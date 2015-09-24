@@ -1,0 +1,984 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: xili_tidy_tags\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-29 15:18+0100\n"
+"PO-Revision-Date: 2014-03-14 11:59+0100\n"
+"Last-Translator: Borisa Djuraskovic <borisad@webhostinghub.com>\n"
+"Language-Team: dev.xiligroup.com <contact@xiligroup.com>\n"
+"Language: fr_FR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;"
+"_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;"
+"esc_attr_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: xili-tidy-tags.php:362
+msgid "Tags: "
+msgstr "Tagovi:"
+
+#: xili-tidy-tags.php:444
+msgid "Invalid Taxonomy"
+msgstr "Nepostojeći Taxonomy"
+
+#: xili-tidy-tags.php:777
+msgid "Cloud of grouped tags by xili-tidy-tags plugin"
+msgstr "Cloud grupisanih tagova od xili-tidy-tags plugin"
+
+#: xili-tidy-tags.php:778
+msgid "Tidy tags cloud"
+msgstr "Cloud sa urednim  tagovima"
+
+#: xili-tidy-tags.php:897
+msgid "Title:"
+msgstr "Naslov:"
+
+#: xili-tidy-tags.php:900
+msgid "Group"
+msgstr "Grupa"
+
+#: xili-tidy-tags.php:902
+msgid "Choose a group…"
+msgstr "Izabrati grupu..."
+
+#: xili-tidy-tags.php:905
+msgid "Current language"
+msgstr "Trenutni jezik"
+
+#: xili-tidy-tags.php:909
+msgid "Current category"
+msgstr "Trenutna kategorija"
+
+#: xili-tidy-tags.php:923
+msgid "Group #2"
+msgstr "Grupa #2"
+
+#: xili-tidy-tags.php:926
+msgid "(Option) Choose a 2nd group…"
+msgstr "(Opcija) Izabrati drugu grupu"
+
+#: xili-tidy-tags.php:940
+msgid "Smallest size"
+msgstr "Najmanja veličina"
+
+#: xili-tidy-tags.php:941
+msgid "Largest size"
+msgstr "Najveći broj"
+
+#: xili-tidy-tags.php:942
+msgid "Number"
+msgstr "Broj"
+
+#: xili-tidy-tags.php:943
+msgid "Order and sorting infos"
+msgstr "Nnarudžbina i info sortiranja"
+
+#: xili-tidy-tags.php:945
+msgid "no orderby"
+msgstr "nema narudžbine"
+
+#: xili-tidy-tags.php:946
+msgid "count"
+msgstr "brojanje"
+
+#: xili-tidy-tags.php:947
+msgid "name"
+msgstr "ime"
+
+#: xili-tidy-tags.php:951
+msgid "no order"
+msgstr "nema red"
+
+#: xili-tidy-tags.php:952
+msgid "ASC"
+msgstr "ASC"
+
+#: xili-tidy-tags.php:953
+msgid "DESC"
+msgstr "DESC"
+
+#: xili-tidy-tags.php:957
+msgid "Display as"
+msgstr "Prikazati kao"
+
+#: xili-tidy-tags.php:959
+msgid "Cloud"
+msgstr "Cloud"
+
+#: xili-tidy-tags.php:960
+msgid "List"
+msgstr "Lista"
+
+#: xili-tidy-tags.php:968
+msgid "Target site ID"
+msgstr "ID targetiranog sajta"
+
+#: xili-tidy-tags.php:971
+msgid "Choose site..."
+msgstr "Izaberite sajt..."
+
+#: xili-tidy-tags.php:973
+msgid "undefined"
+msgstr "nedefinisano"
+
+#: xili-tidy-tags.php:984
+msgid ""
+"No site assigned to current admin user ! Please verify user's list for "
+"targeted sites."
+msgstr ""
+"Nijedan sajt nije pripisan trenutno admin korisniku! Molim vas verifikujte "
+
+#: xili-tidy-tags.php:991
+msgid "Taxonomies"
+msgstr "Taxonomije"
+
+#: xili-tidy-tags.php:995
+msgid "tidy taxonomy"
+msgstr "uredne taxonomije"
+
+#: xili-tidy-tags.php:1008
+msgid "Condition"
+msgstr "Uslovi"
+
+#: xili-includes/xtt-class-admin.php:75 xili-includes/xtt-class-admin.php:77
+#: xili-includes/xtt-class-admin.php:79 xili-includes/xtt-class-admin.php:887
+#: xili-includes/xtt-class-admin.php:1020
+#, php-format
+msgid "%s groups"
+msgstr "%s grupe"
+
+#: xili-includes/xtt-class-admin.php:75 xili-includes/xtt-class-admin.php:83
+#: xili-includes/xtt-class-admin.php:496
+#, php-format
+msgid "Tidy %s"
+msgstr "Uredno %s"
+
+#: xili-includes/xtt-class-admin.php:77
+msgid "Info for SuperAdmin"
+msgstr "Info za SuperAdmin"
+
+#: xili-includes/xtt-class-admin.php:79 xili-includes/xtt-class-admin.php:100
+#, php-format
+msgid "Tidy %s settings"
+msgstr "Postavke za uredno  %s "
+
+#: xili-includes/xtt-class-admin.php:83
+#, php-format
+msgid "Tidy %s assign"
+msgstr "Uredno %s  dodato"
+
+#: xili-includes/xtt-class-admin.php:101
+msgid ""
+"This window is reserved for future settings in multisite mode (wpmu) for "
+"administrator like SuperAdmin..."
+msgstr ""
+"Ovaj prozor je rezervisan za buduće postavke u multisajt mode-u (wpmu) za "
+"administratore kao SuperAdmin..."
+
+#: xili-includes/xtt-class-admin.php:102
+#, php-format
+msgid "Link to set tidy %s in current site"
+msgstr "Link za podešavanje uredno %s  na trenutnom sajtu"
+
+#: xili-includes/xtt-class-admin.php:102
+#, php-format
+msgid "To create groups of %s"
+msgstr "Da biste kreirali grupe %s "
+
+#: xili-includes/xtt-class-admin.php:103
+#, php-format
+msgid "Link to assign tidy %s in current site"
+msgstr "Link za dodavanje uredno %s  na trenutnom sajtu"
+
+#: xili-includes/xtt-class-admin.php:103
+#, php-format
+msgid "To assign a group to %s"
+msgstr "Da bi se dodala grupa %s na trenutnom sajtu"
+
+#: xili-includes/xtt-class-admin.php:105 xili-includes/xtt-class-admin.php:346
+#: xili-includes/xtt-class-admin.php:546
+msgid "Author"
+msgstr "Autor"
+
+#: xili-includes/xtt-class-admin.php:115
+msgid "Add a group"
+msgstr "Dodati grupu"
+
+#: xili-includes/xtt-class-admin.php:116
+#: xili-includes/xtt-class-admin.php:1386
+msgid "Add &raquo;"
+msgstr "Dodati &raquo;"
+
+#: xili-includes/xtt-class-admin.php:117 xili-includes/xtt-class-admin.php:397
+msgid "Cancel"
+msgstr "Ukinuti"
+
+#: xili-includes/xtt-class-admin.php:156
+msgid "Editor Capabilities changed to: "
+msgstr "Sposobnosti editora promenjene na:"
+
+#: xili-includes/xtt-class-admin.php:165
+msgid "Group for: "
+msgstr "Grupa za:"
+
+#: xili-includes/xtt-class-admin.php:165
+msgid "category"
+msgstr "kategorija"
+
+#: xili-includes/xtt-class-admin.php:172
+msgid "This group was added: "
+msgstr "Ova grupa je dodata"
+
+#: xili-includes/xtt-class-admin.php:179 xili-includes/xtt-class-admin.php:297
+msgid "The languages groups was added."
+msgstr "Grupa sa jezicima je dodata."
+
+#: xili-includes/xtt-class-admin.php:191 xili-includes/xtt-class-admin.php:293
+msgid "A new group was added."
+msgstr "Nova grupa je dodata."
+
+#: xili-includes/xtt-class-admin.php:201 xili-includes/xtt-class-admin.php:294
+msgid "NO new group was added."
+msgstr "Nijedna nova grupa nije dodata"
+
+#: xili-includes/xtt-class-admin.php:209
+#: xili-includes/xtt-class-admin.php:1422
+msgid "Update &raquo;"
+msgstr "Update &raquo;"
+
+#: xili-includes/xtt-class-admin.php:210
+msgid "Edit Group"
+msgstr "Edituj grupu"
+
+#: xili-includes/xtt-class-admin.php:211
+msgid "Group to update."
+msgstr "Grupa za update"
+
+#: xili-includes/xtt-class-admin.php:221 xili-includes/xtt-class-admin.php:295
+msgid "A group was updated."
+msgstr "Grupa je update-ovana"
+
+#: xili-includes/xtt-class-admin.php:227
+msgid "Delete &raquo;"
+msgstr "Obrisati &raquo;"
+
+#: xili-includes/xtt-class-admin.php:228
+msgid "Delete group"
+msgstr "Obrisati grupu"
+
+#: xili-includes/xtt-class-admin.php:230
+msgid "A group to delete."
+msgstr "Grupa za brisanje."
+
+#: xili-includes/xtt-class-admin.php:238 xili-includes/xtt-class-admin.php:296
+msgid "A group was deleted."
+msgstr "Grupa je izbrisana."
+
+#: xili-includes/xtt-class-admin.php:276 xili-includes/xtt-class-admin.php:299
+msgid "Email sent."
+msgstr "Email poslat"
+
+#: xili-includes/xtt-class-admin.php:278
+#, php-format
+msgid "Thanks for your email. A copy was sent to %s (%s)"
+msgstr "Hvala vam na mejlu. Kopija vam je poslata na %s (%s)"
+
+#: xili-includes/xtt-class-admin.php:284
+#, php-format
+msgid "Find the list of groups for %s."
+msgstr "Nadjite listu grupa za %s."
+
+#: xili-includes/xtt-class-admin.php:289
+#, php-format
+msgid "Groups of %s"
+msgstr "Grupe od %s ."
+
+#: xili-includes/xtt-class-admin.php:290
+msgid "The group"
+msgstr "Grupe"
+
+#: xili-includes/xtt-class-admin.php:291 xili-includes/xtt-class-admin.php:495
+msgid "Actions"
+msgstr "Akcije"
+
+#: xili-includes/xtt-class-admin.php:306
+#, php-format
+msgid "Tidy %s groups"
+msgstr "Uredne %s grupe"
+
+#: xili-includes/xtt-class-admin.php:376 xili-includes/xtt-class-admin.php:666
+#: xili-includes/xtt-class-admin.php:2005
+msgid "Message"
+msgstr "Poruka"
+
+#: xili-includes/xtt-class-admin.php:377 xili-includes/xtt-class-admin.php:667
+msgid "Info"
+msgstr "Info"
+
+#: xili-includes/xtt-class-admin.php:378
+msgid "Mail & Support"
+msgstr "Mail & Podrška"
+
+#: xili-includes/xtt-class-admin.php:380
+msgid "Capabilities"
+msgstr "Sposobnosti"
+
+#: xili-includes/xtt-class-admin.php:396
+msgid "Update"
+msgstr "Update"
+
+#: xili-includes/xtt-class-admin.php:489
+#, php-format
+msgid "Find the list of %s."
+msgstr "Nadjite listu %s. "
+
+#: xili-includes/xtt-class-admin.php:498
+msgid "List updated in database !"
+msgstr "Lista update-ovana u bazi."
+
+#: xili-includes/xtt-class-admin.php:501
+msgid "Post Type <strong>not declared</strong> in Custom Taxonomy !"
+msgstr "Post Type <strong>nije objavljeno</strong> u Custom Taxonomy !"
+
+#: xili-includes/xtt-class-admin.php:505
+#, php-format
+msgid "%s in group with post type named: %s"
+msgstr "%s u grupi sa imenovanim tipom posta: %s"
+
+#: xili-includes/xtt-class-admin.php:569
+msgid "All lines"
+msgstr "Sve rečenice"
+
+#: xili-includes/xtt-class-admin.php:572
+msgid "First"
+msgstr "Prvo"
+
+#: xili-includes/xtt-class-admin.php:573
+msgid "Last page"
+msgstr "Poslednja stranica"
+
+#: xili-includes/xtt-class-admin.php:574
+msgid "Next"
+msgstr "Sledeće"
+
+#: xili-includes/xtt-class-admin.php:575
+msgid "Previous"
+msgstr "Prethodno"
+
+#: xili-includes/xtt-class-admin.php:577
+#, php-format
+msgid "Showing (_START_ to _END_) of _TOTAL_ %s"
+msgstr "Prikazuje (_OD POŠETKA_ DO _KRAJA_) _TOTAL_ %s"
+
+#: xili-includes/xtt-class-admin.php:578
+msgid "(filtered from _MAX_ total entries)"
+msgstr "(filtrirano iz _MAX_ totalnih unosa)"
+
+#: xili-includes/xtt-class-admin.php:579
+msgid "Show _MENU_ tags"
+msgstr "Prikazati _MENI_ tagove"
+
+#: xili-includes/xtt-class-admin.php:580
+msgid "Filter tags:"
+msgstr "Filter tagovi:"
+
+#: xili-includes/xtt-class-admin.php:596
+msgid "Updating table of tags !"
+msgstr "Update-ovanje tabele sa tagovima!"
+
+#: xili-includes/xtt-class-admin.php:710
+msgid "Language"
+msgstr "Jezik"
+
+#: xili-includes/xtt-class-admin.php:712
+msgid "Alias of"
+msgstr "Alias"
+
+#: xili-includes/xtt-class-admin.php:742 xili-includes/xtt-class-admin.php:765
+#, php-format
+msgid "Tags in %s."
+msgstr "Tagovi u  %s."
+
+#: xili-includes/xtt-class-admin.php:746
+msgid "assigned in:"
+msgstr "dodati"
+
+#: xili-includes/xtt-class-admin.php:774
+msgid "Alias:"
+msgstr "Alias:"
+
+#: xili-includes/xtt-class-admin.php:885 xili-includes/xtt-class-admin.php:970
+#: xili-includes/xtt-class-admin.php:1018
+#: xili-includes/xtt-class-admin.php:1024
+#, php-format
+msgid "© by xili-tidy-tags v. %s"
+msgstr "© by xili-tidy-tags v. %s"
+
+#: xili-includes/xtt-class-admin.php:907
+msgid "new"
+msgstr "novo"
+
+#: xili-includes/xtt-class-admin.php:909
+msgid "in another language"
+msgstr "na drugom jeziku"
+
+#: xili-includes/xtt-class-admin.php:909
+msgid "as synonym"
+msgstr "kao sinonim"
+
+#: xili-includes/xtt-class-admin.php:911
+#, php-format
+msgid ""
+"This sub-form contains a field to define alias of this %1$s%2$s. Choose a "
+"%2$s already present %3$s."
+msgstr ""
+"Pod forma sadrži polje za definisanje aliasa ovoga %1$s%2$s. Izaberite %2$s  "
+"već prisutnog u %3$s."
+
+#: xili-includes/xtt-class-admin.php:919
+#, php-format
+msgid "This %1$s (%2$s) is already present in the group %3$s:"
+msgstr "Ovaj %1$s (%2$s) je ve’ prisutan u grupi %3$s:"
+
+#: xili-includes/xtt-class-admin.php:919
+#, php-format
+msgctxt "singular"
+msgid "of the following %s"
+msgstr "sledećeg %s"
+
+#: xili-includes/xtt-class-admin.php:919
+#, php-format
+msgctxt "plural"
+msgid "of the following %s"
+msgstr "sledećeg %s"
+
+#: xili-includes/xtt-class-admin.php:930
+#, php-format
+msgid ""
+"Select below if you want to change the group of this %1$s (%2$s). Be careful!"
+msgstr "Selektovati ispod ako želite da promenite grupu  %1$s (%2$s). Pazite!"
+
+#: xili-includes/xtt-class-admin.php:941
+msgid "Choice alias..."
+msgstr "Izbor aliasa..."
+
+#: xili-includes/xtt-class-admin.php:972
+#, php-format
+msgid "The %s aliases group"
+msgstr "Grupa  %s  aliasa"
+
+#: xili-includes/xtt-class-admin.php:1047
+#: xili-includes/xtt-class-admin.php:1048
+msgid "Settings"
+msgstr "Postavke"
+
+#: xili-includes/xtt-class-admin.php:1063
+msgid "Things to remember to set xili-tidy-tags:"
+msgstr "Stvari koje morate da zapamtite prilikom podešavanja xili-tidy-tags:"
+
+#: xili-includes/xtt-class-admin.php:1065
+msgid ""
+"If you use it for multilingual website: verify that the xili-language "
+"trilogy is active."
+msgstr ""
+"Ako koristite multi jezički sajt: verifikujte xili-jezičku triologiju kao "
+"aktivnu."
+
+#: xili-includes/xtt-class-admin.php:1066
+msgid "Update the list of targeted languages. See Actions left box."
+msgstr "Update-ujte listu ciljanih jezika. Pogledajte levo deo ACTIONS"
+
+#: xili-includes/xtt-class-admin.php:1067
+msgid ""
+"For current site with lot of tags, create group or sub-group and go in "
+"assign page."
+msgstr ""
+"Za trenutni sajt sa dosta tagova, napravite grupu ili pod grupu u dodeljenoj "
+"stranici."
+
+#: xili-includes/xtt-class-admin.php:1068
+msgid "Don’t forget to activate a tags cloud widget."
+msgstr "Ne zaboravite da aktivirate tagove cloud widget-a."
+
+#: xili-includes/xtt-class-admin.php:1069
+msgid ""
+"In widget: the group for displaying tags in current lang is \"the_curlang\"."
+msgstr ""
+"U widget-u: grupa za prikazivanje tagova u trenutnom jeziku \"the_curlang\"."
+
+#: xili-includes/xtt-class-admin.php:1070
+msgid ""
+"In widget: the group to set is the slug - trademark for TradeMark group - if "
+"you create one."
+msgstr ""
+"U widget-u: grupa za podešavanje je slug - trademark za TradeMark grupu - "
+"ako je stvorite već."
+
+#: xili-includes/xtt-class-admin.php:1074
+#: xili-includes/xtt-class-admin.php:1101
+msgid "For more information:"
+msgstr "Za više informacija:"
+
+#: xili-includes/xtt-class-admin.php:1075
+#: xili-includes/xtt-class-admin.php:1102
+msgid ""
+"<a href=\"http://dev.xiligroup.com/xili-tidy-tags\" target=\"_blank\">Xili-"
+"tidy-tags Plugin Documentation</a>"
+msgstr ""
+" <a href=\"http://dev.xiligroup.com/xili-tidy-tags\" target=\"_blank\">Xili-"
+"tidy-tagovi Plugin Dokumentacija</a>"
+
+#: xili-includes/xtt-class-admin.php:1076
+#: xili-includes/xtt-class-admin.php:1105
+msgid ""
+"<a href=\"http://codex.wordpress.org/\" target=\"_blank\">WordPress "
+"Documentation</a>"
+msgstr ""
+"<a href=\"http://codex.wordpress.org/\" target=\"_blank\">WordPress  "
+"Dokumentacija</a>"
+
+#: xili-includes/xtt-class-admin.php:1077
+#: xili-includes/xtt-class-admin.php:1104
+msgid ""
+"<a href=\"http://forum2.dev.xiligroup.com/\" target=\"_blank\">Support "
+"Forums</a>"
+msgstr ""
+"<a href=\"http://forum2.dev.xiligroup.com/\" target=\"_blank\">Forumi za "
+"podršku</a>"
+
+#: xili-includes/xtt-class-admin.php:1081
+#: xili-includes/xtt-class-admin.php:1110
+msgid "Things to remember"
+msgstr "Stvari koje treba zapamtiti"
+
+#: xili-includes/xtt-class-admin.php:1087
+#: xili-includes/xtt-class-admin.php:1116
+msgid "For more information"
+msgstr "Za više info"
+
+#: xili-includes/xtt-class-admin.php:1094
+msgid "Things to remember to assign tags to groups:"
+msgstr "Stvari koje treba zapamtiti prilikom dodavanja tagova grupama:"
+
+#: xili-includes/xtt-class-admin.php:1096
+msgid "Use features of paginated table."
+msgstr "Koristite karakteristike obeležene tabele"
+
+#: xili-includes/xtt-class-admin.php:1097
+msgid ""
+"Don’t forget to update by clicking button in left - Actions - titled meta "
+"box."
+msgstr ""
+"Ne zaboravite da updateujete klikom na dugme levo - Actions - naslov meta "
+"box."
+
+#: xili-includes/xtt-class-admin.php:1103
+msgid ""
+"<a href=\"http://wiki.xiligroup.org/\" target=\"_blank\">Xili Wiki "
+"Documentation</a>"
+msgstr ""
+"<a href=\"http://wiki.xiligroup.org/\" target=\"_blank\">Xili Wiki "
+"Documentation</a>"
+
+#: xili-includes/xtt-class-admin.php:1185
+msgid "Docs about xili-tidy-tags"
+msgstr "Dokumenti o xili-tidy-tagovima"
+
+#: xili-includes/xtt-class-admin.php:1194
+msgid "xili-tidy-tags updated"
+msgstr "xili-tidy-tagovi update-ovani"
+
+#: xili-includes/xtt-class-admin.php:1195
+#, php-format
+msgid "xili-tidy-tags was updated to version %s"
+msgstr "xili-tidy-tagovi su updateovani na verziju %s"
+
+#: xili-includes/xtt-class-admin.php:1196
+msgid ""
+"Now tags can be grouped using alias feature existing in WP taxonomy and two "
+"new template tags for theme are available for files tag.php and taxonomy.php."
+msgstr ""
+"Sada tagovi mogu da se grupišu koristeći alias u WP taksonomiji i dve nove  "
+"template tagova za temu su dostupne za fajlove tag.php i taxonomy.php."
+
+#: xili-includes/xtt-class-admin.php:1198
+#: xili-includes/xtt-class-admin.php:1200
+msgid "See submenu"
+msgstr "Pogledati podmeni"
+
+#: xili-includes/xtt-class-admin.php:1198
+msgid "to define groups of tags"
+msgstr "definisati grupe tagova"
+
+#: xili-includes/xtt-class-admin.php:1200
+msgid "to assign tags to group"
+msgstr "dodeliti tagove grupi"
+
+#: xili-includes/xtt-class-admin.php:1202
+#, php-format
+msgid ""
+"Before to question dev.xiligroup support, do not forget to visit %s "
+"documentation"
+msgstr ""
+"Pre pitanja dev.xiligroup podrške ne zaboravite da posetite %s  dokumentaciju"
+
+#: xili-includes/xtt-class-admin.php:1256
+#: xili-includes/xtt-class-admin.php:1960
+msgid "Note:"
+msgstr "Beleška:"
+
+#: xili-includes/xtt-class-admin.php:1264
+msgid ""
+"On this page, the tags groups are defined. The special groups for xili-"
+"language plugin are importable.<br /> For debug, some technical infos are "
+"displayed in the tables or boxes.<br />"
+msgstr ""
+"Na ovoj stranici , su tagovi grupe definisani. Posebne grupe za xili jezik "
+"plugin su za uvoz <br /> Za otklanjanje grešaka, neke tehničke info  su "
+"prikazane u tabelama ili pravougaonicima . . <br />"
+
+#: xili-includes/xtt-class-admin.php:1266
+msgid ""
+"On this page, in a oneshot way, it is possible to assign the tags to one or "
+"more groups defined on the other page of <i>xili-tidy-tags</i> plugin."
+msgstr ""
+"Na ovoj stranici , na oneshot način , moguće je dodeliti oznake jednoj ili "
+"više grupa definisanih na drugoj strani <i> xili - uredni tagovai< / i > "
+"plugin ."
+
+#: xili-includes/xtt-class-admin.php:1268
+msgid ""
+"<b>xili-tidy-tags</b> is a tool for grouping tags by language or semantic "
+"group. Initially developed to enrich multilingual website powered by xili-"
+"language plugin."
+msgstr ""
+"<b> xili - uredni - tagovi < / b > je alatka za grupisanje tagova  po jeziku "
+"ili semantičke grupe . Prvobitno razvijena da bi  obogatili multijezički "
+"sajt pokrenut xili jeziku pluginom."
+
+#: xili-includes/xtt-class-admin.php:1291
+msgid "Here, as admin, set capabilities of the editor:"
+msgstr "Ovde kao admin, podešavate mogućnosti editora"
+
+#: xili-includes/xtt-class-admin.php:1293
+#: xili-includes/xtt-class-admin.php:1688
+msgid "no capability"
+msgstr "nema sposobnosti"
+
+#: xili-includes/xtt-class-admin.php:1294
+msgid "Grouping"
+msgstr "Grupiranje"
+
+#: xili-includes/xtt-class-admin.php:1295
+msgid "Setting and grouping"
+msgstr "Postavke i grupiranje"
+
+#: xili-includes/xtt-class-admin.php:1297
+msgid "Disable Datatable javascript"
+msgstr "Onemogućiti javascript bazu podataka"
+
+#: xili-includes/xtt-class-admin.php:1300
+msgid "Set &raquo;"
+msgstr "Podesiti  &raquo;"
+
+#: xili-includes/xtt-class-admin.php:1361
+msgid "Add a tag's group for a chosen category"
+msgstr "Dodati grupu za biranu kategoriju"
+
+#: xili-includes/xtt-class-admin.php:1365
+msgid "choose a category"
+msgstr "izabrati kategoriju"
+
+#: xili-includes/xtt-class-admin.php:1372
+msgid "Choose a parent tag's group"
+msgstr "Izabrati roditeljski tag grupu"
+
+#: xili-includes/xtt-class-admin.php:1376
+#: xili-includes/xtt-class-admin.php:1523
+#: xili-includes/xtt-class-admin.php:1560
+#: xili-includes/xtt-class-admin.php:1583
+msgid "no parent"
+msgstr "nema roditelja"
+
+#: xili-includes/xtt-class-admin.php:1387
+msgid ""
+"See docs to set xili_tidy_tag_cloud function or widget to implement in theme…"
+msgstr ""
+"Pogledajte dokumenta da biste namestili  xili_tidy_tag_cloud  funkciju ili "
+"widget  za implementiranje u temu..."
+
+#: xili-includes/xtt-class-admin.php:1392
+msgid "xili-language plugin is not activated."
+msgstr " xili-jezik plugin nije aktivan."
+
+#: xili-includes/xtt-class-admin.php:1401
+msgid "The group of languages is set for use with xili-language plugin."
+msgstr "Gtrupa jezika je nameštena za korišćenje  xili-jezik plugina."
+
+#: xili-includes/xtt-class-admin.php:1419
+msgid "The group of languages in xili-language plugin has been changed."
+msgstr "Grupa jezika u xili-jezik pluginu je promenjena."
+
+#: xili-includes/xtt-class-admin.php:1421
+msgid "It is possible to update the group of languages."
+msgstr "Moguće je update-ovati grupu jezika."
+
+#: xili-includes/xtt-class-admin.php:1426
+msgid ""
+"One or more language(s) here are not present in active xili-language list."
+msgstr ""
+"Jedan ili više jezika ovde nisu prisutni u aktivnoj xili-language listi."
+
+#: xili-includes/xtt-class-admin.php:1434
+msgid "It is possible to import the group of languages."
+msgstr "Moguće je importovati grupu jezika."
+
+#: xili-includes/xtt-class-admin.php:1435
+msgid "Import…"
+msgstr "Imporovati..."
+
+#: xili-includes/xtt-class-admin.php:1438
+msgid "Go to settings of xili-language plugin and add languages"
+msgstr "Idite na postavke xili-jezik plugin i dodajte jezike"
+
+#: xili-includes/xtt-class-admin.php:1441
+msgid "See administrator for language settings."
+msgstr "Videti sa administratorom o postavkama za jezik."
+
+#: xili-includes/xtt-class-admin.php:1455
+#: xili-includes/xtt-class-admin.php:1729
+#: xili-includes/xtt-class-admin.php:1740
+msgid "ID"
+msgstr "ID"
+
+#: xili-includes/xtt-class-admin.php:1456
+#: xili-includes/xtt-class-admin.php:1484
+#: xili-includes/xtt-class-admin.php:1730
+#: xili-includes/xtt-class-admin.php:1741
+msgid "Name"
+msgstr "Ime"
+
+#: xili-includes/xtt-class-admin.php:1457
+#: xili-includes/xtt-class-admin.php:1492
+msgid "Description"
+msgstr "Opis"
+
+#: xili-includes/xtt-class-admin.php:1458
+msgid "Group slug"
+msgstr "Grupni slug"
+
+#: xili-includes/xtt-class-admin.php:1459
+msgid "Group taxo ID"
+msgstr "Grupni taxo ID"
+
+#: xili-includes/xtt-class-admin.php:1460
+msgid "Parent"
+msgstr "Roditelj"
+
+#: xili-includes/xtt-class-admin.php:1461
+msgid "Tags"
+msgstr "Tagovi"
+
+#: xili-includes/xtt-class-admin.php:1462
+msgid "Action"
+msgstr "Akcija"
+
+#: xili-includes/xtt-class-admin.php:1488
+msgid "tags group slug"
+msgstr "tagovi slug grupe"
+
+#: xili-includes/xtt-class-admin.php:1497
+msgid "kinship"
+msgstr "kinship"
+
+#: xili-includes/xtt-class-admin.php:1540
+#: xili-includes/xtt-class-admin.php:1568
+msgid "Select the parent if necessary"
+msgstr "Selektuj roditelja ako je potrebno"
+
+#: xili-includes/xtt-class-admin.php:1546
+msgid "parent of: "
+msgstr "roditelj od:"
+
+#: xili-includes/xtt-class-admin.php:1553
+msgid "no child now"
+msgstr "sada nema deteta"
+
+#: xili-includes/xtt-class-admin.php:1576
+msgid "child of: "
+msgstr "dete od:"
+
+#: xili-includes/xtt-class-admin.php:1593
+msgid "Modify the parent if necessary"
+msgstr "Modifikovati roditelja ako je potrebno"
+
+#: xili-includes/xtt-class-admin.php:1684
+msgid "Edit"
+msgstr "Editovati"
+
+#: xili-includes/xtt-class-admin.php:1686
+msgid "Delete"
+msgstr "Obrisati"
+
+#: xili-includes/xtt-class-admin.php:1720
+msgid "Creating table of tags !"
+msgstr "Stvaranje tabele tagova!"
+
+#: xili-includes/xtt-class-admin.php:1731
+#: xili-includes/xtt-class-admin.php:1742
+msgid "Posts"
+msgstr "Postovi"
+
+#: xili-includes/xtt-class-admin.php:1732
+#: xili-includes/xtt-class-admin.php:1743
+msgid "Group(s) to choose"
+msgstr "Grupe za izbor"
+
+#: xili-includes/xtt-class-admin.php:1760
+msgid "After checking or unchecking do not forget to click update button !"
+msgstr "Nakon čekiranja i nečekiranja ne zaboravite da kliknete na dugme!"
+
+#: xili-includes/xtt-class-admin.php:1763
+msgid "Sub list of tags"
+msgstr "Pod lista tagova:"
+
+#: xili-includes/xtt-class-admin.php:1764
+msgid "Starting with:"
+msgstr "Počinje sa:"
+
+#: xili-includes/xtt-class-admin.php:1766
+msgid "Containing:"
+msgstr "Sadrži:"
+
+#: xili-includes/xtt-class-admin.php:1768
+msgid "Choose:"
+msgstr "Izabrati:"
+
+#: xili-includes/xtt-class-admin.php:1775
+msgid "every"
+msgstr "svaki"
+
+#: xili-includes/xtt-class-admin.php:1776
+msgid "Unchecked only"
+msgstr "Nečekirane samo"
+
+#: xili-includes/xtt-class-admin.php:1800
+msgid "Exclude this group"
+msgstr "Isključiti ovu grupu"
+
+#: xili-includes/xtt-class-admin.php:1802
+msgid "No childs"
+msgstr "Nema dece"
+
+#: xili-includes/xtt-class-admin.php:1806
+msgid "Include unchecked"
+msgstr "Uključiti nečekirano"
+
+#: xili-includes/xtt-class-admin.php:1809
+#: xili-includes/xtt-class-admin.php:1825
+msgid "Sub select…"
+msgstr "Pod izbor..."
+
+#: xili-includes/xtt-class-admin.php:1809
+msgid "No select…"
+msgstr "Nije izabrano"
+
+#: xili-includes/xtt-class-admin.php:1812
+msgid "Columns: Group selection"
+msgstr "Kolone: Ibor grupa"
+
+#: xili-includes/xtt-class-admin.php:1815
+msgid "No sub-selection"
+msgstr "Nema pod izbora"
+
+#: xili-includes/xtt-class-admin.php:1963
+msgid "Mail to dev.xiligroup"
+msgstr "Mail za dev.xiligroup"
+
+#: xili-includes/xtt-class-admin.php:1964
+msgid "Cc:"
+msgstr "Cc:"
+
+#: xili-includes/xtt-class-admin.php:1973
+msgid "When checking and giving detailled infos, support will be better !"
+msgstr "Kada čekirate i dajete detaljne info, podrška bi bila bolja!"
+
+#: xili-includes/xtt-class-admin.php:1991
+msgid "Type of webmaster:"
+msgstr "Tip webmastera:"
+
+#: xili-includes/xtt-class-admin.php:1994
+msgid "Define your experience as webmaster…"
+msgstr "Definišite vaše iskustvo kao webmaster…"
+
+#: xili-includes/xtt-class-admin.php:1995
+msgid "Newbie in WP"
+msgstr "Početnik u WP"
+
+#: xili-includes/xtt-class-admin.php:1996
+msgid "Good knowledge in WP and few in php"
+msgstr "Dobro znanje u WP i php"
+
+#: xili-includes/xtt-class-admin.php:1997
+msgid "Good knowledge in WP, CMS and good in php"
+msgstr "Dobro znanje u WP, CMS i php"
+
+#: xili-includes/xtt-class-admin.php:1998
+msgid "WP theme and /or plugin developper"
+msgstr "WP tema i /ili plugin programera "
+
+#: xili-includes/xtt-class-admin.php:2001
+msgid "Subject:"
+msgstr "Nasov:"
+
+#: xili-includes/xtt-class-admin.php:2004
+msgid "Choose topic..."
+msgstr "Izaberite temu..."
+
+# msgid "Message"
+# msgstr "Message"
+#: xili-includes/xtt-class-admin.php:2006
+msgid "Question"
+msgstr "Pitanje"
+
+#: xili-includes/xtt-class-admin.php:2007
+msgid "Encouragement"
+msgstr "Ohrabrenje"
+
+#: xili-includes/xtt-class-admin.php:2008
+msgid "Support need"
+msgstr "Podrška potrebna"
+
+#: xili-includes/xtt-class-admin.php:2010
+msgid "Your message here…"
+msgstr "Vaša poruka ide ovde…"
+
+#: xili-includes/xtt-class-admin.php:2013
+msgid ""
+"Before send the mail, check the infos to be sent and complete textarea. A "
+"copy (Cc:) is sent to webmaster email (modify it if needed)."
+msgstr ""
+"Pre slanja poruke , proverite info koje treba da budu poslate i kompletno "
+"područje teksta. Kopija ( Cc :) se šalje na webmaster e-mail ( modifikovati "
+"ga ako je potrebno ) ."
+
+#: xili-includes/xtt-class-admin.php:2016
+msgid "Send email"
+msgstr "Poslati email"
+
+#~ msgid "Previous source file is splitted for admin."
+#~ msgstr "Les sources précédents ont été partagées pour le côté admin."
+
+#~ msgid "Tidy tags"
+#~ msgstr "Tidy tags"
+
+#~ msgid "List of %s"
+#~ msgstr "Liste de %s"
+
+#~ msgid "Groups selection"
+#~ msgstr "Sous-sélection des groupes"
