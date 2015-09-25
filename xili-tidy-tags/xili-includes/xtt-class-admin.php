@@ -270,7 +270,10 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 				$contextual_arr[] = $this->xili_settings['webmestre-level'];  // 1.9.1
 
 				$headers = 'From: xili-tidy-tags plugin page <' . get_bloginfo ('admin_email').'>' . "\r\n" ;
-	   			if ( '' != $_POST['ccmail'] ) $headers .= 'Cc: <'.$_POST['ccmail'].'>' . "\r\n";
+	   			if ( '' != $_POST['ccmail'] ) {
+					$headers .= 'Cc: <'.$_POST['ccmail'].'>' . "\r\n";
+					$headers .= 'Reply-To: <'.$_POST['ccmail'].'>' . "\r\n";
+				}
 	   			$headers .= "\\";
 	   			$message = "Message sent by: ".get_bloginfo ('admin_email')."\n\n" ;
 	   			$message .= "Subject: ".$_POST['subject']."\n\n" ;
@@ -1108,7 +1111,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	      '<p><strong>' . __('For more information:') . '</strong></p>' .
 	      '<p>' . __('<a href="http://dev.xiligroup.com/xili-tidy-tags" target="_blank">Xili-tidy-tags Plugin Documentation</a>','xili_tidy_tags') . '</p>' .
 	      '<p>' . __('<a href="http://codex.wordpress.org/" target="_blank">WordPress Documentation</a>','xili_tidy_tags') . '</p>' .
-	      '<p>' . __('<a href="http://forum2.dev.xiligroup.com/" target="_blank">Support Forums</a>','xili_tidy_tags') . '</p>' ;
+	      '<p>' . __('<a href="https://wordpress.org/support/plugin/xili-tidy-tags" target="_blank">Support Forums</a>','xili_tidy_tags') . '</p>' ;
 
 	      $screen->add_help_tab( array(
  				'id'      => 'to-remember',
@@ -1135,7 +1138,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	  	'<p><strong>' . __('For more information:') . '</strong></p>' .
 	    '<p>' . __('<a href="http://dev.xiligroup.com/xili-tidy-tags" target="_blank">Xili-tidy-tags Plugin Documentation</a>','xili_tidy_tags') . '</p>' .
 	    '<p>' . __('<a href="http://wiki.xiligroup.org/" target="_blank">Xili Wiki Documentation</a>','xili_tidy_tags') . '</p>' .
-	    '<p>' . __('<a href="http://forum2.dev.xiligroup.com/" target="_blank">Support Forums</a>','xili_tidy_tags') . '</p>' .
+	    '<p>' . __('<a href="https://wordpress.org/support/plugin/xili-tidy-tags" target="_blank">Support Forums</a>','xili_tidy_tags') . '</p>' .
 	    '<p>' . __('<a href="http://codex.wordpress.org/" target="_blank">WordPress Documentation</a>','xili_tidy_tags') . '</p>' ;
 
 
@@ -1999,7 +2002,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			<p><strong><?php echo $emessage;?></strong></p>
 		<?php } ?>
 		<fieldset style="margin:2px; padding:12px 6px; border:1px solid #ccc;"><legend><?php echo _e('Mail to dev.xiligroup', 'xili_tidy_tags'); ?></legend>
-		<label for="ccmail"><?php _e('Cc:','xili_tidy_tags'); ?>
+		<label for="ccmail"><?php _e('Cc: (Reply to:)','xili_tidy_tags'); ?>
 		<input class="widefat" id="ccmail" name="ccmail" type="text" value="<?php bloginfo ('admin_email') ; ?>" /></label><br /><br />
 		<?php if ( false === strpos( get_bloginfo ('url'), 'local' ) ){ ?>
 			<label for="urlenable">

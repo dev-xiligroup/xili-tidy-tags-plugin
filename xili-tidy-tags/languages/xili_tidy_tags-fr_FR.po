@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: xili_tidy_tags\n"
 "Report-Msgid-Bugs-To: http://dev.xiligroup.com/\n"
-"POT-Creation-Date: 2015-09-24 18:04+0200\n"
-"PO-Revision-Date: 2015-09-24 18:04+0200\n"
+"POT-Creation-Date: 2015-09-25 16:36+0200\n"
+"PO-Revision-Date: 2015-09-25 16:36+0200\n"
 "Last-Translator: dev.xiligroup <contact@xiligroup.com>\n"
 "Language-Team: dev.xiligroup.com <contact@xiligroup.com>\n"
 "Language: fr_FR\n"
@@ -19,13 +19,13 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 
 #: xili-includes/xtt-class-admin.php:82 xili-includes/xtt-class-admin.php:84
-#: xili-includes/xtt-class-admin.php:86 xili-includes/xtt-class-admin.php:921
-#: xili-includes/xtt-class-admin.php:1054
+#: xili-includes/xtt-class-admin.php:86 xili-includes/xtt-class-admin.php:924
+#: xili-includes/xtt-class-admin.php:1057
 msgid "%s groups"
 msgstr "Les groupes pour %s "
 
 #: xili-includes/xtt-class-admin.php:82 xili-includes/xtt-class-admin.php:90
-#: xili-includes/xtt-class-admin.php:503
+#: xili-includes/xtt-class-admin.php:506
 msgid "Tidy %s"
 msgstr "'Tidy' %s"
 
@@ -65,8 +65,8 @@ msgstr "Lien pour affecter les tidy %s du site"
 msgid "To assign a group to %s"
 msgstr "Pour affecter un groupe à %s"
 
-#: xili-includes/xtt-class-admin.php:112 xili-includes/xtt-class-admin.php:353
-#: xili-includes/xtt-class-admin.php:553
+#: xili-includes/xtt-class-admin.php:112 xili-includes/xtt-class-admin.php:356
+#: xili-includes/xtt-class-admin.php:556
 msgid "Author"
 msgstr "Auteur"
 
@@ -74,11 +74,11 @@ msgstr "Auteur"
 msgid "Add a group"
 msgstr "Ajouter un groupe"
 
-#: xili-includes/xtt-class-admin.php:123 xili-includes/xtt-class-admin.php:1419
+#: xili-includes/xtt-class-admin.php:123 xili-includes/xtt-class-admin.php:1422
 msgid "Add &raquo;"
 msgstr "Ajouter &raquo;"
 
-#: xili-includes/xtt-class-admin.php:124 xili-includes/xtt-class-admin.php:404
+#: xili-includes/xtt-class-admin.php:124 xili-includes/xtt-class-admin.php:407
 msgid "Cancel"
 msgstr "Annuler"
 
@@ -98,19 +98,19 @@ msgstr "catégorie"
 msgid "This group was added: "
 msgstr "Ce groupe a été ajouté."
 
-#: xili-includes/xtt-class-admin.php:186 xili-includes/xtt-class-admin.php:304
+#: xili-includes/xtt-class-admin.php:186 xili-includes/xtt-class-admin.php:307
 msgid "The languages groups was added."
 msgstr "Les groupes de langues ont été ajoutés."
 
-#: xili-includes/xtt-class-admin.php:198 xili-includes/xtt-class-admin.php:300
+#: xili-includes/xtt-class-admin.php:198 xili-includes/xtt-class-admin.php:303
 msgid "A new group was added."
 msgstr "Un nouveau groupe a été ajouté."
 
-#: xili-includes/xtt-class-admin.php:208 xili-includes/xtt-class-admin.php:301
+#: xili-includes/xtt-class-admin.php:208 xili-includes/xtt-class-admin.php:304
 msgid "NO new group was added."
 msgstr "Aucun groupe ajouté."
 
-#: xili-includes/xtt-class-admin.php:216 xili-includes/xtt-class-admin.php:1455
+#: xili-includes/xtt-class-admin.php:216 xili-includes/xtt-class-admin.php:1458
 msgid "Update &raquo;"
 msgstr "Mise à jour &raquo;"
 
@@ -122,7 +122,7 @@ msgstr "Modifier le groupe"
 msgid "Group to update."
 msgstr "Groupe à mettre à jour."
 
-#: xili-includes/xtt-class-admin.php:228 xili-includes/xtt-class-admin.php:302
+#: xili-includes/xtt-class-admin.php:228 xili-includes/xtt-class-admin.php:305
 msgid "A group was updated."
 msgstr "Un groupe a été mis à jour."
 
@@ -138,154 +138,154 @@ msgstr "Supprimer le groupe"
 msgid "A group to delete."
 msgstr "Groupe à effacer."
 
-#: xili-includes/xtt-class-admin.php:245 xili-includes/xtt-class-admin.php:303
+#: xili-includes/xtt-class-admin.php:245 xili-includes/xtt-class-admin.php:306
 msgid "A group was deleted."
 msgstr "Le groupe a été effacé."
 
-#: xili-includes/xtt-class-admin.php:283 xili-includes/xtt-class-admin.php:306
+#: xili-includes/xtt-class-admin.php:286 xili-includes/xtt-class-admin.php:309
 msgid "Email sent."
 msgstr "Courriel envoyé"
 
-#: xili-includes/xtt-class-admin.php:285
+#: xili-includes/xtt-class-admin.php:288
 msgid "Thanks for your email. A copy was sent to %s (%s)"
 msgstr "Merci pour votre courriel dont une copie est envoyé à %s (%s)"
 
-#: xili-includes/xtt-class-admin.php:291
+#: xili-includes/xtt-class-admin.php:294
 msgid "Find the list of groups for %s."
 msgstr "Voici la liste des groupes de %s."
 
-#: xili-includes/xtt-class-admin.php:296
+#: xili-includes/xtt-class-admin.php:299
 msgid "Groups of %s"
 msgstr "Groupes des %s"
 
-#: xili-includes/xtt-class-admin.php:297
+#: xili-includes/xtt-class-admin.php:300
 msgid "The group"
 msgstr "Le groupe"
 
-#: xili-includes/xtt-class-admin.php:298 xili-includes/xtt-class-admin.php:502
+#: xili-includes/xtt-class-admin.php:301 xili-includes/xtt-class-admin.php:505
 msgid "Actions"
 msgstr "Actions"
 
-#: xili-includes/xtt-class-admin.php:313
+#: xili-includes/xtt-class-admin.php:316
 msgid "Tidy %s groups"
 msgstr "Les groupes de %s"
 
-#: xili-includes/xtt-class-admin.php:383 xili-includes/xtt-class-admin.php:673
-#: xili-includes/xtt-class-admin.php:2043
+#: xili-includes/xtt-class-admin.php:386 xili-includes/xtt-class-admin.php:676
+#: xili-includes/xtt-class-admin.php:2046
 msgid "Message"
 msgstr "Message"
 
-#: xili-includes/xtt-class-admin.php:384 xili-includes/xtt-class-admin.php:674
+#: xili-includes/xtt-class-admin.php:387 xili-includes/xtt-class-admin.php:677
 msgid "Info"
 msgstr "Info"
 
-#: xili-includes/xtt-class-admin.php:385
+#: xili-includes/xtt-class-admin.php:388
 msgid "Mail & Support"
 msgstr "Courriel et support"
 
-#: xili-includes/xtt-class-admin.php:387
+#: xili-includes/xtt-class-admin.php:390
 msgid "Capabilities"
 msgstr "Profil et droits"
 
-#: xili-includes/xtt-class-admin.php:403
+#: xili-includes/xtt-class-admin.php:406
 msgid "Update"
 msgstr "Mettre à jour"
 
-#: xili-includes/xtt-class-admin.php:496
+#: xili-includes/xtt-class-admin.php:499
 msgid "Find the list of %s."
 msgstr "Voici la liste des %s."
 
-#: xili-includes/xtt-class-admin.php:505
+#: xili-includes/xtt-class-admin.php:508
 msgid "List updated in database !"
 msgstr "Liste des mots-clés sauvée dans la base de données !"
 
-#: xili-includes/xtt-class-admin.php:508
+#: xili-includes/xtt-class-admin.php:511
 msgid "Post Type <strong>not declared</strong> in Custom Taxonomy !"
 msgstr "Type de post non déclaré dans la taxinomie courante !"
 
-#: xili-includes/xtt-class-admin.php:512
+#: xili-includes/xtt-class-admin.php:515
 msgid "%s in group with post type named: %s"
 msgstr "%s avec le type %s : affectation aux groupes"
 
-#: xili-includes/xtt-class-admin.php:576
+#: xili-includes/xtt-class-admin.php:579
 msgid "All lines"
 msgstr "Tous"
 
-#: xili-includes/xtt-class-admin.php:579
+#: xili-includes/xtt-class-admin.php:582
 msgid "First"
 msgstr "Début"
 
-#: xili-includes/xtt-class-admin.php:580
+#: xili-includes/xtt-class-admin.php:583
 msgid "Last page"
 msgstr "Fin"
 
-#: xili-includes/xtt-class-admin.php:581
+#: xili-includes/xtt-class-admin.php:584
 msgid "Next"
 msgstr "Suiv."
 
-#: xili-includes/xtt-class-admin.php:582
+#: xili-includes/xtt-class-admin.php:585
 msgid "Previous"
 msgstr "Préc."
 
-#: xili-includes/xtt-class-admin.php:584
+#: xili-includes/xtt-class-admin.php:587
 msgid "Showing (_START_ to _END_) of _TOTAL_ %s"
 msgstr "Affiche (_START_ à _END_) des _TOTAL_ %s"
 
-#: xili-includes/xtt-class-admin.php:585
+#: xili-includes/xtt-class-admin.php:588
 msgid "(filtered from _MAX_ total entries)"
 msgstr "(filtrés du total des _MAX_ termes)"
 
-#: xili-includes/xtt-class-admin.php:586
+#: xili-includes/xtt-class-admin.php:589
 msgid "Show _MENU_ tags"
 msgstr "Afficher _MENU_ termes"
 
-#: xili-includes/xtt-class-admin.php:587
+#: xili-includes/xtt-class-admin.php:590
 msgid "Filter tags:"
 msgstr "Filtrer les termes :"
 
-#: xili-includes/xtt-class-admin.php:603
+#: xili-includes/xtt-class-admin.php:606
 msgid "Updating table of tags !"
 msgstr "Mise à jour de la table des termes !"
 
-#: xili-includes/xtt-class-admin.php:711
+#: xili-includes/xtt-class-admin.php:714
 msgid "Language"
 msgstr "Langue"
 
-#: xili-includes/xtt-class-admin.php:713
+#: xili-includes/xtt-class-admin.php:716
 msgid "Alias of"
 msgstr "Alias de"
 
-#: xili-includes/xtt-class-admin.php:743 xili-includes/xtt-class-admin.php:766
+#: xili-includes/xtt-class-admin.php:746 xili-includes/xtt-class-admin.php:769
 msgid "Tags in %s."
 msgstr "Mots clés dans %s"
 
-#: xili-includes/xtt-class-admin.php:747
+#: xili-includes/xtt-class-admin.php:750
 msgid "assigned in:"
 msgstr "assigné en :"
 
-#: xili-includes/xtt-class-admin.php:775
+#: xili-includes/xtt-class-admin.php:778
 msgid "Alias:"
 msgstr "Alias :"
 
-#: xili-includes/xtt-class-admin.php:919 xili-includes/xtt-class-admin.php:1004
-#: xili-includes/xtt-class-admin.php:1052
-#: xili-includes/xtt-class-admin.php:1058
+#: xili-includes/xtt-class-admin.php:922 xili-includes/xtt-class-admin.php:1007
+#: xili-includes/xtt-class-admin.php:1055
+#: xili-includes/xtt-class-admin.php:1061
 msgid "© by xili-tidy-tags v. %s"
 msgstr "© par xili-tidy-tags v. %s"
 
-#: xili-includes/xtt-class-admin.php:941
+#: xili-includes/xtt-class-admin.php:944
 msgid "new"
 msgstr "nouveau"
 
-#: xili-includes/xtt-class-admin.php:943
+#: xili-includes/xtt-class-admin.php:946
 msgid "in another language"
 msgstr "dans une autre langue"
 
-#: xili-includes/xtt-class-admin.php:943
+#: xili-includes/xtt-class-admin.php:946
 msgid "as synonym"
 msgstr "comme synonyme"
 
-#: xili-includes/xtt-class-admin.php:945
+#: xili-includes/xtt-class-admin.php:948
 msgid ""
 "This sub-form contains a field to define alias of this %1$s%2$s. Choose a "
 "%2$s already present %3$s."
@@ -293,34 +293,34 @@ msgstr ""
 "Cette partie du formulaire contient un champ pour définir l’alias de ce %1$s"
 "%2$s. Choisir un %2$s déjà présent %3$s."
 
-#: xili-includes/xtt-class-admin.php:953
+#: xili-includes/xtt-class-admin.php:956
 msgid "This %1$s (%2$s) is already present in the group %3$s:"
 msgstr "Ce %1$s (%2$s) est déjà inséré dans le groupe %3$s :"
 
-#: xili-includes/xtt-class-admin.php:964
+#: xili-includes/xtt-class-admin.php:967
 msgid ""
 "Select below if you want to change the group of this %1$s (%2$s). Be careful!"
 msgstr ""
 "Sélectionner ci-dessous pour changer le group de ce %1$s (%2$s). Prudence !"
 
-#: xili-includes/xtt-class-admin.php:975
+#: xili-includes/xtt-class-admin.php:978
 msgid "Choice alias..."
 msgstr "Choisir l'alias..."
 
-#: xili-includes/xtt-class-admin.php:1006
+#: xili-includes/xtt-class-admin.php:1009
 msgid "The %s aliases group"
 msgstr "Le groupe des %s alias"
 
-#: xili-includes/xtt-class-admin.php:1081
-#: xili-includes/xtt-class-admin.php:1082
+#: xili-includes/xtt-class-admin.php:1084
+#: xili-includes/xtt-class-admin.php:1085
 msgid "Settings"
 msgstr "Réglages"
 
-#: xili-includes/xtt-class-admin.php:1097
+#: xili-includes/xtt-class-admin.php:1100
 msgid "Things to remember to set xili-tidy-tags:"
 msgstr "Eléments à retenir pour paramétrer xili-tidy-tags :"
 
-#: xili-includes/xtt-class-admin.php:1099
+#: xili-includes/xtt-class-admin.php:1102
 msgid ""
 "If you use it for multilingual website: verify that the xili-language "
 "trilogy is active."
@@ -328,12 +328,12 @@ msgstr ""
 "Si vous utiliser xili-tidy-tags pour un site multilingue : vérifier que la "
 "trilogie des extensions est active."
 
-#: xili-includes/xtt-class-admin.php:1100
+#: xili-includes/xtt-class-admin.php:1103
 msgid "Update the list of targeted languages. See Actions left box."
 msgstr ""
 "Mettre à jour la liste des langues cible. Voir la boite 'actions' à gauche."
 
-#: xili-includes/xtt-class-admin.php:1101
+#: xili-includes/xtt-class-admin.php:1104
 msgid ""
 "For current site with lot of tags, create group or sub-group and go in "
 "assign page."
@@ -341,18 +341,18 @@ msgstr ""
 "Pour un site avec des nombreaux mots-clefs, créer des groupes et sous-"
 "groupes et aller dans page Groupage."
 
-#: xili-includes/xtt-class-admin.php:1102
+#: xili-includes/xtt-class-admin.php:1105
 msgid "Don’t forget to activate a tags cloud widget."
 msgstr "N'oublier pas d'activer le widget Nuage de mots-clefs."
 
-#: xili-includes/xtt-class-admin.php:1103
+#: xili-includes/xtt-class-admin.php:1106
 msgid ""
 "In widget: the group for displaying tags in current lang is \"the_curlang\"."
 msgstr ""
 "Dans le widget : le nom du groupe pour un affichage des mots-clefs dans la "
 "langue active est \"the_curlang\"."
 
-#: xili-includes/xtt-class-admin.php:1104
+#: xili-includes/xtt-class-admin.php:1107
 msgid ""
 "In widget: the group to set is the slug - trademark for TradeMark group - if "
 "you create one."
@@ -360,13 +360,13 @@ msgstr ""
 "Dans le widget : on utilise le slug du groupe - par exemple, trademark pour "
 "le groupe TradeMark, si vous en avez créé un."
 
-#: xili-includes/xtt-class-admin.php:1108
-#: xili-includes/xtt-class-admin.php:1135
+#: xili-includes/xtt-class-admin.php:1111
+#: xili-includes/xtt-class-admin.php:1138
 msgid "For more information:"
 msgstr "Pour plus d'infos :"
 
-#: xili-includes/xtt-class-admin.php:1109
-#: xili-includes/xtt-class-admin.php:1136
+#: xili-includes/xtt-class-admin.php:1112
+#: xili-includes/xtt-class-admin.php:1139
 msgid ""
 "<a href=\"http://dev.xiligroup.com/xili-tidy-tags\" target=\"_blank\">Xili-"
 "tidy-tags Plugin Documentation</a>"
@@ -374,8 +374,8 @@ msgstr ""
 "<a href=\"http://dev.xiligroup.com/xili-tidy-tags\" target=\"_blank"
 "\">Documentation de l'extension xili-tidy-tags</a>"
 
-#: xili-includes/xtt-class-admin.php:1110
-#: xili-includes/xtt-class-admin.php:1139
+#: xili-includes/xtt-class-admin.php:1113
+#: xili-includes/xtt-class-admin.php:1142
 msgid ""
 "<a href=\"http://codex.wordpress.org/\" target=\"_blank\">WordPress "
 "Documentation</a>"
@@ -383,34 +383,34 @@ msgstr ""
 "<a href=\"http://codex.wordpress.org/\" target=\"_blank\">Documentation "
 "WordPress (codex)</a>"
 
-#: xili-includes/xtt-class-admin.php:1111
-#: xili-includes/xtt-class-admin.php:1138
+#: xili-includes/xtt-class-admin.php:1114
+#: xili-includes/xtt-class-admin.php:1141
 msgid ""
-"<a href=\"http://forum2.dev.xiligroup.com/\" target=\"_blank\">Support "
-"Forums</a>"
+"<a href=\"https://wordpress.org/support/plugin/xili-tidy-tags\" target="
+"\"_blank\">Support Forums</a>"
 msgstr ""
-"<a href=\"http://forum2.dev.xiligroup.com/\" target=\"_blank\">Forum "
-"Support</a>"
+"<a href=“https://wordpress.org/support/plugin/xili-tidy-tags” "
+"target=“_blank”>Forums de support</a>"
 
-#: xili-includes/xtt-class-admin.php:1115
-#: xili-includes/xtt-class-admin.php:1144
+#: xili-includes/xtt-class-admin.php:1118
+#: xili-includes/xtt-class-admin.php:1147
 msgid "Things to remember"
 msgstr "Eléments à retenir"
 
-#: xili-includes/xtt-class-admin.php:1121
-#: xili-includes/xtt-class-admin.php:1150
+#: xili-includes/xtt-class-admin.php:1124
+#: xili-includes/xtt-class-admin.php:1153
 msgid "For more information"
 msgstr "Pour plus d'infos"
 
-#: xili-includes/xtt-class-admin.php:1128
+#: xili-includes/xtt-class-admin.php:1131
 msgid "Things to remember to assign tags to groups:"
 msgstr "Eléments à retenir pour grouper les mots-clefs :"
 
-#: xili-includes/xtt-class-admin.php:1130
+#: xili-includes/xtt-class-admin.php:1133
 msgid "Use features of paginated table."
 msgstr "Pour naviguer dans la liste utiliser la pagination du tableau."
 
-#: xili-includes/xtt-class-admin.php:1131
+#: xili-includes/xtt-class-admin.php:1134
 msgid ""
 "Don’t forget to update by clicking button in left - Actions - titled meta "
 "box."
@@ -418,7 +418,7 @@ msgstr ""
 "Ne pas oublier de mettre à jour régulièrement en activant le bouton mise à "
 "jour à gauche dans la boite Actions."
 
-#: xili-includes/xtt-class-admin.php:1137
+#: xili-includes/xtt-class-admin.php:1140
 msgid ""
 "<a href=\"http://wiki.xiligroup.org/\" target=\"_blank\">Xili Wiki "
 "Documentation</a>"
@@ -426,23 +426,23 @@ msgstr ""
 "<a href=\"http://wiki.xiligroup.org\" target=\"_blank\">Documents xili wiki</"
 "a>"
 
-#: xili-includes/xtt-class-admin.php:1219
+#: xili-includes/xtt-class-admin.php:1222
 msgid "Docs about xili-tidy-tags"
 msgstr "Docs sur xili-tidy-tags"
 
-#: xili-includes/xtt-class-admin.php:1228
+#: xili-includes/xtt-class-admin.php:1231
 msgid "xili-tidy-tags updated"
 msgstr "xili-tidy-tags mis à jour"
 
-#: xili-includes/xtt-class-admin.php:1229
+#: xili-includes/xtt-class-admin.php:1232
 msgid "xili-tidy-tags was updated to version %s"
 msgstr "xili-tidy-tags a été mis à jour en version %s"
 
-#: xili-includes/xtt-class-admin.php:1230
+#: xili-includes/xtt-class-admin.php:1233
 msgid "This version %s is tested with WP 4.3"
 msgstr "Cette version %s a été testée avec WP 4.3"
 
-#: xili-includes/xtt-class-admin.php:1231
+#: xili-includes/xtt-class-admin.php:1234
 msgid ""
 "Now tags can be grouped using alias feature existing in WP taxonomy and two "
 "new template tags for theme are available for files tag.php and taxonomy.php."
@@ -451,20 +451,20 @@ msgstr ""
 "différentes langues. Deux nouveaux template tags sont disponibles pour les "
 "fichiers tag.php et taxonomy.php des thèmes."
 
-#: xili-includes/xtt-class-admin.php:1233
-#: xili-includes/xtt-class-admin.php:1235
+#: xili-includes/xtt-class-admin.php:1236
+#: xili-includes/xtt-class-admin.php:1238
 msgid "See submenu"
 msgstr "Voir le sous-menu"
 
-#: xili-includes/xtt-class-admin.php:1233
+#: xili-includes/xtt-class-admin.php:1236
 msgid "to define groups of tags"
 msgstr "Pour définir des groupes de mots clefs"
 
-#: xili-includes/xtt-class-admin.php:1235
+#: xili-includes/xtt-class-admin.php:1238
 msgid "to assign tags to group"
 msgstr "Pour affecter un des mots-clefs à un group"
 
-#: xili-includes/xtt-class-admin.php:1237
+#: xili-includes/xtt-class-admin.php:1240
 msgid ""
 "Before to question dev.xiligroup support, do not forget to visit %s "
 "documentation"
@@ -472,12 +472,12 @@ msgstr ""
 "Avant de questionner le support dev.xiligroup, ne pas oublier de consulter "
 "la documentation %s"
 
-#: xili-includes/xtt-class-admin.php:1289
-#: xili-includes/xtt-class-admin.php:1998
+#: xili-includes/xtt-class-admin.php:1292
+#: xili-includes/xtt-class-admin.php:2001
 msgid "Note:"
 msgstr "Note :"
 
-#: xili-includes/xtt-class-admin.php:1297
+#: xili-includes/xtt-class-admin.php:1300
 msgid ""
 "On this page, the tags groups are defined. The special groups for xili-"
 "language plugin are importable.<br /> For debug, some technical infos are "
@@ -487,7 +487,7 @@ msgstr ""
 "créés par l'extension xili-language sont importables.<br /> Il y a des infos "
 "techniques dans les tables et boites pour le debogguage.<br />"
 
-#: xili-includes/xtt-class-admin.php:1299
+#: xili-includes/xtt-class-admin.php:1302
 msgid ""
 "On this page, in a oneshot way, it is possible to assign the tags to one or "
 "more groups defined on the other page of <i>xili-tidy-tags</i> plugin."
@@ -496,7 +496,7 @@ msgstr ""
 "ou plusieurs groupes définis sur l'autre page de l'extension <i>xili-tidy-"
 "tags</i>."
 
-#: xili-includes/xtt-class-admin.php:1301
+#: xili-includes/xtt-class-admin.php:1304
 msgid ""
 "<b>xili-tidy-tags</b> is a tool for grouping tags by language or semantic "
 "group. Initially developed to enrich multilingual website powered by xili-"
@@ -506,310 +506,310 @@ msgstr ""
 "ou par groupe sémantique. Cette extension a été developpée initialement pour "
 "enrichir des sites multilingues motorisés avec l'extension xili-language."
 
-#: xili-includes/xtt-class-admin.php:1324
+#: xili-includes/xtt-class-admin.php:1327
 msgid "Here, as admin, set capabilities of the editor:"
 msgstr "Ici, en administrateur, réglez les accès des éditeurs :"
 
-#: xili-includes/xtt-class-admin.php:1326
-#: xili-includes/xtt-class-admin.php:1721
+#: xili-includes/xtt-class-admin.php:1329
+#: xili-includes/xtt-class-admin.php:1724
 msgid "no capability"
 msgstr "aucun accès"
 
-#: xili-includes/xtt-class-admin.php:1327
+#: xili-includes/xtt-class-admin.php:1330
 msgid "Grouping"
 msgstr "Accès au groupage"
 
-#: xili-includes/xtt-class-admin.php:1328
+#: xili-includes/xtt-class-admin.php:1331
 msgid "Setting and grouping"
 msgstr "Accès aux réglages et groupages"
 
-#: xili-includes/xtt-class-admin.php:1330
+#: xili-includes/xtt-class-admin.php:1333
 msgid "Disable Datatable javascript"
 msgstr "Javascript DataTable désactivé"
 
-#: xili-includes/xtt-class-admin.php:1333
+#: xili-includes/xtt-class-admin.php:1336
 msgid "Set &raquo;"
 msgstr "Régler &raquo;"
 
-#: xili-includes/xtt-class-admin.php:1394
+#: xili-includes/xtt-class-admin.php:1397
 msgid "Add a tag's group for a chosen category"
 msgstr "Ajouter un groupe correspondant à une catégorie"
 
-#: xili-includes/xtt-class-admin.php:1398
+#: xili-includes/xtt-class-admin.php:1401
 msgid "choose a category"
 msgstr "choisir une catégorie"
 
-#: xili-includes/xtt-class-admin.php:1405
+#: xili-includes/xtt-class-admin.php:1408
 msgid "Choose a parent tag's group"
 msgstr "Choisir le groupe parent"
 
-#: xili-includes/xtt-class-admin.php:1409
-#: xili-includes/xtt-class-admin.php:1556
-#: xili-includes/xtt-class-admin.php:1593
-#: xili-includes/xtt-class-admin.php:1616
+#: xili-includes/xtt-class-admin.php:1412
+#: xili-includes/xtt-class-admin.php:1559
+#: xili-includes/xtt-class-admin.php:1596
+#: xili-includes/xtt-class-admin.php:1619
 msgid "no parent"
 msgstr "pas de parent"
 
-#: xili-includes/xtt-class-admin.php:1420
+#: xili-includes/xtt-class-admin.php:1423
 msgid ""
 "See docs to set xili_tidy_tag_cloud function or widget to implement in theme…"
 msgstr ""
 "Voir la documentation pour les réglages du nuage de mots en mode fonction "
 "(xili_tidy_tag_cloud) ou en widget"
 
-#: xili-includes/xtt-class-admin.php:1425
+#: xili-includes/xtt-class-admin.php:1428
 msgid "xili-language plugin is not activated."
 msgstr "L'extension xili-language n'est pas active."
 
-#: xili-includes/xtt-class-admin.php:1434
+#: xili-includes/xtt-class-admin.php:1437
 msgid "The group of languages is set for use with xili-language plugin."
 msgstr "Les groupes de langues sont en place."
 
-#: xili-includes/xtt-class-admin.php:1452
+#: xili-includes/xtt-class-admin.php:1455
 msgid "The group of languages in xili-language plugin has been changed."
 msgstr "La liste des langues a été modifiée dans xili-language."
 
-#: xili-includes/xtt-class-admin.php:1454
+#: xili-includes/xtt-class-admin.php:1457
 msgid "It is possible to update the group of languages."
 msgstr "Il est possible de modifier la liste des langues pour les mots-clefs."
 
-#: xili-includes/xtt-class-admin.php:1459
+#: xili-includes/xtt-class-admin.php:1462
 msgid ""
 "One or more language(s) here are not present in active xili-language list."
 msgstr ""
 "Des langues ici pour les mots-clefs ne sont plus présentes dans xili-"
 "language actif."
 
-#: xili-includes/xtt-class-admin.php:1467
+#: xili-includes/xtt-class-admin.php:1470
 msgid "It is possible to import the group of languages."
 msgstr "Il est possible d'importer les groupes de langues."
 
-#: xili-includes/xtt-class-admin.php:1468
+#: xili-includes/xtt-class-admin.php:1471
 msgid "Import…"
 msgstr "Importer…"
 
-#: xili-includes/xtt-class-admin.php:1471
+#: xili-includes/xtt-class-admin.php:1474
 msgid "Go to settings of xili-language plugin and add languages"
 msgstr ""
 "Allez sur la page de réglages de l'extension xili-language et ajouter des "
 "langues"
 
-#: xili-includes/xtt-class-admin.php:1474
+#: xili-includes/xtt-class-admin.php:1477
 msgid "See administrator for language settings."
 msgstr "Voir l'administrateur pour le réglage multilingue."
 
-#: xili-includes/xtt-class-admin.php:1488
-#: xili-includes/xtt-class-admin.php:1762
-#: xili-includes/xtt-class-admin.php:1773
+#: xili-includes/xtt-class-admin.php:1491
+#: xili-includes/xtt-class-admin.php:1765
+#: xili-includes/xtt-class-admin.php:1776
 msgid "ID"
 msgstr "N°"
 
-#: xili-includes/xtt-class-admin.php:1489
-#: xili-includes/xtt-class-admin.php:1517
-#: xili-includes/xtt-class-admin.php:1763
-#: xili-includes/xtt-class-admin.php:1774
+#: xili-includes/xtt-class-admin.php:1492
+#: xili-includes/xtt-class-admin.php:1520
+#: xili-includes/xtt-class-admin.php:1766
+#: xili-includes/xtt-class-admin.php:1777
 msgid "Name"
 msgstr "Nom"
 
-#: xili-includes/xtt-class-admin.php:1490
-#: xili-includes/xtt-class-admin.php:1525
+#: xili-includes/xtt-class-admin.php:1493
+#: xili-includes/xtt-class-admin.php:1528
 msgid "Description"
 msgstr "Description"
 
-#: xili-includes/xtt-class-admin.php:1491
+#: xili-includes/xtt-class-admin.php:1494
 msgid "Group slug"
 msgstr "Slug"
 
-#: xili-includes/xtt-class-admin.php:1492
+#: xili-includes/xtt-class-admin.php:1495
 msgid "Group taxo ID"
 msgstr "N° taxinomie"
 
-#: xili-includes/xtt-class-admin.php:1493
+#: xili-includes/xtt-class-admin.php:1496
 msgid "Parent"
 msgstr "Parent"
 
-#: xili-includes/xtt-class-admin.php:1494
+#: xili-includes/xtt-class-admin.php:1497
 msgid "Tags"
 msgstr "Mots clés"
 
-#: xili-includes/xtt-class-admin.php:1495
+#: xili-includes/xtt-class-admin.php:1498
 msgid "Action"
 msgstr "Action"
 
-#: xili-includes/xtt-class-admin.php:1521
+#: xili-includes/xtt-class-admin.php:1524
 msgid "tags group slug"
 msgstr "Slug du groupe"
 
-#: xili-includes/xtt-class-admin.php:1530
+#: xili-includes/xtt-class-admin.php:1533
 msgid "kinship"
 msgstr "Parenté"
 
-#: xili-includes/xtt-class-admin.php:1573
-#: xili-includes/xtt-class-admin.php:1601
+#: xili-includes/xtt-class-admin.php:1576
+#: xili-includes/xtt-class-admin.php:1604
 msgid "Select the parent if necessary"
 msgstr "Si nécessaire, sélectionner le groupe parent"
 
-#: xili-includes/xtt-class-admin.php:1579
+#: xili-includes/xtt-class-admin.php:1582
 msgid "parent of: "
 msgstr "groupe contenant : "
 
-#: xili-includes/xtt-class-admin.php:1586
+#: xili-includes/xtt-class-admin.php:1589
 msgid "no child now"
 msgstr "pas de mot clé dans ce groupe"
 
-#: xili-includes/xtt-class-admin.php:1609
+#: xili-includes/xtt-class-admin.php:1612
 msgid "child of: "
 msgstr "appartient au groupe : "
 
-#: xili-includes/xtt-class-admin.php:1626
+#: xili-includes/xtt-class-admin.php:1629
 msgid "Modify the parent if necessary"
 msgstr "Si nécessaire, modifier le parent"
 
-#: xili-includes/xtt-class-admin.php:1717
+#: xili-includes/xtt-class-admin.php:1720
 msgid "Edit"
 msgstr "Modifier"
 
-#: xili-includes/xtt-class-admin.php:1719
+#: xili-includes/xtt-class-admin.php:1722
 msgid "Delete"
 msgstr "Effacer"
 
-#: xili-includes/xtt-class-admin.php:1753
+#: xili-includes/xtt-class-admin.php:1756
 msgid "Creating table of tags !"
 msgstr "Prépare la table des termes !"
 
-#: xili-includes/xtt-class-admin.php:1764
-#: xili-includes/xtt-class-admin.php:1775
+#: xili-includes/xtt-class-admin.php:1767
+#: xili-includes/xtt-class-admin.php:1778
 msgid "Posts"
 msgstr "Articles"
 
-#: xili-includes/xtt-class-admin.php:1765
-#: xili-includes/xtt-class-admin.php:1776
+#: xili-includes/xtt-class-admin.php:1768
+#: xili-includes/xtt-class-admin.php:1779
 msgid "Group(s) to choose"
 msgstr "Choisir le(s) groupe(s)"
 
-#: xili-includes/xtt-class-admin.php:1793
+#: xili-includes/xtt-class-admin.php:1796
 msgid "After checking or unchecking do not forget to click update button !"
 msgstr ""
 "Après avoir coché ou décoché, n'oubliez pas de cliquer sur le bouton "
 "\"mettre à jour…\""
 
-#: xili-includes/xtt-class-admin.php:1796
+#: xili-includes/xtt-class-admin.php:1799
 msgid "Sub list of tags"
 msgstr "Sous-sélection des mots-clés"
 
-#: xili-includes/xtt-class-admin.php:1798
+#: xili-includes/xtt-class-admin.php:1801
 msgid "Starting with:"
 msgstr "Commençant par :"
 
-#: xili-includes/xtt-class-admin.php:1801
+#: xili-includes/xtt-class-admin.php:1804
 msgid "Containing:"
 msgstr "Incluant :"
 
-#: xili-includes/xtt-class-admin.php:1803
+#: xili-includes/xtt-class-admin.php:1806
 msgid "Choose:"
 msgstr "Choisir :"
 
-#: xili-includes/xtt-class-admin.php:1810
+#: xili-includes/xtt-class-admin.php:1813
 msgid "every"
 msgstr "Tous"
 
-#: xili-includes/xtt-class-admin.php:1811
+#: xili-includes/xtt-class-admin.php:1814
 msgid "Unchecked only"
 msgstr "Les non cochés"
 
-#: xili-includes/xtt-class-admin.php:1835
+#: xili-includes/xtt-class-admin.php:1838
 msgid "Exclude this group"
 msgstr "Ce groupe exclu"
 
-#: xili-includes/xtt-class-admin.php:1837
+#: xili-includes/xtt-class-admin.php:1840
 msgid "No childs"
 msgstr "Ce parent seul"
 
-#: xili-includes/xtt-class-admin.php:1841
+#: xili-includes/xtt-class-admin.php:1844
 msgid "Include unchecked"
 msgstr "Inclure les non-cochés"
 
-#: xili-includes/xtt-class-admin.php:1844
-#: xili-includes/xtt-class-admin.php:1860
+#: xili-includes/xtt-class-admin.php:1847
+#: xili-includes/xtt-class-admin.php:1863
 msgid "Sub select…"
 msgstr "Sélectionner…"
 
-#: xili-includes/xtt-class-admin.php:1844
+#: xili-includes/xtt-class-admin.php:1847
 msgid "No select…"
 msgstr "Désélection"
 
-#: xili-includes/xtt-class-admin.php:1847
+#: xili-includes/xtt-class-admin.php:1850
 msgid "Columns: Group selection"
 msgstr "Colonnes : Sous-sélection d'un groupe"
 
-#: xili-includes/xtt-class-admin.php:1850
+#: xili-includes/xtt-class-admin.php:1853
 msgid "No sub-selection"
 msgstr "Pas de sous-sélection"
 
-#: xili-includes/xtt-class-admin.php:2001
+#: xili-includes/xtt-class-admin.php:2004
 msgid "Mail to dev.xiligroup"
 msgstr "Courriel pour dev.xiligroup"
 
-#: xili-includes/xtt-class-admin.php:2002
-msgid "Cc:"
-msgstr "Cc :"
+#: xili-includes/xtt-class-admin.php:2005
+msgid "Cc: (Reply to:)"
+msgstr "Cc: (Répondre à :)"
 
-#: xili-includes/xtt-class-admin.php:2011
+#: xili-includes/xtt-class-admin.php:2014
 msgid "When checking and giving detailled infos, support will be better !"
 msgstr ""
 "En cochant et en donnant des infos détaillées, le support sera plus aisé !"
 
-#: xili-includes/xtt-class-admin.php:2029
+#: xili-includes/xtt-class-admin.php:2032
 msgid "Type of webmaster:"
 msgstr "Type de webmestre :"
 
-#: xili-includes/xtt-class-admin.php:2032
+#: xili-includes/xtt-class-admin.php:2035
 msgid "Define your experience as webmaster…"
 msgstr "Décrivez votre expérience en webmestre…"
 
-#: xili-includes/xtt-class-admin.php:2033
+#: xili-includes/xtt-class-admin.php:2036
 msgid "Newbie in WP"
 msgstr "Novice en WP"
 
-#: xili-includes/xtt-class-admin.php:2034
+#: xili-includes/xtt-class-admin.php:2037
 msgid "Good knowledge in WP and few in php"
 msgstr "Bon niveau en WP mais peu en php"
 
-#: xili-includes/xtt-class-admin.php:2035
+#: xili-includes/xtt-class-admin.php:2038
 msgid "Good knowledge in WP, CMS and good in php"
 msgstr "Bon niveau en WP, CMS et bon en php"
 
-#: xili-includes/xtt-class-admin.php:2036
+#: xili-includes/xtt-class-admin.php:2039
 msgid "WP theme and /or plugin developper"
 msgstr "Développeur de themes WP et/ou de Plugin pour WP"
 
-#: xili-includes/xtt-class-admin.php:2039
+#: xili-includes/xtt-class-admin.php:2042
 msgid "Subject:"
 msgstr "Objet :"
 
-#: xili-includes/xtt-class-admin.php:2042
+#: xili-includes/xtt-class-admin.php:2045
 msgid "Choose topic..."
 msgstr "Choisir le thème..."
 
 # msgid "Message"
 # msgstr "Message"
-#: xili-includes/xtt-class-admin.php:2044
+#: xili-includes/xtt-class-admin.php:2047
 msgid "Question"
 msgstr "Question"
 
-#: xili-includes/xtt-class-admin.php:2045
+#: xili-includes/xtt-class-admin.php:2048
 msgid "Encouragement"
 msgstr "Encouragement"
 
-#: xili-includes/xtt-class-admin.php:2046
+#: xili-includes/xtt-class-admin.php:2049
 msgid "Support need"
 msgstr "Demande de support"
 
-#: xili-includes/xtt-class-admin.php:2048
+#: xili-includes/xtt-class-admin.php:2051
 msgid "Your message here…"
 msgstr "Ecrire votre message…"
 
-#: xili-includes/xtt-class-admin.php:2051
+#: xili-includes/xtt-class-admin.php:2054
 msgid ""
 "Before send the mail, check the infos to be sent and complete textarea. A "
 "copy (Cc:) is sent to webmaster email (modify it if needed)."
@@ -818,7 +818,7 @@ msgstr ""
 "autres champs. Une copie est envoyée au webmestre (courriel à modifier si "
 "nécessaire)."
 
-#: xili-includes/xtt-class-admin.php:2054
+#: xili-includes/xtt-class-admin.php:2057
 msgid "Send email"
 msgstr "Envoyer le courriel"
 
@@ -957,6 +957,16 @@ msgstr "Choisir %s"
 #: xili-tidy-tags.php:1115
 msgid "Tag"
 msgstr "Etiquette"
+
+#~ msgid ""
+#~ "<a href=\"http://forum2.dev.xiligroup.com/\" target=\"_blank\">Support "
+#~ "Forums</a>"
+#~ msgstr ""
+#~ "<a href=\"http://forum2.dev.xiligroup.com/\" target=\"_blank\">Forum "
+#~ "Support</a>"
+
+#~ msgid "Cc:"
+#~ msgstr "Cc :"
 
 #~ msgid "This version %s is pre-tested with WP 4.3-beta1"
 #~ msgstr "Cette version %s est en cours de test avec WordPress 4.3-beta1"
