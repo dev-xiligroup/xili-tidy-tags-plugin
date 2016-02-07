@@ -4,12 +4,14 @@ Plugin Name: xili-tidy-tags
 Plugin URI: http://dev.xiligroup.com/xili-tidy-tags/
 Description: xili-tidy-tags is a tool for grouping tags by language or semantic group. Initially developed to enrich xili-language plugin and usable in all sites (CMS) and bbPress forum or others custom taxonomies.
 Author: dev.xiligroup.com - MS
-Version: 1.11.2
+Version: 1.11.3
 Author URI: http://dev.xiligroup.com
 License: GPLv2
-Text Domain: xili_tidy_tags
+Text Domain: xili-tidy-tags
 Domain Path: /languages/
 */
+
+# 1.11.3 - 160207 - compatibility with glotpress (language file name changed)
 
 # 1.11.2 - 150924 - compatibility with xl 2.20.3+
 # 1.11.1 - 150705 - more tests with WP 4.3-beta
@@ -79,7 +81,7 @@ Domain Path: /languages/
 # License along with this plugin; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
-define('XILITIDYTAGS_VER','1.11.2'); /* used in admin UI */
+define('XILITIDYTAGS_VER','1.11.3'); /* used in admin UI */
 
 class xili_tidy_tags {
 
@@ -171,7 +173,7 @@ class xili_tidy_tags {
 
 	function init_plugin() {
 		/*multilingual for admin pages and menu*/
-		load_plugin_textdomain( 'xili_tidy_tags', false, 'xili-tidy-tags/languages' ); // 1.5.5
+		load_plugin_textdomain( 'xili-tidy-tags', false, 'xili-tidy-tags/languages' ); // 1.5.5
 
 		/* add new taxonomy in available taxonomies - move here for wpmu and wp 3.0*/
 		register_taxonomy( $this->tidy_taxonomy, 'term', array(
@@ -808,9 +810,9 @@ function walk_TagGroupList_sorted() {
 class xili_tidy_tags_cloud_multiple_widgets extends WP_Widget {
 
 	function xili_tidy_tags_cloud_multiple_widgets() {
-		load_plugin_textdomain('xili_tidy_tags', false, 'xili-tidy-tags/languages' );
-		$widget_ops = array('classname' => 'xili_tdtc_widget', 'description' => __( "Cloud of grouped tags by xili-tidy-tags plugin",'xili_tidy_tags' ).' - v.'.XILITIDYTAGS_VER );
-		parent::__construct('xili_tidy_tags_cloud_widget', '[©xili] ' .__("Tidy tags cloud", 'xili_tidy_tags'), $widget_ops);
+		load_plugin_textdomain('xili-tidy-tags', false, 'xili-tidy-tags/languages' );
+		$widget_ops = array('classname' => 'xili_tdtc_widget', 'description' => __( "Cloud of grouped tags by xili-tidy-tags plugin", 'xili-tidy-tags' ).' - v.'.XILITIDYTAGS_VER );
+		parent::__construct('xili_tidy_tags_cloud_widget', '[©xili] ' .__( "Tidy tags cloud", 'xili-tidy-tags'), $widget_ops);
 		$this->alt_option_name = 'xili_tidy_tags_cloud_widgets_options';
 	}
 
@@ -932,16 +934,16 @@ class xili_tidy_tags_cloud_multiple_widgets extends WP_Widget {
 		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>
 		<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-		<label for="<?php echo $this->get_field_id('tagsgroup'); ?>" ><?php _e('Group','xili_tidy_tags') ?> : </label><br />
+		<label for="<?php echo $this->get_field_id('tagsgroup'); ?>" ><?php _e('Group','xili-tidy-tags') ?> : </label><br />
 		<select name="<?php echo $this->get_field_name('tagsgroup'); ?>" id="<?php echo $this->get_field_id('tagsgroup'); ?>" style="width:90%;">
-		<option value="" ><?php _e('Choose a group…','xili_tidy_tags'); ?></option>
+		<option value="" ><?php _e('Choose a group…','xili-tidy-tags'); ?></option>
 		<?php /* group named as current language */
 		if (class_exists('xili_language') ) { ?>
-			<option value="the_curlang" <?php selected( $tagsgroup, 'the_curlang' ); ?> ><?php _e('Current language','xili_tidy_tags');  ?></option>
+			<option value="the_curlang" <?php selected( $tagsgroup, 'the_curlang' ); ?> ><?php _e('Current language','xili-tidy-tags');  ?></option>
 		<?php }
 		/* group named as current category */ ?>
 
-		<option value="the_category" <?php selected( $tagsgroup, 'the_category' ); ?> ><?php _e('Current category','xili_tidy_tags');  ?></option>
+		<option value="the_category" <?php selected( $tagsgroup, 'the_category' ); ?> ><?php _e('Current category','xili-tidy-tags');  ?></option>
 		<?php
 		if ( $listtagsgroupssorted ) {
 			foreach ($listtagsgroupssorted as $curterm) {
@@ -955,10 +957,10 @@ class xili_tidy_tags_cloud_multiple_widgets extends WP_Widget {
 		</select>
 
 		<br />
-		<label for="<?php echo $this->get_field_id('tagsallgroup'); ?>" ><?php _e('Group #2','xili_tidy_tags') ?> : </label><br />
+		<label for="<?php echo $this->get_field_id('tagsallgroup'); ?>" ><?php _e('Group #2','xili-tidy-tags') ?> : </label><br />
 
 		<select name="<?php echo $this->get_field_name('tagsallgroup'); ?>" id="<?php echo $this->get_field_id('tagsallgroup'); ?>" style="width:90%;">
-		<option value="" ><?php _e('(Option) Choose a 2nd group…','xili_tidy_tags'); ?></option>
+		<option value="" ><?php _e('(Option) Choose a 2nd group…','xili-tidy-tags'); ?></option>
 
 		<?php
 		if ( $listtagsgroupssorted ) {
@@ -972,27 +974,27 @@ class xili_tidy_tags_cloud_multiple_widgets extends WP_Widget {
 		</select>
 
 		<br />
-		<label for="<?php echo $this->get_field_id('smallest'); ?>" ><?php _e('Smallest size','xili_tidy_tags') ?> : <input id="<?php echo $this->get_field_id('smallest'); ?>" name="<?php echo $this->get_field_name('smallest'); ?>" type="text" value="<?php echo $smallest ?>" /></label><br />
-		<label for="<?php echo $this->get_field_id('largest'); ?>" ><?php _e('Largest size','xili_tidy_tags') ?> : <input id="<?php echo $this->get_field_id('largest'); ?>" name="<?php echo $this->get_field_name('largest'); ?>" type="text" value="<?php echo $largest ?>" /></label><br />
-		<label for="<?php echo $this->get_field_id('quantity'); ?>" ><?php _e('Number','xili_tidy_tags') ?> : <input id="<?php echo $this->get_field_id('quantity'); ?>" name="<?php echo $this->get_field_name('quantity'); ?>" type="text" value="<?php echo $quantity ?>" /></label>
-		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;"><legend><?php _e('Order and sorting infos','xili_tidy_tags') ?></legend>
+		<label for="<?php echo $this->get_field_id('smallest'); ?>" ><?php _e('Smallest size','xili-tidy-tags') ?> : <input id="<?php echo $this->get_field_id('smallest'); ?>" name="<?php echo $this->get_field_name('smallest'); ?>" type="text" value="<?php echo $smallest ?>" /></label><br />
+		<label for="<?php echo $this->get_field_id('largest'); ?>" ><?php _e('Largest size','xili-tidy-tags') ?> : <input id="<?php echo $this->get_field_id('largest'); ?>" name="<?php echo $this->get_field_name('largest'); ?>" type="text" value="<?php echo $largest ?>" /></label><br />
+		<label for="<?php echo $this->get_field_id('quantity'); ?>" ><?php _e('Number','xili-tidy-tags') ?> : <input id="<?php echo $this->get_field_id('quantity'); ?>" name="<?php echo $this->get_field_name('quantity'); ?>" type="text" value="<?php echo $quantity ?>" /></label>
+		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;"><legend><?php _e('Order and sorting infos','xili-tidy-tags') ?></legend>
 		<select name="<?php echo $this->get_field_name('orderby'); ?>" id="<?php echo $this->get_field_id('orderby'); ?>" style="width:100%;"> 		<?php
-		echo '<option value="no" >'.__('no orderby','xili_tidy_tags').'</option>';
-		echo '<option value="count" '. selected( $orderby, 'count', false ) .' >'.__('count','xili_tidy_tags').'</option>';
-		echo '<option value="name" '. selected( $orderby, 'name', false ) .' >'.__('name','xili_tidy_tags').'</option>'; ?>
+		echo '<option value="no" >'.__('no orderby','xili-tidy-tags').'</option>';
+		echo '<option value="count" '. selected( $orderby, 'count', false ) .' >'.__('count','xili-tidy-tags').'</option>';
+		echo '<option value="name" '. selected( $orderby, 'name', false ) .' >'.__('name','xili-tidy-tags').'</option>'; ?>
 		</select>
 		<select name="<?php echo $this->get_field_name('order'); ?>" id="<?php echo $this->get_field_id('order'); ?>" style="width:100%;">
 		<?php
-		echo '<option value="no" >'.__('no order','xili_tidy_tags').'</option>';
-		echo '<option value="ASC" '. selected( $order, 'ASC', false ) .' >'.__('ASC','xili_tidy_tags').'</option>';
-		echo '<option value="DESC" '. selected( $order, 'DESC', false ) .' >'.__('DESC','xili_tidy_tags').'</option>';
+		echo '<option value="no" >'.__('no order','xili-tidy-tags').'</option>';
+		echo '<option value="ASC" '. selected( $order, 'ASC', false ) .' >'.__('ASC','xili-tidy-tags').'</option>';
+		echo '<option value="DESC" '. selected( $order, 'DESC', false ) .' >'.__('DESC','xili-tidy-tags').'</option>';
 		?>
 		</select>
 		</fieldset>
-		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;"><legend><?php _e('Display as','xili_tidy_tags') ?></legend>
+		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;"><legend><?php _e('Display as','xili-tidy-tags') ?></legend>
 		<select name="<?php echo $this->get_field_name('displayas'); ?>" id="<?php echo $this->get_field_id('displayas'); ?>" style="width:100%;"> <?php
-		echo '<option value="flat" '. selected( $displayas, 'flat', false ) .' >'.__('Cloud','xili_tidy_tags').'</option>';
-		echo '<option value="list" '. selected( $displayas, 'list', false ) .' >'.__('List','xili_tidy_tags').'</option></select>';
+		echo '<option value="flat" '. selected( $displayas, 'flat', false ) .' >'.__('Cloud','xili-tidy-tags').'</option>';
+		echo '<option value="list" '. selected( $displayas, 'list', false ) .' >'.__('List','xili-tidy-tags').'</option></select>';
 		?>
 		<br /></fieldset>
 
@@ -1000,12 +1002,12 @@ class xili_tidy_tags_cloud_multiple_widgets extends WP_Widget {
 			$all_blogs = get_blogs_of_user( get_current_user_id() );
 
 			if ( count( $all_blogs ) > 1 ) { ?>
-				<label for="<?php echo $this->get_field_id('targetsite'); ?>" ><?php _e('Target site ID','xili_tidy_tags') ?> :
+				<label for="<?php echo $this->get_field_id('targetsite'); ?>" ><?php _e('Target site ID','xili-tidy-tags') ?> :
 				<?php
 				$echodis = "" ; //( $disabled == true ) ? 'disabled="disabled"' : '' ;
-				echo '<select id="'.$this->get_field_id('targetsite').'" name="'.$this->get_field_name('targetsite').'" '.$echodis.' class="widefat" ><option value=0 '. selected( $targetsite,  0, false ).' >'.__('Choose site...', 'xili_tidy_tags').'</option>';
+				echo '<select id="'.$this->get_field_id('targetsite').'" name="'.$this->get_field_name('targetsite').'" '.$echodis.' class="widefat" ><option value=0 '. selected( $targetsite,  0, false ).' >'.__('Choose site...', 'xili-tidy-tags').'</option>';
 				foreach( (array) $all_blogs as $blog ) {
-						$wplang = ( '' != get_blog_option ($blog->userblog_id, 'WPLANG') ) ? get_blog_option ($blog->userblog_id, 'WPLANG') : __('undefined', 'xili_tidy_tags') ;	 // to adapt if xlms ready
+						$wplang = ( '' != get_blog_option ($blog->userblog_id, 'WPLANG') ) ? get_blog_option ($blog->userblog_id, 'WPLANG') : __('undefined', 'xili-tidy-tags') ;	 // to adapt if xlms ready
 						?>
 						<option value="<?php echo $blog->userblog_id ?>" <?php selected( $targetsite,  $blog->userblog_id ); ?> ><?php echo esc_url( get_home_url( $blog->userblog_id ) ).' ('.$blog->userblog_id.') - WPLANG = '.$wplang ; ?></option>
 						<?php
@@ -1016,18 +1018,18 @@ class xili_tidy_tags_cloud_multiple_widgets extends WP_Widget {
 			<?php } else { ?>
 				<input id="<?php echo $this->get_field_id('targetsite'); ?>" name="<?php echo $this->get_field_name('targetsite'); ?>" type="hidden" value="<?php echo $targetsite ?>" />
 				<?php
-				echo '<span style="color:red">'.__('No site assigned to current admin user ! Please verify user\'s list for targeted sites.','xili_tidy_tags').'</span>';
+				echo '<span style="color:red">'.__('No site assigned to current admin user ! Please verify user\'s list for targeted sites.','xili-tidy-tags').'</span>';
 			}
 
 			?>
 		<br />
 		<?php } ?>
 
-		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;"><legend><?php _e('Taxonomies','xili_tidy_tags') ?></legend>
+		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;"><legend><?php _e('Taxonomies','xili-tidy-tags') ?></legend>
 		<?php
 		$taxos_list = get_object_taxonomies ('term');
 		?>
-		<label for="<?php echo $this->get_field_id('tidy_taxonomy'); ?>" ><?php _e('tidy taxonomy','xili_tidy_tags') ?> : </label><br />
+		<label for="<?php echo $this->get_field_id('tidy_taxonomy'); ?>" ><?php _e('tidy taxonomy','xili-tidy-tags') ?> : </label><br />
 		<select name="<?php echo $this->get_field_name('tidy_taxonomy'); ?>" id="<?php echo $this->get_field_id('tidy_taxonomy'); ?>" style="width:90%;">
 		<?php
 		foreach ( $taxos_list as $curterm ) {
@@ -1040,7 +1042,7 @@ class xili_tidy_tags_cloud_multiple_widgets extends WP_Widget {
 
 		</fieldset>
 		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;" >
-			<label for="<?php echo $this->get_field_id('thecondition'); ?>"><?php _e('Condition','xili_tidy_tags'); ?></label>:
+			<label for="<?php echo $this->get_field_id('thecondition'); ?>"><?php _e('Condition','xili-tidy-tags'); ?></label>:
 			<input class="widefat" id="<?php echo $this->get_field_id('thecondition'); ?>" name="<?php echo $this->get_field_name('thecondition'); ?>" type="text" value="<?php echo $thecondition; ?>" />
 			( <input id="<?php echo $this->get_field_id('theparams'); ?>" name="<?php echo $this->get_field_name('theparams'); ?>" type="text" value="<?php echo $theparams; ?>" /> )
 		</fieldset>

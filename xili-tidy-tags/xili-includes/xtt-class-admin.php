@@ -79,15 +79,15 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 		 	$pre = ( $this->post_tag == 'post_tag') ? ''  : '_'.$this->post_tag;
 
-			$this->thehook0 = add_object_page( sprintf(__('%s groups','xili_tidy_tags'), $this->tags_name), sprintf(__('Tidy %s','xili_tidy_tags'), $this->tags_name ) , '', 'xili-tidy-tags'.$pre, array(&$this,'top_tidy_menu_title'), plugins_url( 'images/xilitidy-logo-16.png', $this->file_file ) ); //1.5.5
+			$this->thehook0 = add_object_page( sprintf(__( '%s groups', 'xili-tidy-tags' ), $this->tags_name), sprintf(__( 'Tidy %s', 'xili-tidy-tags' ), $this->tags_name ) , '', 'xili-tidy-tags'.$pre, array(&$this,'top_tidy_menu_title'), plugins_url( 'images/xilitidy-logo-16.png', $this->file_file ) ); //1.5.5
 
-		  	$this->thehooka = add_submenu_page('xili-tidy-tags'.$pre, sprintf( __('%s groups','xili_tidy_tags'), $this->tags_name),__('Info for SuperAdmin','xili_tidy_tags'), '', 'xili-tidy-tags'.$pre, array(&$this,'top_tidy_menu_title'));
+		  	$this->thehooka = add_submenu_page('xili-tidy-tags'.$pre, sprintf( __( '%s groups', 'xili-tidy-tags' ), $this->tags_name),__( 'Info for SuperAdmin', 'xili-tidy-tags' ), '', 'xili-tidy-tags'.$pre, array(&$this,'top_tidy_menu_title'));
 
-		  	$this->thehook = add_submenu_page('xili-tidy-tags'.$pre, sprintf( __('%s groups','xili_tidy_tags'), $this->tags_name), sprintf(__('Tidy %s settings','xili_tidy_tags'), $this->tags_name), 'xili_tidy_editor_set', 'xili_tidy_tags_settings'.$pre, array(&$this,'xili_tidy_tags_settings'));
+		  	$this->thehook = add_submenu_page('xili-tidy-tags'.$pre, sprintf( __( '%s groups', 'xili-tidy-tags' ), $this->tags_name), sprintf(__( 'Tidy %s settings', 'xili-tidy-tags' ), $this->tags_name), 'xili_tidy_editor_set', 'xili_tidy_tags_settings'.$pre, array(&$this,'xili_tidy_tags_settings'));
 		  	add_action( 'load-'.$this->thehook, array(&$this,'on_load_page' ) );
 
 		 	/* sub-page */
-		 	$this->thehook2 = add_submenu_page('xili-tidy-tags'.$pre, sprintf(__('Tidy %s','xili_tidy_tags'), $this->tags_name ), sprintf(__('Tidy %s assign','xili_tidy_tags'), $this->tags_name), 'xili_tidy_editor_group', 'xili_tidy_tags_assign'.$pre, array(&$this,'xili_tidy_tags_assign'));
+		 	$this->thehook2 = add_submenu_page('xili-tidy-tags'.$pre, sprintf(__( 'Tidy %s', 'xili-tidy-tags' ), $this->tags_name ), sprintf(__( 'Tidy %s assign', 'xili-tidy-tags' ), $this->tags_name), 'xili_tidy_editor_group', 'xili_tidy_tags_assign'.$pre, array(&$this,'xili_tidy_tags_assign'));
 
 
 		 	add_action( 'load-'.$this->thehook2, array(&$this,'on_load_page2') );
@@ -104,12 +104,12 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
  		$pre = ( $this->post_tag == 'post_tag') ? ''  : '_'.$this->post_tag;
  		?>
  		<div class='wrap'>
-		<h2><?php printf(__("Tidy %s settings","xili_tidy_tags"), $this->tags_name); ?></h2>
-		<h4><?php _e("This window is reserved for future settings in multisite mode (wpmu) for administrator like SuperAdmin...","xili_tidy_tags"); ?></h4>
-		<p><?php printf(__("Link to set tidy %s in current site","xili_tidy_tags"), $this->tags_name); ?>: <a href="<?php echo "admin.php?page=xili_tidy_tags_settings".$pre; ?>" title="xili-tidy-tags settings" ><?php printf(__("To create groups of %s","xili_tidy_tags"), $this->tags_name); ?></a></p>
-		<p><?php printf(__("Link to assign tidy %s in current site","xili_tidy_tags"), $this->tags_name); ?>: <a href="<?php echo "admin.php?page=xili_tidy_tags_assign".$pre; ?>" title="xili-tidy-tags assign"><?php printf(__("To assign a group to %s","xili_tidy_tags"), $this->tags_name); ?></a></p>
+		<h2><?php printf(__( "Tidy %s settings", 'xili-tidy-tags' ), $this->tags_name); ?></h2>
+		<h4><?php _e( "This window is reserved for future settings in multisite mode (wpmu) for administrator like SuperAdmin...", 'xili-tidy-tags' ); ?></h4>
+		<p><?php printf(__( "Link to set tidy %s in current site", 'xili-tidy-tags' ), $this->tags_name); ?>: <a href="<?php echo "admin.php?page=xili_tidy_tags_settings".$pre; ?>" title="xili-tidy-tags settings" ><?php printf(__( "To create groups of %s", 'xili-tidy-tags' ), $this->tags_name); ?></a></p>
+		<p><?php printf(__( "Link to assign tidy %s in current site", 'xili-tidy-tags' ), $this->tags_name); ?>: <a href="<?php echo "admin.php?page=xili_tidy_tags_assign".$pre; ?>" title="xili-tidy-tags assign"><?php printf(__( "To assign a group to %s", 'xili-tidy-tags' ), $this->tags_name); ?></a></p>
 
-		<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ) ; ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e('Author'); ?>" >xiligroup.com</a>™ - msc 2009-15 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
+		<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ) ; ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e( 'Author'); ?>" >xiligroup.com</a>™ - msc 2009-16 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
 		</div>
 		<?php
  	}
@@ -119,9 +119,9 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		global $wp_version ;
 
 		$xili_tidy_tags_page = 'settings';
-		$formtitle = __('Add a group', 'xili_tidy_tags'); /* translated in form */
-		$submit_text = __('Add &raquo;', 'xili_tidy_tags');
-		$cancel_text = __('Cancel');
+		$formtitle = __( 'Add a group', 'xili-tidy-tags' ); /* translated in form */
+		$submit_text = __( 'Add &raquo;', 'xili-tidy-tags' );
+		$cancel_text = __( 'Cancel');
 		$action = '';
 		$optionmessage = '';
 		$emessage = "";
@@ -160,7 +160,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 				update_option('xili_tidy_tags_settings', $this->xili_settings);
 
 				$actiontype = "add";
-			    $message .= " - ".__('Editor Capabilities changed to: ','xili_tidy_tags')." (".$new_cap.") ";
+			    $message .= " - ".__( 'Editor Capabilities changed to: ', 'xili-tidy-tags' )." (".$new_cap.") ";
 			    $optionmessage = $message;
 			    $msg = 6;
 				break;
@@ -169,21 +169,21 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 				$chosencatid = $_POST['catsforgroup'];
 				$chosenparent = $_POST['tags_parent'];
 				$chosencat = get_category($chosencatid);
-				$desc = __('Group for: ','xili_tidy_tags').$chosencat->name .' '. __('category','xili_tidy_tags');
+				$desc = __( 'Group for: ', 'xili-tidy-tags' ).$chosencat->name .' '. __( 'category', 'xili-tidy-tags' );
 				$args = array( 'alias_of' => '', 'description' => $desc, 'parent' => (int) $_POST['tags_parent']);
 			    $theids = wp_insert_term( $chosencat->name, $this->tidy_taxonomy, $args);
 			    if ( !is_wp_error($theids) )
 			    	wp_set_object_terms($theids['term_id'], (int)$_POST['tags_parent'], $this->tidy_taxonomy);
 
 				$actiontype = "add";
-			    $message .= " - ".__('This group was added: ','xili_tidy_tags')." (".$chosencatid.") parent = ".$chosenparent;
+			    $message .= " - ".__( 'This group was added: ', 'xili-tidy-tags' )." (".$chosencatid.") parent = ".$chosenparent;
 				break;
 
 			case 'importxililanguages';
 				check_admin_referer( 'xilitagsettings' );
 				$this->xili_langs_import_terms ();
 				$actiontype = "add";
-			    $message .= " - ".__('The languages groups was added.','xili_tidy_tags');
+			    $message .= " - ".__( 'The languages groups was added.', 'xili-tidy-tags' );
 			    $msg = 5;
 				break;
 
@@ -195,7 +195,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 				    $theids = wp_insert_term( $term, $this->tidy_taxonomy, $args);
 				    if (!is_wp_error($theids)) {
 				    	wp_set_object_terms($theids['term_id'], (int)$_POST['tagsgroup_parent'], $this->tidy_taxonomy);
-				    	$message .= " - ".__('A new group was added.','xili_tidy_tags');
+				    	$message .= " - ".__( 'A new group was added.', 'xili-tidy-tags' );
 				    	$msg = 1;
 				    } else {
 				    	$message .= " - Error DB: ". serialize ( $theids ) ;
@@ -205,7 +205,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 				} else {
 					$actiontype = "add";
-				    $message .= " - ".__('NO new group was added.','xili_tidy_tags');
+				    $message .= " - ".__( 'NO new group was added.', 'xili-tidy-tags' );
 				    $msg = 2;
 				}
 			    break;
@@ -213,9 +213,9 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			case 'edit';
 				$actiontype = "edited";
 			    $tagsgroup = get_term( (int) $term_id, $this->tidy_taxonomy,OBJECT,'edit');
-			    $submit_text = __('Update &raquo;','xili_tidy_tags');
-			    $formtitle =  __('Edit Group', 'xili_tidy_tags');
-			    $message .= " - ".__('Group to update.','xili_tidy_tags');
+			    $submit_text = __( 'Update &raquo;', 'xili-tidy-tags' );
+			    $formtitle =  __( 'Edit Group', 'xili-tidy-tags' );
+			    $message .= " - ".__( 'Group to update.', 'xili-tidy-tags' );
 				break;
 
 			case 'edited';
@@ -225,16 +225,16 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			    $term_name = $_POST['tagsgroup_name']; // fixed 1.6.0
 				$args = array( 'name' => $term_name,'alias_of' => '', 'description' => $_POST['tagsgroup_description'], 'parent' => (int)$_POST['tagsgroup_parent'], 'slug' =>$_POST['tagsgroup_nicename']);
 				$theids = wp_update_term( $term_id, $this->tidy_taxonomy, $args);
-				$message .= " - ".__('A group was updated.','xili_tidy_tags');
+				$message .= " - ".__( 'A group was updated.', 'xili-tidy-tags' );
 				$msg = 3;
 			    break;
 
 			case 'delete';
 			    $actiontype = "deleting";
-			    $submit_text = __('Delete &raquo;','xili_tidy_tags');
-			    $formtitle = __('Delete group','xili_tidy_tags');
+			    $submit_text = __( 'Delete &raquo;', 'xili-tidy-tags' );
+			    $formtitle = __( 'Delete group', 'xili-tidy-tags' );
 			    $tagsgroup = get_term( (int) $term_id, $this->tidy_taxonomy,OBJECT, 'edit');
-			    $message .= " - ".__('A group to delete.','xili_tidy_tags');
+			    $message .= " - ".__( 'A group to delete.', 'xili-tidy-tags' );
 			    break;
 
 			case 'deleting';
@@ -242,7 +242,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			    $actiontype = "add";
 			    $term = $_POST['tagsgroup_term_id'];
 			    wp_delete_term( $term, $this->tidy_taxonomy ); // 1.8.1
-			    $message .= " - ".__('A group was deleted.','xili_tidy_tags');
+			    $message .= " - ".__( 'A group was deleted.', 'xili-tidy-tags' );
 			    $msg = 4;
 			    break;
 
@@ -283,37 +283,37 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	   			$message .= "This message was sent by webmaster in xili-tidy-tags plugin settings page.\n\n";
 	   			$message .= "\n\n";
 	   			$result = wp_mail('contact@xiligroup.com', $_POST['thema'].' from xili-tidy-tags v.'.XILITIDYTAGS_VER.' plugin settings page.' , $message, $headers );
-				$message = __('Email sent.','xili_tidy_tags');
+				$message = __( 'Email sent.', 'xili-tidy-tags' );
 				$msg = 7;
-				$emessage = sprintf( __( 'Thanks for your email. A copy was sent to %s (%s)','xili_tidy_tags' ), $_POST['ccmail'], $result ) ;
+				$emessage = sprintf( __( 'Thanks for your email. A copy was sent to %s (%s)', 'xili-tidy-tags' ), $_POST['ccmail'], $result ) ;
 				$actiontype = "add";
 				break;
 
 			default :
 			    $actiontype = "add";
-			    $message .= sprintf( __('Find the list of groups for %s.','xili_tidy_tags'), $this->tags_name);
+			    $message .= sprintf( __( 'Find the list of groups for %s.', 'xili-tidy-tags' ), $this->tags_name);
 		}
 
 		/* register the main boxes always available */
 
-		add_meta_box('xili_tidy_tags-normal-group-tags-list', sprintf( __('Groups of %s','xili_tidy_tags'), $this->tags_name), array(&$this,'on_normal_group_tags_list_content'), $this->thehook , 'normal', 'core'); /* list of groups*/
-		add_meta_box('xili_tidy_tags-normal-form', __('The group','xili_tidy_tags'), array(&$this,'on_normal_group_form_content'), $this->thehook , 'normal', 'core'); /* the group*/
-		add_meta_box('xili_tidy_tags-sidebox-import', __('Actions','xili_tidy_tags'), array(&$this,'on_sidebox_import_content'), $this->thehook , 'side', 'core'); /* Actions */
+		add_meta_box('xili_tidy_tags-normal-group-tags-list', sprintf( __( 'Groups of %s', 'xili-tidy-tags' ), $this->tags_name), array(&$this,'on_normal_group_tags_list_content'), $this->thehook , 'normal', 'core'); /* list of groups*/
+		add_meta_box('xili_tidy_tags-normal-form', __( 'The group', 'xili-tidy-tags' ), array(&$this,'on_normal_group_form_content'), $this->thehook , 'normal', 'core'); /* the group*/
+		add_meta_box('xili_tidy_tags-sidebox-import', __( 'Actions', 'xili-tidy-tags' ), array(&$this,'on_sidebox_import_content'), $this->thehook , 'side', 'core'); /* Actions */
 
-		$themessages[1] = __('A new group was added.','xili_tidy_tags');
-		$themessages[2] = __('NO new group was added.','xili_tidy_tags');
-		$themessages[3] = __('A group was updated.','xili_tidy_tags');
-		$themessages[4] = __('A group was deleted.','xili_tidy_tags');
-		$themessages[5] = __('The languages groups was added.','xili_tidy_tags');
+		$themessages[1] = __( 'A new group was added.', 'xili-tidy-tags' );
+		$themessages[2] = __( 'NO new group was added.', 'xili-tidy-tags' );
+		$themessages[3] = __( 'A group was updated.', 'xili-tidy-tags' );
+		$themessages[4] = __( 'A group was deleted.', 'xili-tidy-tags' );
+		$themessages[5] = __( 'The languages groups was added.', 'xili-tidy-tags' );
 		$themessages[6] = $optionmessage ;
-		$themessages[7] = __('Email sent.','xili_tidy_tags');
+		$themessages[7] = __( 'Email sent.', 'xili-tidy-tags' );
 
 		/* form datas in array for do_meta_boxes() */
 		$data = array('xili_tidy_tags_page' => $xili_tidy_tags_page,'message' => $message, 'action'=>$action, 'formtitle'=>$formtitle, 'tagsgroup'=>$tagsgroup, 'submit_text'=>$submit_text,'cancel_text'=>$cancel_text, 'term_id'=>$term_id, 'emessage'=>$emessage);
 		?>
 		<div id="xili-tidy-tags-settings" class="wrap columns-2" style="min-width:880px">
 			<?php screen_icon('tools'); ?>
-			<h2><?php printf(__('Tidy %s groups','xili_tidy_tags'), $this->tags_name) ?></h2>
+			<h2><?php printf(__( 'Tidy %s groups', 'xili-tidy-tags' ), $this->tags_name) ?></h2>
 			<?php if (0!= $msg ) { ?>
 			<div id="message" class="updated fade"><p><?php echo $themessages[$msg]; ?></p></div>
 			<?php }
@@ -353,7 +353,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 								<?php do_meta_boxes($this->thehook, 'normal', $data); ?>
 							</div>
 
-							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ); ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e('Author'); ?>" >xiligroup.com</a>™ - msc 2009-15 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
+							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ); ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e( 'Author'); ?>" >xiligroup.com</a>™ - msc 2009-16 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
 
 						</div>
 					</div>
@@ -383,11 +383,11 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			wp_enqueue_script('postbox');
 
 			$pre = ( $this->post_tag == 'post_tag') ? ''  : $this->post_tag.'_' ;
-			add_meta_box('xili_tidy_tags-sidebox-1', __('Message','xili_tidy_tags'), array(&$this,'on_sidebox_msg_content'), $this->thehook , 'side', 'core');
-			add_meta_box($pre.'xili_tidy_tags-sidebox-3', __('Info','xili_tidy_tags'), array(&$this,'on_sidebox_info_content'), $this->thehook , 'side', 'core');
-			add_meta_box($pre.'xili_tidy_tags-sidebox-mail', __('Mail & Support','xili_tidy_tags'), array(&$this,'on_sidebox_mail_content'), $this->thehook , 'normal', 'low');
+			add_meta_box('xili_tidy_tags-sidebox-1', __( 'Message', 'xili-tidy-tags' ), array(&$this,'on_sidebox_msg_content'), $this->thehook , 'side', 'core');
+			add_meta_box($pre.'xili_tidy_tags-sidebox-3', __( 'Info', 'xili-tidy-tags' ), array(&$this,'on_sidebox_info_content'), $this->thehook , 'side', 'core');
+			add_meta_box($pre.'xili_tidy_tags-sidebox-mail', __( 'Mail & Support', 'xili-tidy-tags' ), array(&$this,'on_sidebox_mail_content'), $this->thehook , 'normal', 'low');
 			if (current_user_can( 'xili_tidy_admin_set'))
-				add_meta_box($pre.'xili_tidy_tags-sidebox-4', __('Capabilities','xili_tidy_tags'), array(&$this,'on_sidebox_admin_content'), $this->thehook , 'side', 'core');
+				add_meta_box($pre.'xili_tidy_tags-sidebox-4', __( 'Capabilities', 'xili-tidy-tags' ), array(&$this,'on_sidebox_admin_content'), $this->thehook , 'side', 'core');
 
 	}
 
@@ -403,8 +403,8 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		$tagsnamelike = '';
 		$tagsnamesearch = '';
 		$xili_tidy_tags_page = 'assign';
-		$submit_text = __('Update','xili_tidy_tags');
-		$cancel_text = __('Cancel');
+		$submit_text = __( 'Update', 'xili-tidy-tags' );
+		$cancel_text = __( 'Cancel');
 		$tagsnamelike = ( isset( $_POST['tagsnamelike'] ) ) ? $_POST['tagsnamelike'] : "" ;
 		$tagsnamesearch = ( isset( $_POST['tagsnamesearch'] ) ) ? $_POST['tagsnamesearch']: "";
 		if (isset($_POST['update'])) {
@@ -496,23 +496,23 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 			default :
 			    $actiontype = "add";
-			    $message .= sprintf( __('Find the list of %s.','xili_tidy_tags'), $this->tags_name);
+			    $message .= sprintf( __( 'Find the list of %s.', 'xili-tidy-tags' ), $this->tags_name);
 		}
 		/* form datas in array for do_meta_boxes() */
 		$data = array( 'xili_tidy_tags_page' => $xili_tidy_tags_page, 'message'=>$message, 'action'=>$action, 'submit_text'=>$submit_text, 'cancel_text'=>$cancel_text, 'term_id'=>$term_id, 'tagsnamesearch'=>$tagsnamesearch, 'tagsnamelike'=>$tagsnamelike);
 
 		/* register the main boxes always available */
-		add_meta_box( 'xili_tidy_tags-sidebox-action', __('Actions','xili_tidy_tags'), array( &$this,'on_sub_sidebox_action_content' ), $this->thehook2 , 'side', 'core'); /* Actions */
-		add_meta_box( 'xili_tidy_tags-normal-tags', sprintf(__('Tidy %s','xili_tidy_tags'), $this->tags_name ), array( &$this,'on_sub_normal_tags_list_content' ), $this->thehook2 , 'normal', 'core'); /* list of tags*/
+		add_meta_box( 'xili_tidy_tags-sidebox-action', __( 'Actions', 'xili-tidy-tags' ), array( &$this,'on_sub_sidebox_action_content' ), $this->thehook2 , 'side', 'core'); /* Actions */
+		add_meta_box( 'xili_tidy_tags-normal-tags', sprintf(__( 'Tidy %s', 'xili-tidy-tags' ), $this->tags_name ), array( &$this,'on_sub_normal_tags_list_content' ), $this->thehook2 , 'normal', 'core'); /* list of tags*/
 
-		$themessages[1] = __('List updated in database !','xili_tidy_tags');
+		$themessages[1] = __( 'List updated in database !', 'xili-tidy-tags' );
 
 		$themessages[2] = $message ;
-		$themessages[3] = __('Post Type <strong>not declared</strong> in Custom Taxonomy !','xili_tidy_tags');
+		$themessages[3] = __( 'Post Type <strong>not declared</strong> in Custom Taxonomy !', 'xili-tidy-tags' );
 			?>
 		<div id="xili-tidy-tags-assign" class="wrap columns-2" style="min-width:880px">
 			<?php screen_icon('post'); ?>
-			<h2><?php printf(__('%s in group with post type named: %s','xili_tidy_tags'), $this->tags_name, $this->post_tag_post_type); ?></h2>
+			<h2><?php printf(__( '%s in group with post type named: %s', 'xili-tidy-tags' ), $this->tags_name, $this->post_tag_post_type); ?></h2>
 			<?php if ( 0 != $msg && "" != $msg ) { ?>
 			<div id="message" class="updated fade"><p><?php echo $themessages[$msg]; ?></p></div>
 			<?php }
@@ -553,7 +553,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	   							<?php do_meta_boxes($this->thehook2, 'normal', $data); ?>
 							</div>
 
-							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ) ; ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e('Author'); ?>" >xiligroup.com</a>™ - msc 2009-15 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
+							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ) ; ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e( 'Author'); ?>" >xiligroup.com</a>™ - msc 2009-16 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
 
 						</div>
 					</div>
@@ -576,18 +576,18 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 					"bStateSave": true,
 					"sDom": '<"topbanner"ipf>rt<"bottombanner"lp><"clear">',
 					"sPaginationType": "full_numbers",
-					"aLengthMenu": [[15, 30, 60, -1], [15, 30, 60, "<?php _e('All lines','xili_tidy_tags') ?>"]],
+					"aLengthMenu": [[15, 30, 60, -1], [15, 30, 60, "<?php _e( 'All lines', 'xili-tidy-tags' ) ?>"]],
 					"oLanguage": {
 						"oPaginate": {
-							"sFirst": "<?php _e('First','xili_tidy_tags') ?>",
-							"sLast": "<?php _e('Last page','xili_tidy_tags') ?>",
-							"sNext": "<?php _e('Next','xili_tidy_tags') ?>",
-							"sPrevious": "<?php _e('Previous','xili_tidy_tags') ?>"
+							"sFirst": "<?php _e( 'First', 'xili-tidy-tags' ) ?>",
+							"sLast": "<?php _e( 'Last page', 'xili-tidy-tags' ) ?>",
+							"sNext": "<?php _e( 'Next', 'xili-tidy-tags' ) ?>",
+							"sPrevious": "<?php _e( 'Previous', 'xili-tidy-tags' ) ?>"
 						},
-						"sInfo": "<?php printf(__('Showing (_START_ to _END_) of _TOTAL_ %s','xili_tidy_tags'), $this->tags_name ); ?>",
-						"sInfoFiltered": "<?php _e('(filtered from _MAX_ total entries)','xili_tidy_tags') ?>",
-						"sLengthMenu": "<?php _e('Show _MENU_ tags','xili_tidy_tags') ?>",
-						"sSearch": "<?php _e('Filter tags:','xili_tidy_tags') ?>"
+						"sInfo": "<?php printf(__( 'Showing (_START_ to _END_) of _TOTAL_ %s', 'xili-tidy-tags' ), $this->tags_name ); ?>",
+						"sInfoFiltered": "<?php _e( '(filtered from _MAX_ total entries)', 'xili-tidy-tags' ) ?>",
+						"sLengthMenu": "<?php _e( 'Show _MENU_ tags', 'xili-tidy-tags' ) ?>",
+						"sSearch": "<?php _e( 'Filter tags:', 'xili-tidy-tags' ) ?>"
 					},
 					"aaSorting": [[1,'asc']],
 					"aoColumns": [
@@ -603,7 +603,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 					$('#assigntable').hide();
 
-					$('#tableupdating').html("<br /><br /><h1><?php _e('Updating table of tags !','xili_tidy_tags') ?></h1>");
+					$('#tableupdating').html("<br /><br /><h1><?php _e( 'Updating table of tags !', 'xili-tidy-tags' ) ?></h1>");
 					$('#tableupdating').show();
 					assignTable.fnDestroy();
 				} );
@@ -673,8 +673,8 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			wp_enqueue_script('postbox');
 
 			$pre = ( $this->post_tag == 'post_tag') ? ''  : $this->post_tag.'_' ;
-			add_meta_box($pre.'xili_tidy_tags-sidebox-1', __('Message', 'xili_tidy_tags'), array(&$this,'on_sidebox_msg_content'), $this->thehook2 , 'side', 'core');
-			add_meta_box($pre.'xili_tidy_tags-sidebox-3', __('Info', 'xili_tidy_tags'), array(&$this,'on_sidebox_info_content'), $this->thehook2 , 'side', 'core');
+			add_meta_box($pre.'xili_tidy_tags-sidebox-1', __( 'Message', 'xili-tidy-tags' ), array(&$this,'on_sidebox_msg_content'), $this->thehook2 , 'side', 'core');
+			add_meta_box($pre.'xili_tidy_tags-sidebox-3', __( 'Info', 'xili-tidy-tags' ), array(&$this,'on_sidebox_info_content'), $this->thehook2 , 'side', 'core');
 	}
 
 	/**
@@ -711,9 +711,9 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 				}
 			}
 			if ( defined ( 'TAXONAME' ) )
-				$cols[TAXONAME] = __('Language','xili-language');
+				$cols[TAXONAME] = __( 'Language','xili-language');
 			// for grouping
-			$cols['alias_of'] = __('Alias of','xili_tidy_tags');
+			$cols['alias_of'] = __( 'Alias of', 'xili-tidy-tags' );
 			$cols = array_merge($cols, $end);
 
 
@@ -730,7 +730,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 		if ( defined ( 'TAXONAME' ) && $name == TAXONAME ) {
 
-			//$a .= __( 'translated in:', 'xili_tidy_tags' )." ";
+
 
 			// loop of languages
 			$listlanguages = get_terms( TAXONAME, array('hide_empty' => false ) );
@@ -743,11 +743,11 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 					$group = term_exists ( $lang->slug. '-'. $this->xili_settings['tidylangsgroup'] , $this->tidy_taxonomy ) ;
 			        $nonce_url = wp_nonce_url ('admin.php?page=xili_tidy_tags_assign&tps='.$group['term_id'] , 'xtt-tps'  ) ; // wp-admin/admin.php?page=xili_tidy_tags_assign&tps=8
 
-					$a .=  '<span title="'. sprintf(__('Tags in %s.','xili_tidy_tags'), $lang->description ) .'" class="curlang lang-'. $lang->slug .'"><a href="'. $nonce_url .'" >' . $lang->name . '</a></span>' ;
+					$a .=  '<span title="'. sprintf(__( 'Tags in %s.', 'xili-tidy-tags' ), $lang->description ) .'" class="curlang lang-'. $lang->slug .'"><a href="'. $nonce_url .'" >' . $lang->name . '</a></span>' ;
 				}
 			}
 			if ( $a != "" ) {
-				$a = '<div class="edittag" >'. __( 'assigned in:', 'xili_tidy_tags' )." " . $a ;
+				$a = '<div class="edittag" >'. __( 'assigned in:', 'xili-tidy-tags' )." " . $a ;
 				$a .= '</div>';
 		  		return $a;
 			}
@@ -766,7 +766,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 							//if ( class_exists('xili_language') ) {
 							 	if ( $langs = $this->return_lang_of_tag ( $one_alias->term_id ) ) {
 							 		foreach ( $langs as $lang ) {
-										$a .=  ' <span title="'. sprintf(__('Tags in %s.','xili_tidy_tags'), $lang->description ) .'" class="curlang lang-'. $lang->slug .'"><a href="'.$link.'">' . $lang->name . '</a></span>' ;
+										$a .=  ' <span title="'. sprintf(__( 'Tags in %s.', 'xili-tidy-tags' ), $lang->description ) .'" class="curlang lang-'. $lang->slug .'"><a href="'.$link.'">' . $lang->name . '</a></span>' ;
 							 		}
 							 	}
 							//}
@@ -775,7 +775,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 					}
 				}
 				if ( $a != "" ) {
-					$a = '<div class="edittag" ><em>'. __( 'Alias:', 'xili_tidy_tags' )."</em><br />" . $a ;
+					$a = '<div class="edittag" ><em>'. __( 'Alias:', 'xili-tidy-tags' )."</em><br />" . $a ;
 					$a .= '</div>';
 			  		return $a;
 				}
@@ -919,9 +919,9 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 				$checkline .= '<input type="checkbox" id="group-'.$group->term_id.'" name="group-'.$group->term_id.'" value="'.$group->term_id.'" />' . $disp_group ;
 				$i++;
 			}
-			$checkline .='<br /><br /><small>'. sprintf(__('© by xili-tidy-tags v. %s','xili_tidy_tags'), XILITIDYTAGS_VER ) .'</small>';
+			$checkline .='<br /><br /><small>'. sprintf(__( '© by xili-tidy-tags v. %s', 'xili-tidy-tags' ), XILITIDYTAGS_VER ) .'</small>';
 			// display
-			echo '<div id="xtt-edit-tag" style="max-width:525px; margin:2px 22px 2px 2px; padding:3px; border:1px solid #ccc;"><label>'.sprintf( __('%s groups','xili_tidy_tags'), $this->tags_name ) . ':</label><br />'.$checkline.'</div>';
+			echo '<div id="xtt-edit-tag" style="max-width:525px; margin:2px 22px 2px 2px; padding:3px; border:1px solid #ccc;"><label>'.sprintf( __( '%s groups', 'xili-tidy-tags' ), $this->tags_name ) . ':</label><br />'.$checkline.'</div>';
 		} else {
 			echo '<p style="color:red"> ERROR IN xili-tidy-tags TAXONOMY: '.$this->tidy_taxonomy.'</p>'; // 1.8.3
 		}
@@ -941,11 +941,11 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		$checkline = '';
 
 
-		$val = ( is_string( $tag ) ) ?  __('new', 'xili_tidy_tags').' ' : '' ;
+		$val = ( is_string( $tag ) ) ?  __( 'new', 'xili-tidy-tags' ).' ' : '' ;
 
-		$context = ( class_exists('xili_language') ) ? __('in another language','xili_tidy_tags') : __( 'as synonym', 'xili_tidy_tags' );
+		$context = ( class_exists('xili_language') ) ? __( 'in another language', 'xili-tidy-tags' ) : __( 'as synonym', 'xili-tidy-tags' );
 
-		$checkline = '<p>'. sprintf(__('This sub-form contains a field to define alias of this %1$s%2$s. Choose a %2$s already present %3$s.','xili_tidy_tags'), $val, $this->singular_name, $context ) .'</p>';
+		$checkline = '<p>'. sprintf(__( 'This sub-form contains a field to define alias of this %1$s%2$s. Choose a %2$s already present %3$s.', 'xili-tidy-tags' ), $val, $this->singular_name, $context ) .'</p>';
 
 		if ( !is_string( $tag ) &&  $tag->term_group > 0 ) {
 
@@ -953,7 +953,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 				if ( $alias_group ) {
 
-					$checkline .= '<p><em>' . sprintf( __('This %1$s (%2$s) is already present in the group %3$s:','xili_tidy_tags'), $this->singular_name, $tag->name , _n( sprintf(_x('of the following %s','singular','xili_tidy_tags'), $this->singular_name), sprintf(_x('of the following %s','plural','xili_tidy_tags'), $this->tags_name), count($alias_group)-1 )  )  . '</em></p>';
+					$checkline .= '<p><em>' . sprintf( __( 'This %1$s (%2$s) is already present in the group %3$s:', 'xili-tidy-tags' ), $this->singular_name, $tag->name , _n( sprintf(_x('of the following %s','singular', 'xili-tidy-tags' ), $this->singular_name), sprintf(_x('of the following %s','plural', 'xili-tidy-tags' ), $this->tags_name), count($alias_group)-1 )  )  . '</em></p>';
 					$list = array();
 					foreach ( $alias_group as $one_alias ) {
 						if ( $one_alias->slug != $tag->slug ) {
@@ -964,7 +964,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 					$checkline .= implode ( ' - ', $list );
 					$checkline .='<br /><br />';
 
-					$checkline .= '<p><em>' . sprintf( __('Select below if you want to change the group of this %1$s (%2$s). Be careful!','xili_tidy_tags'), $this->singular_name, $tag->name )  . '</em></p>';
+					$checkline .= '<p><em>' . sprintf( __( 'Select below if you want to change the group of this %1$s (%2$s). Be careful!', 'xili-tidy-tags' ), $this->singular_name, $tag->name )  . '</em></p>';
 				}
 
 		}
@@ -975,7 +975,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		$tags = get_terms( $this->post_tag, array( 'hide_empty' => false,'get'=>'all' ) );
 
 		if ( ! is_wp_error( $tags ) ) {
-			$checkline .= '<option value="">'.__('Choice alias...','xili_tidy_tags').'</option>';
+			$checkline .= '<option value="">'.__( 'Choice alias...', 'xili-tidy-tags' ).'</option>';
 			foreach ($tags as $one_tag) {
 
 				if ( class_exists('xili_language') ) {
@@ -1004,9 +1004,9 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			$checkline .= '</select>';
 		}
 
-		$checkline .='<br /><br /><small>'. sprintf(__('© by xili-tidy-tags v. %s','xili_tidy_tags'), XILITIDYTAGS_VER ) .'</small>';
+		$checkline .='<br /><br /><small>'. sprintf(__( '© by xili-tidy-tags v. %s', 'xili-tidy-tags' ), XILITIDYTAGS_VER ) .'</small>';
 
-		echo '<div id="xtt-edit-tag" style="max-width:525px; margin:2px 22px 2px 2px; padding:3px; border:1px solid #ccc;"><label>'.sprintf( __('The %s aliases group','xili_tidy_tags'), $this->tags_name ) .':<br /></label><br />'.$checkline.'</div>';
+		echo '<div id="xtt-edit-tag" style="max-width:525px; margin:2px 22px 2px 2px; padding:3px; border:1px solid #ccc;"><label>'.sprintf( __( 'The %s aliases group', 'xili-tidy-tags' ), $this->tags_name ) .':<br /></label><br />'.$checkline.'</div>';
 
 	}
 
@@ -1052,13 +1052,13 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 				$checkline .= '<input type="checkbox" name="group-'.$group->term_id.'" id="group-'.$group->term_id.'" value="'.$group->term_id.'" '.$checked.' />'. $disp_group ;
 				$i++;
 			}
-			$checkline .='<br /><br /><small>'. sprintf(__('© by xili-tidy-tags v. %s','xili_tidy_tags'), XILITIDYTAGS_VER ) .'</small>';
+			$checkline .='<br /><br /><small>'. sprintf(__( '© by xili-tidy-tags v. %s', 'xili-tidy-tags' ), XILITIDYTAGS_VER ) .'</small>';
 			// display
-			echo '<div id="xtt-edit-tag" style="width:525px; margin:2px; padding:3px; border:1px solid #ccc;"><label>'.sprintf( __('%s groups','xili_tidy_tags'), $this->tags_name ) .':<br /></label><br />'.$checkline.'</div>';
+			echo '<div id="xtt-edit-tag" style="width:525px; margin:2px; padding:3px; border:1px solid #ccc;"><label>'.sprintf( __( '%s groups', 'xili-tidy-tags' ), $this->tags_name ) .':<br /></label><br />'.$checkline.'</div>';
 
 		} else {
 			echo '<p style="color:red"> ERROR IN xili-tidy-tags TAXONOMY: '.$this->tidy_taxonomy.'</p>'; // 1.8.3
-			echo '<br /><br /><small>'. sprintf(__('© by xili-tidy-tags v. %s','xili_tidy_tags'), XILITIDYTAGS_VER ) .'</small>';
+			echo '<br /><br /><small>'. sprintf(__( '© by xili-tidy-tags v. %s', 'xili-tidy-tags' ), XILITIDYTAGS_VER ) .'</small>';
 		}
 	}
 
@@ -1081,8 +1081,8 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 		if( $file == $this_plugin ){
 			$suffix = ( 'post_tag' == $this->post_tag ) ? '' : '_'. $this->post_tag;
-			$title = ( 'post_tag' == $this->post_tag ) ? __('Settings') : __('Settings'). ': '. $this->post_tag;
-			$settings_link = '<a title="'. esc_attr( $title ) .'" href="admin.php?page=xili_tidy_tags_settings'.$suffix.'">' . __('Settings') . '</a>';
+			$title = ( 'post_tag' == $this->post_tag ) ? __( 'Settings') : __( 'Settings'). ': '. $this->post_tag;
+			$settings_link = '<a title="'. esc_attr( $title ) .'" href="admin.php?page=xili_tidy_tags_settings'.$suffix.'">' . __( 'Settings') . '</a>';
 			$links = array_merge( array($settings_link), $links); // before other links
 		}
 		return $links;
@@ -1097,60 +1097,60 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 	  if ( false !== strpos( $screen->id,'xili_tidy_tags_settings' ) ) {
 	    $to_remember =
-	      '<p>' . __('Things to remember to set xili-tidy-tags:','xili_tidy_tags') . '</p>' .
+	      '<p>' . __( 'Things to remember to set xili-tidy-tags:', 'xili-tidy-tags' ) . '</p>' .
 	      '<ul>' .
-	      '<li>' . __('If you use it for multilingual website: verify that the xili-language trilogy is active.','xili_tidy_tags') . '</li>' .
-	      '<li>' . __('Update the list of targeted languages. See Actions left box.','xili_tidy_tags') . '</li>' .
-	      '<li>' . __('For current site with lot of tags, create group or sub-group and go in assign page.','xili_tidy_tags') . '</li>' .
-	      '<li>' . __('Don’t forget to activate a tags cloud widget.','xili_tidy_tags') . '</li>' .
-	      '<li>' . __('In widget: the group for displaying tags in current lang is "the_curlang".','xili_tidy_tags') . '</li>' .
-	      '<li>' . __('In widget: the group to set is the slug - trademark for TradeMark group - if you create one.','xili_tidy_tags') . '</li>' .
+	      '<li>' . __( 'If you use it for multilingual website: verify that the xili-language trilogy is active.', 'xili-tidy-tags' ) . '</li>' .
+	      '<li>' . __( 'Update the list of targeted languages. See Actions left box.', 'xili-tidy-tags' ) . '</li>' .
+	      '<li>' . __( 'For current site with lot of tags, create group or sub-group and go in assign page.', 'xili-tidy-tags' ) . '</li>' .
+	      '<li>' . __( 'Don’t forget to activate a tags cloud widget.', 'xili-tidy-tags' ) . '</li>' .
+	      '<li>' . __( 'In widget: the group for displaying tags in current lang is "the_curlang".', 'xili-tidy-tags' ) . '</li>' .
+	      '<li>' . __( 'In widget: the group to set is the slug - trademark for TradeMark group - if you create one.', 'xili-tidy-tags' ) . '</li>' .
 	      '</ul>' ;
 
 	      $more_infos =
-	      '<p><strong>' . __('For more information:') . '</strong></p>' .
-	      '<p>' . __('<a href="http://dev.xiligroup.com/xili-tidy-tags" target="_blank">Xili-tidy-tags Plugin Documentation</a>','xili_tidy_tags') . '</p>' .
-	      '<p>' . __('<a href="http://codex.wordpress.org/" target="_blank">WordPress Documentation</a>','xili_tidy_tags') . '</p>' .
-	      '<p>' . __('<a href="https://wordpress.org/support/plugin/xili-tidy-tags" target="_blank">Support Forums</a>','xili_tidy_tags') . '</p>' ;
+	      '<p><strong>' . __( 'For more information:') . '</strong></p>' .
+	      '<p>' . __( '<a href="http://dev.xiligroup.com/xili-tidy-tags" target="_blank">Xili-tidy-tags Plugin Documentation</a>', 'xili-tidy-tags' ) . '</p>' .
+	      '<p>' . __( '<a href="http://codex.wordpress.org/" target="_blank">WordPress Documentation</a>', 'xili-tidy-tags' ) . '</p>' .
+	      '<p>' . __( '<a href="https://wordpress.org/support/plugin/xili-tidy-tags" target="_blank">Support Forums</a>', 'xili-tidy-tags' ) . '</p>' ;
 
 	      $screen->add_help_tab( array(
  				'id'      => 'to-remember',
-				'title'   => __('Things to remember','xili-language'),
+				'title'   => __( 'Things to remember','xili-language'),
 				'content' => $to_remember,
 		  ));
 
 	      $screen->add_help_tab( array(
  				'id'      => 'more-infos',
-				'title'   => __('For more information', 'xili-language'),
+				'title'   => __( 'For more information', 'xili-language'),
 				'content' => $more_infos,
 		  ));
 
 
 	  } else if ( false !== strpos( $screen->id, 'xili_tidy_tags_assign' ) ) {
 	  	$to_remember =
-	  	'<p>' . __('Things to remember to assign tags to groups:','xili_tidy_tags') . '</p>'.
+	  	'<p>' . __( 'Things to remember to assign tags to groups:', 'xili-tidy-tags' ) . '</p>'.
 	  	'<ul>' .
-	      '<li>' . __('Use features of paginated table.','xili_tidy_tags') . '</li>' .
-	      '<li>' . __('Don’t forget to update by clicking button in left - Actions - titled meta box.','xili_tidy_tags') . '</li>' .
+	      '<li>' . __( 'Use features of paginated table.', 'xili-tidy-tags' ) . '</li>' .
+	      '<li>' . __( 'Don’t forget to update by clicking button in left - Actions - titled meta box.', 'xili-tidy-tags' ) . '</li>' .
 	  	'</ul>';
 
 	  	$more_infos =
-	  	'<p><strong>' . __('For more information:') . '</strong></p>' .
-	    '<p>' . __('<a href="http://dev.xiligroup.com/xili-tidy-tags" target="_blank">Xili-tidy-tags Plugin Documentation</a>','xili_tidy_tags') . '</p>' .
-	    '<p>' . __('<a href="http://wiki.xiligroup.org/" target="_blank">Xili Wiki Documentation</a>','xili_tidy_tags') . '</p>' .
-	    '<p>' . __('<a href="https://wordpress.org/support/plugin/xili-tidy-tags" target="_blank">Support Forums</a>','xili_tidy_tags') . '</p>' .
-	    '<p>' . __('<a href="http://codex.wordpress.org/" target="_blank">WordPress Documentation</a>','xili_tidy_tags') . '</p>' ;
+	  	'<p><strong>' . __( 'For more information:') . '</strong></p>' .
+	    '<p>' . __( '<a href="http://dev.xiligroup.com/xili-tidy-tags" target="_blank">Xili-tidy-tags Plugin Documentation</a>', 'xili-tidy-tags' ) . '</p>' .
+	    '<p>' . __( '<a href="http://wiki.xiligroup.org/" target="_blank">Xili Wiki Documentation</a>', 'xili-tidy-tags' ) . '</p>' .
+	    '<p>' . __( '<a href="https://wordpress.org/support/plugin/xili-tidy-tags" target="_blank">Support Forums</a>', 'xili-tidy-tags' ) . '</p>' .
+	    '<p>' . __( '<a href="http://codex.wordpress.org/" target="_blank">WordPress Documentation</a>', 'xili-tidy-tags' ) . '</p>' ;
 
 
 	    $screen->add_help_tab( array(
  				'id'      => 'to-remember',
-				'title'   => __('Things to remember','xili_tidy_tags'),
+				'title'   => __( 'Things to remember', 'xili-tidy-tags' ),
 				'content' => $to_remember,
 		  ));
 
 	    $screen->add_help_tab( array(
  				'id'      => 'more-infos',
-				'title'   => __('For more information', 'xili_tidy_tags'),
+				'title'   => __( 'For more information', 'xili-tidy-tags' ),
 				'content' => $more_infos,
 		  ));
 
@@ -1219,7 +1219,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	 *
 	 */
 	function localize_admin_js( $case_news, $news_id ) {
- 			$about = __('Docs about xili-tidy-tags', 'xili_tidy_tags');
+ 			$about = __( 'Docs about xili-tidy-tags', 'xili-tidy-tags' );
  			$pointer_edge = '';
  			$pointer_at = '';
  			$pointer_my = '';
@@ -1228,16 +1228,16 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
  		switch ( $case_news ) {
 
  			case 'xtt_new_version' :
- 				$pointer_text = '<h3>' . esc_js( __( 'xili-tidy-tags updated', 'xili_tidy_tags') ) . '</h3>';
-				$pointer_text .= '<p>' . esc_js( sprintf( __( 'xili-tidy-tags was updated to version %s', 'xili_tidy_tags' ) , XILITIDYTAGS_VER) ). '.</p>';
-				$pointer_text .= '<p>' . esc_js( sprintf( __( 'This version %s is tested with WP 4.3', 'xili_tidy_tags' ) , XILITIDYTAGS_VER) ). '.</p>';
-				$pointer_text .= '<p>' . esc_js( __( 'Now tags can be grouped using alias feature existing in WP taxonomy and two new template tags for theme are available for files tag.php and taxonomy.php.', 'xili_tidy_tags')). ',</p>';
+ 				$pointer_text = '<h3>' . esc_js( __( 'xili-tidy-tags updated', 'xili-tidy-tags' ) ) . '</h3>';
+				$pointer_text .= '<p>' . esc_js( sprintf( __( 'xili-tidy-tags was updated to version %s', 'xili-tidy-tags' ) , XILITIDYTAGS_VER) ). '.</p>';
+				$pointer_text .= '<p>' . esc_js( sprintf( __( 'This version %s is tested with WP 4.3', 'xili-tidy-tags' ) , XILITIDYTAGS_VER) ). '.</p>';
+				$pointer_text .= '<p>' . esc_js( __( 'Now tags can be grouped using alias feature existing in WP taxonomy and two new template tags for theme are available for files tag.php and taxonomy.php.', 'xili-tidy-tags' )). ',</p>';
 
-				$pointer_text .= '<p>' . esc_js( __( 'See submenu', 'xili_tidy_tags' ).' “<a href="admin.php?page=xili_tidy_tags_settings'.$pre.'">'. __('to define groups of tags','xili_tidy_tags')."</a>”" ). '.</p>';
+				$pointer_text .= '<p>' . esc_js( __( 'See submenu', 'xili-tidy-tags' ).' “<a href="admin.php?page=xili_tidy_tags_settings'.$pre.'">'. __( 'to define groups of tags', 'xili-tidy-tags' )."</a>”" ). '.</p>';
 
-				$pointer_text .= '<p>' . esc_js( __( 'See submenu', 'xili_tidy_tags' ).' “<a href="admin.php?page=xili_tidy_tags_assign'.$pre.'">'. __('to assign tags to group','xili_tidy_tags')."</a>”" ). '.</p>';
+				$pointer_text .= '<p>' . esc_js( __( 'See submenu', 'xili-tidy-tags' ).' “<a href="admin.php?page=xili_tidy_tags_assign'.$pre.'">'. __( 'to assign tags to group', 'xili-tidy-tags' )."</a>”" ). '.</p>';
 
-				$pointer_text .= '<p>' . esc_js( sprintf(__( 'Before to question dev.xiligroup support, do not forget to visit %s documentation', 'xili_tidy_tags' ), '<a href="http://wiki.xiligroup.org" title="'.$about.'" >wiki</a>' ) ). '.</p>';
+				$pointer_text .= '<p>' . esc_js( sprintf(__( 'Before to question dev.xiligroup support, do not forget to visit %s documentation', 'xili-tidy-tags' ), '<a href="http://wiki.xiligroup.org" title="'.$about.'" >wiki</a>' ) ). '.</p>';
 
  				$pointer_dismiss = 'xd-new-version-'.str_replace('.', '-', XILITIDYTAGS_VER);
  				$pointer_div = '#toplevel_page_xili-tidy-tags';
@@ -1289,7 +1289,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	function  on_sidebox_msg_content($data=array()) {
 		extract($data);
 		?>
-	 	<h4><?php _e('Note:','xili_tidy_tags') ?></h4>
+	 	<h4><?php _e( 'Note:', 'xili-tidy-tags' ) ?></h4>
 		<p><?php echo $message;?></p>
 		<?php
 	}
@@ -1297,11 +1297,11 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	function  on_sidebox_info_content($data=array()) {
 	 	extract($data);
 	 	if ($xili_tidy_tags_page == 'settings') {
-	 		echo '<p style="margin:2px; padding:3px; border:1px solid #ccc;">'.__('On this page, the tags groups are defined. The special groups for xili-language plugin are importable.<br /> For debug, some technical infos are displayed in the tables or boxes.<br />','xili_tidy_tags').'</p>';
+	 		echo '<p style="margin:2px; padding:3px; border:1px solid #ccc;">'.__( 'On this page, the tags groups are defined. The special groups for xili-language plugin are importable.<br /> For debug, some technical infos are displayed in the tables or boxes.<br />', 'xili-tidy-tags' ).'</p>';
 	 	} elseif ($xili_tidy_tags_page == 'assign') {
-	 		echo '<p style="margin:2px; padding:3px; border:1px solid #ccc;">'.__('On this page, in a oneshot way, it is possible to assign the tags to one or more groups defined on the other page of <i>xili-tidy-tags</i> plugin.','xili_tidy_tags').'</p>';
+	 		echo '<p style="margin:2px; padding:3px; border:1px solid #ccc;">'.__( 'On this page, in a oneshot way, it is possible to assign the tags to one or more groups defined on the other page of <i>xili-tidy-tags</i> plugin.', 'xili-tidy-tags' ).'</p>';
 	 	}	 ?>
-		<p><?php _e('<b>xili-tidy-tags</b> is a tool for grouping tags by language or semantic group. Initially developed to enrich multilingual website powered by xili-language plugin.','xili_tidy_tags') ?></p>
+		<p><?php _e( '<b>xili-tidy-tags</b> is a tool for grouping tags by language or semantic group. Initially developed to enrich multilingual website powered by xili-language plugin.', 'xili-tidy-tags' ) ?></p>
 		<?php
 	}
 
@@ -1324,16 +1324,16 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			}
 	 	?>
 	 	<div style="margin:2px; padding:3px; border:1px solid #ccc;">
-		<p><?php _e('Here, as admin, set capabilities of the editor:','xili_tidy_tags') ?></p>
+		<p><?php _e( 'Here, as admin, set capabilities of the editor:', 'xili-tidy-tags' ) ?></p>
 		<select name="editor_caps" id="editor_caps" style="width:80%;">
-  				<option value="no_caps" ><?php _e('no capability','xili_tidy_tags'); ?></option>
-  				<option value="caps_grouping" <?php echo $selected2;?>><?php _e('Grouping','xili_tidy_tags');  ?></option>
-  				<option value="caps_setting_grouping" <?php echo $selected3;?>><?php _e('Setting and grouping','xili_tidy_tags');?></option>
+  				<option value="no_caps" ><?php _e( 'no capability', 'xili-tidy-tags' ); ?></option>
+  				<option value="caps_grouping" <?php echo $selected2;?>><?php _e( 'Grouping', 'xili-tidy-tags' );  ?></option>
+  				<option value="caps_setting_grouping" <?php echo $selected3;?>><?php _e( 'Setting and grouping', 'xili-tidy-tags' );?></option>
   		</select><br /><br />
-  		<label for="datatable_js"><?php _e('Disable Datatable javascript','xili_tidy_tags') ?> : <input id="datatable_js" name="datatable_js" type="checkbox" value="disable" <?php checked( $this->xili_settings['datatable_js'], 'disable' ); ?> /></label>
+  		<label for="datatable_js"><?php _e( 'Disable Datatable javascript', 'xili-tidy-tags' ) ?> : <input id="datatable_js" name="datatable_js" type="checkbox" value="disable" <?php checked( $this->xili_settings['datatable_js'], 'disable' ); ?> /></label>
 
   		<?php
-  		echo'<p class="submit"><input type="submit" name="editor_caps_submit" value="'.__('Set &raquo;','xili_tidy_tags').'" /></p></div>';
+  		echo'<p class="submit"><input type="submit" name="editor_caps_submit" value="'.__( 'Set &raquo;', 'xili-tidy-tags' ).'" /></p></div>';
 	}
 
 	/**
@@ -1394,22 +1394,22 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	 	extract($data);
 	 	if ( $this->post_tag == 'post_tag' ) { // 1.5.5
 		 	echo '<div style="margin:2px; padding:3px; border:1px solid #ccc;">';
-		 	echo '<p>'.__('Add a tag\'s group for a chosen category','xili_tidy_tags').'</p>';
+		 	echo '<p>'.__( 'Add a tag\'s group for a chosen category', 'xili-tidy-tags' ).'</p>';
 		 	/* build the selector of available categories */
 		 	$categories = get_categories(array('get'=>'all')); /* even if cat is empty */
 		 	echo '<select name="catsforgroup" id="catsforgroup" style="width:100%;">';
-			  				echo '<option value="no" >'.__('choose a category','xili_tidy_tags').'</option>';
+			  				echo '<option value="no" >'.__( 'choose a category', 'xili-tidy-tags' ).'</option>';
 		 	foreach ($categories as $cat) {
 		 		$catinside = term_exists ($cat->slug,$this->tidy_taxonomy);
 				if ($catinside == 0 && $cat->term_id != 1)
 					echo '<option value="'.$cat->term_id.'" >'.$cat->name.'</option>';
 			}
 		 	echo '</select>';
-		 	echo '<p>'.__('Choose a parent tag\'s group','xili_tidy_tags').'</p>';
+		 	echo '<p>'.__( 'Choose a parent tag\'s group', 'xili-tidy-tags' ).'</p>';
 		 	$listterms = get_terms($this->tidy_taxonomy, array('hide_empty' => false));
 			?>
 			<select name="tags_parent" id="tags_parent" style="width:100%;">
-	  				<option value="no_parent" ><?php _e('no parent','xili_tidy_tags'); ?></option>
+	  				<option value="no_parent" ><?php _e( 'no parent', 'xili-tidy-tags' ); ?></option>
 			<?php
 
 			foreach ($listterms as $curterm) {
@@ -1419,13 +1419,13 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			</select>
 			<br />
 		    <?php
-		 	echo '<p class="submit"><input type="submit" name="importacat" value="'.__('Add &raquo;','xili_tidy_tags').'" /></p>';
-		 	echo '<p>'.__('See docs to set xili_tidy_tag_cloud function or widget to implement in theme…','xili_tidy_tags').'</p>';
+		 	echo '<p class="submit"><input type="submit" name="importacat" value="'.__( 'Add &raquo;', 'xili-tidy-tags' ).'" /></p>';
+		 	echo '<p>'.__( 'See docs to set xili_tidy_tag_cloud function or widget to implement in theme…', 'xili-tidy-tags' ).'</p>';
 		 	echo '</div>';
 	 	}
 	 	echo '<div style="margin:2px; padding:3px; border:1px solid #ccc;">';
 	 	if ( !class_exists('xili_language') ) { ?>
-	 		<p class="submit"><?php _e('xili-language plugin is not activated.','xili_tidy_tags') ?> </p>
+	 		<p class="submit"><?php _e( 'xili-language plugin is not activated.', 'xili-tidy-tags' ) ?> </p>
 	 		<?php
 	 	} else {
 
@@ -1434,7 +1434,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	 		//echo 'nb'.count($childterms) ;
 	 		if ($res && !empty($childterms)) {
 		 		?>
-				<p><?php _e('The group of languages is set for use with xili-language plugin.','xili_tidy_tags') ?> </p>
+				<p><?php _e( 'The group of languages is set for use with xili-language plugin.', 'xili-tidy-tags' ) ?> </p>
 				<?php
 
 				if ( current_user_can( 'xili_tidy_admin_set' ) ) { //current_user_can( 'xili_tidy_admin_set' )
@@ -1452,14 +1452,14 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			 		if ( array_diff( $langinxl, $langinxtt ) != array() ) { // since 1.5.0
 			 		$s = implode( ', ', array_diff( $langinxl, $langinxtt ) );
 			 		?>
-						<p><?php printf(__('The group of languages in xili-language plugin has been changed.','xili_tidy_tags').' ( %s )', $s ); ?> </p>
+						<p><?php printf(__( 'The group of languages in xili-language plugin has been changed.', 'xili-tidy-tags' ).' ( %s )', $s ); ?> </p>
 					<?php
-					echo '<p class="submit">'.__('It is possible to update the group of languages.','xili_tidy_tags').'</p>';
-			 		echo '<p class="submit"><input type="submit" name="importxililanguages" value="'.__('Update &raquo;','xili_tidy_tags').'" /></p>';
+					echo '<p class="submit">'.__( 'It is possible to update the group of languages.', 'xili-tidy-tags' ).'</p>';
+			 		echo '<p class="submit"><input type="submit" name="importxililanguages" value="'.__( 'Update &raquo;', 'xili-tidy-tags' ).'" /></p>';
 			 		}
 			 		if ( array_diff( $langinxtt, $langinxl ) != array() ) {// ( count($langinxtt) != count($langinxl) )
 			 		$s = implode( ', ', array_diff( $langinxtt, $langinxl ) );
-			 			echo '<p class="submit">'.sprintf(__('One or more language(s) here are not present in active xili-language list.','xili_tidy_tags').' ( %s )', $s ).'</p>';
+			 			echo '<p class="submit">'.sprintf(__( 'One or more language(s) here are not present in active xili-language list.', 'xili-tidy-tags' ).' ( %s )', $s ).'</p>';
 			 		}
 				}
 
@@ -1467,14 +1467,14 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		 		if ( current_user_can( 'xili_tidy_admin_set') ) {
 			 		$count_xl = wp_count_terms(TAXONAME); /* count a minima one language */
 			 		if ( $count_xl > 0 ) {
-			 			echo '<p class="submit">'.__('It is possible to import the group of languages.','xili_tidy_tags').'</p>';
-			 			echo '<p class="submit"><input type="submit" name="importxililanguages" value="'.__('Import…','xili_tidy_tags').'" /></p>';
+			 			echo '<p class="submit">'.__( 'It is possible to import the group of languages.', 'xili-tidy-tags' ).'</p>';
+			 			echo '<p class="submit"><input type="submit" name="importxililanguages" value="'.__( 'Import…', 'xili-tidy-tags' ).'" /></p>';
 
 			 		} else {
-			 			echo '<p class="submit">'.__('Go to settings of xili-language plugin and add languages','xili_tidy_tags').'</p>';
+			 			echo '<p class="submit">'.__( 'Go to settings of xili-language plugin and add languages', 'xili-tidy-tags' ).'</p>';
 			 		}
 		 		} else {
-		 			echo '<p class="submit">'.__('See administrator for language settings.','xili_tidy_tags').'</p>';
+		 			echo '<p class="submit">'.__( 'See administrator for language settings.', 'xili-tidy-tags' ).'</p>';
 		 		}
 		 	}
 	 	}
@@ -1488,14 +1488,14 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 					<table class="widefat" style="clear:none;">
 						<thead>
 						<tr>
-						<th scope="col" style="text-align: center"><?php _e('ID','xili_tidy_tags') ?></th>
-	        			<th scope="col"><?php _e('Name','xili_tidy_tags') ?></th>
-	        			<th scope="col"><?php _e('Description','xili_tidy_tags') ?></th>
-	        			<th scope="col"><?php _e('Group slug','xili_tidy_tags') ?></th>
-	        			<th scope="col"><?php _e('Group taxo ID','xili_tidy_tags') ?></th>
-	        			<th scope="col"><?php _e('Parent','xili_tidy_tags') ?></th>
-	        			<th scope="col" width="90" style="text-align: center"><?php _e('Tags') ?></th>
-	        			<th colspan="2" style="text-align: center"><?php _e('Action') ?></th>
+						<th scope="col" style="text-align: center"><?php _e( 'ID', 'xili-tidy-tags' ) ?></th>
+	        			<th scope="col"><?php _e( 'Name', 'xili-tidy-tags' ) ?></th>
+	        			<th scope="col"><?php _e( 'Description', 'xili-tidy-tags' ) ?></th>
+	        			<th scope="col"><?php _e( 'Group slug', 'xili-tidy-tags' ) ?></th>
+	        			<th scope="col"><?php _e( 'Group taxo ID', 'xili-tidy-tags' ) ?></th>
+	        			<th scope="col"><?php _e( 'Parent', 'xili-tidy-tags' ) ?></th>
+	        			<th scope="col" width="90" style="text-align: center"><?php _e( 'Tags') ?></th>
+	        			<th colspan="2" style="text-align: center"><?php _e( 'Action') ?></th>
 						</tr>
 						</thead>
 						<tbody id="the-list">
@@ -1517,20 +1517,20 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		<?php endif; ?>
 		<table class="editform" width="100%" cellspacing="2" cellpadding="5">
 			<tr>
-				<th width="33%" scope="row" valign="top" align="right"><label for="tagsgroup_name"><?php _e('Name','xili_tidy_tags') ?></label>:&nbsp;</th>
+				<th width="33%" scope="row" valign="top" align="right"><label for="tagsgroup_name"><?php _e( 'Name', 'xili-tidy-tags' ) ?></label>:&nbsp;</th>
 				<td width="67%"><input name="tagsgroup_name" id="tagsgroup_name" type="text" value="<?php if (isset($tagsgroup)) echo esc_attr( $tagsgroup->name ); ?>" size="40" <?php if($action=='delete') echo 'disabled="disabled"' ?> /></td>
 			</tr>
 			<tr>
-				<th scope="row" valign="top" align="right"><label for="tagsgroup_nicename"><?php _e('tags group slug','xili_tidy_tags') ?></label>:&nbsp;</th>
+				<th scope="row" valign="top" align="right"><label for="tagsgroup_nicename"><?php _e( 'tags group slug', 'xili-tidy-tags' ) ?></label>:&nbsp;</th>
 				<td><input name="tagsgroup_nicename" id="tagsgroup_nicename" type="text" value="<?php if (isset($tagsgroup)) echo esc_attr($tagsgroup->slug); ?>" size="40" <?php if($action=='delete') echo 'disabled="disabled"' ?> /></td>
 			</tr>
 			<tr>
-				<th scope="row" valign="top" align="right"><label for="tagsgroup_description"><?php _e('Description','xili_tidy_tags') ?></label>:&nbsp;</th>
+				<th scope="row" valign="top" align="right"><label for="tagsgroup_description"><?php _e( 'Description', 'xili-tidy-tags' ) ?></label>:&nbsp;</th>
 				<td><input name="tagsgroup_description" id="tagsgroup_description" size="40" value="<?php if (isset($tagsgroup)) echo esc_attr($tagsgroup->description); ?>" <?php if($action=='delete') echo 'disabled="disabled"' ?> /></td>
 
 			</tr>
 			<tr class="form-field">
-				<th scope="row" valign="top" align="right"><label for="tagsgroup_parent"><?php _e('kinship','xili_tidy_tags') ?></label> :&nbsp;</th>
+				<th scope="row" valign="top" align="right"><label for="tagsgroup_parent"><?php _e( 'kinship', 'xili-tidy-tags' ) ?></label> :&nbsp;</th>
 				<td>
 			  	<?php if (isset($tagsgroup)) {
 			  			$this->xili_selectparent_row($tagsgroup->term_id, $tagsgroup, $action);
@@ -1556,7 +1556,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 				$listterms = get_terms($this->tidy_taxonomy, array('hide_empty' => false));
 				?>
 				<select name="tagsgroup_parent" id="tagsgroup_parent" style="width:100%;">
-		  				<option value="no_parent" ><?php _e('no parent','xili_tidy_tags'); ?></option>
+		  				<option value="no_parent" ><?php _e( 'no parent', 'xili-tidy-tags' ); ?></option>
 				<?php
 				foreach ($listterms as $curterm) {
 					if ($curterm->parent == 0) {
@@ -1573,27 +1573,27 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 				} ?>
 				</select>
 				<br />
-	    		<?php _e('Select the parent if necessary','xili_tidy_tags');
+	    		<?php _e( 'Select the parent if necessary', 'xili-tidy-tags' );
 	     	} else {
 	     		if ($tagsgroup->parent == 0) {
 	     			$listterms = get_terms($this->tidy_taxonomy, array('hide_empty' => false,'parent' => $term_id));
 					// display childs
 					if (!empty($listterms)) {
-						echo __('parent of: ','xili_tidy_tags');
+						echo __( 'parent of: ', 'xili-tidy-tags' );
 						echo '<ul>';
 						foreach ($listterms as $curterm) {
 							echo '<li value="'.$curterm->term_id.'" >'.$curterm->name.'</li>';
 						}
 						echo '</ul>';
 					} else {
-						echo __('no child now','xili_tidy_tags')."<br /><br />";
+						echo __( 'no child now', 'xili-tidy-tags' )."<br /><br />";
 					}
 					/* if modify*/
 					if($action=='edit') {
 						$listterms = get_terms($this->tidy_taxonomy, array('hide_empty' => false));
 				?>
 				<select name="tagsgroup_parent" id="tagsgroup_parent" style="width:100%;">
-		  				<option value="no_parent" ><?php _e('no parent','xili_tidy_tags'); ?></option>
+		  				<option value="no_parent" ><?php _e( 'no parent', 'xili-tidy-tags' ); ?></option>
 				<?php
 					foreach ($listterms as $curterm) {
 						if ($curterm->parent == 0 && $curterm->term_id != $term_id)
@@ -1601,7 +1601,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 					} ?>
 				</select>
 				<br />
-	    		<?php _e('Select the parent if necessary','xili_tidy_tags');
+	    		<?php _e( 'Select the parent if necessary', 'xili-tidy-tags' );
 
 					}
 
@@ -1609,14 +1609,14 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	     			/* if modify*/
 	     			$parent_term = get_term( (int) $tagsgroup->parent,$this->tidy_taxonomy,OBJECT,'edit');
 	     			if($action=='delete') {
-	     				echo __('child of: ','xili_tidy_tags');
+	     				echo __( 'child of: ', 'xili-tidy-tags' );
 	     				echo $parent_term->name; ?>
 	     					<input type="hidden" name="tagsgroup_parent" value="<?php echo $parent_term->term_id ?>" />
 	     		<?php } else {
 	     					$listterms = get_terms($this->tidy_taxonomy, array('hide_empty' => false));
 	     			?>
 							<select name="tagsgroup_parent" id="tagsgroup_parent" style="width:100%;">
-		  					<option value="no_parent" ><?php _e('no parent','xili_tidy_tags'); ?></option>
+		  					<option value="no_parent" ><?php _e( 'no parent', 'xili-tidy-tags' ); ?></option>
 				<?php
 							foreach ($listterms as $curterm) {
 								if ($curterm->parent == 0 && $curterm->term_id != $term_id) {
@@ -1626,7 +1626,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 							} ?>
 							</select>
 				<br />
-	    		<?php _e('Modify the parent if necessary','xili_tidy_tags');
+	    		<?php _e( 'Modify the parent if necessary', 'xili-tidy-tags' );
 	     		}
 	     	}
 			}
@@ -1721,7 +1721,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 					/* delete link &amp;action=edit&amp;term_id=".$tagsgroup->term_id."*/
 					$edit .= "<td><a href='?page=".$pre."&amp;action=delete&amp;term_id=".$tagsgroup->term_id."' class='delete'>".__( 'Delete' )."</a>";
 		    	} else {
-		    		$edit = __('no capability','xili_tidy_tags').'</td><td>';
+		    		$edit = __( 'no capability', 'xili-tidy-tags' ).'</td><td>';
 		    	}
 
 				$line="<tr id='cat-$tagsgroup->term_id'$class>
@@ -1753,7 +1753,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		<div id="topbanner">
 		</div>
 		<?php if ( $this->xili_settings['datatable_js'] == '' ) { ?>
-		<div id="tableupdating" ><br /><br /><h2><?php _e('Creating table of tags !','xili_tidy_tags') ?></h2>
+		<div id="tableupdating" ><br /><br /><h2><?php _e( 'Creating table of tags !', 'xili-tidy-tags' ) ?></h2>
 		</div>
 		<table class="display" id="assigntable" style="visibility:hidden; clear:none; font-size:10px; line-height:1.8em;" >
 		<?php } else { ?>
@@ -1762,10 +1762,10 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 						<thead>
 						<tr>
-							<th scope="col" class="center colid" ><?php _e('ID','xili_tidy_tags') ?></th>
-	        				<th scope="col" class="colname" ><?php _e('Name','xili_tidy_tags') ?></th>
-	        				<th scope="col" class="center colposts"><?php _e('Posts') ?></th>
-	        				<th colspan="2" class="colgrouping"><?php _e('Group(s) to choose','xili_tidy_tags') ?></th>
+							<th scope="col" class="center colid" ><?php _e( 'ID', 'xili-tidy-tags' ) ?></th>
+	        				<th scope="col" class="colname" ><?php _e( 'Name', 'xili-tidy-tags' ) ?></th>
+	        				<th scope="col" class="center colposts"><?php _e( 'Posts') ?></th>
+	        				<th colspan="2" class="colgrouping"><?php _e( 'Group(s) to choose', 'xili-tidy-tags' ) ?></th>
 						</tr>
 						</thead>
 						<tbody id="the-list">
@@ -1773,10 +1773,10 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 						</tbody>
 						<tfoot>
 							<tr>
-								<th><?php _e('ID','xili_tidy_tags') ?></th>
-								<th><?php _e('Name','xili_tidy_tags') ?></th>
-								<th><?php _e('Posts') ?></th>
-								<th><?php _e('Group(s) to choose','xili_tidy_tags') ?></th>
+								<th><?php _e( 'ID', 'xili-tidy-tags' ) ?></th>
+								<th><?php _e( 'Name', 'xili-tidy-tags' ) ?></th>
+								<th><?php _e( 'Posts') ?></th>
+								<th><?php _e( 'Group(s) to choose', 'xili-tidy-tags' ) ?></th>
 							</tr>
 						</tfoot>
 					</table>
@@ -1793,25 +1793,25 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	 */
 	function  on_sub_sidebox_action_content( $data=array() ) {
 	 	extract($data);?>
-	 	<p><?php _e('After checking or unchecking do not forget to click update button !','xili_tidy_tags'); ?></p>
+	 	<p><?php _e( 'After checking or unchecking do not forget to click update button !', 'xili-tidy-tags' ); ?></p>
 		<p class="submit"><input type="submit" class="button-primary" id="update" name="update" value="<?php echo $submit_text ?>" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="reset" value="<?php echo $cancel_text ?>" /></p>
 
-		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;"><legend><?php _e('Sub list of tags','xili_tidy_tags'); ?></legend>
+		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;"><legend><?php _e( 'Sub list of tags', 'xili-tidy-tags' ); ?></legend>
 
-			<label for="tagsnamelike"><?php _e('Starting with:','xili_tidy_tags') ?></label>
+			<label for="tagsnamelike"><?php _e( 'Starting with:', 'xili-tidy-tags' ) ?></label>
 			<input name="tagsnamelike" id="tagsnamelike" type="text" value="<?php echo esc_attr($tagsnamelike); ?>" /><br />
 
-			<label for="tagsnamesearch"><?php _e('Containing:','xili_tidy_tags') ?></label>
+			<label for="tagsnamesearch"><?php _e( 'Containing:', 'xili-tidy-tags' ) ?></label>
 			<input name="tagsnamesearch" id="tagsnamesearch" type="text" value="<?php echo esc_attr($tagsnamesearch); ?>" /><br /><br />
-			<label for="tagsfromgroup"><?php _e('Choose:','xili_tidy_tags') ?></label>
+			<label for="tagsfromgroup"><?php _e( 'Choose:', 'xili-tidy-tags' ) ?></label>
 			<?php $listtagsgroups = get_terms($this->tidy_taxonomy, array('hide_empty' => false));
 
 			if ( !is_wp_error( $listtagsgroups ) && $listtagsgroups != array() ) {
 				$listtagsgroupssorted = walk_TagGroupList_sorted( $listtagsgroups, 3, null, null );
 				?>
 					<select name="tagsgroup_from_select" id="tagsgroup_from_select" style="width:45%;">
-			  				<option value="no_select" ><?php _e('every','xili_tidy_tags'); ?></option>
-							<option value="onlyuncheckedtags" <?php selected( $this->onlyuncheckedtags ) ; ?>><?php _e('Unchecked only','xili_tidy_tags'); ?></option>
+			  				<option value="no_select" ><?php _e( 'every', 'xili-tidy-tags' ); ?></option>
+							<option value="onlyuncheckedtags" <?php selected( $this->onlyuncheckedtags ) ; ?>><?php _e( 'Unchecked only', 'xili-tidy-tags' ); ?></option>
 					<?php
 					$show = false;
 
@@ -1835,22 +1835,22 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 					<?php
 			}
 				if( $this->onlyuncheckedtags == false &&  $this->fromgroupselect != 0 ) { ?>
-				<br /><label for="xili_group_not_select"><?php _e('Exclude this group','xili_tidy_tags') ?> <input id="xili_group_not_select" name="xili_group_not_select" type="checkbox" value="not" <?php checked( $this->groupexclude, true ); ?> /></label>
+				<br /><label for="xili_group_not_select"><?php _e( 'Exclude this group', 'xili-tidy-tags' ) ?> <input id="xili_group_not_select" name="xili_group_not_select" type="checkbox" value="not" <?php checked( $this->groupexclude, true ); ?> /></label>
 				<?php if ($show) { ?>
-				&nbsp;–&nbsp;<label for="xili_group_only_parent"><?php _e('No childs','xili_tidy_tags') ?> <input id="xili_group_only_parent" name="xili_group_only_parent" type="checkbox" value="onlyparent" <?php checked( $this->onlyparent, true); ?> /></label>
+				&nbsp;–&nbsp;<label for="xili_group_only_parent"><?php _e( 'No childs', 'xili-tidy-tags' ) ?> <input id="xili_group_only_parent" name="xili_group_only_parent" type="checkbox" value="onlyparent" <?php checked( $this->onlyparent, true); ?> /></label>
 				<?php } ?>
 				<br />
 				<?php if($this->groupexclude == true) { ?>
-					<label for="xili_uncheckedtags"><?php _e('Include unchecked','xili_tidy_tags') ?> <input id="xili_uncheckedtags" name="xili_uncheckedtags" type="checkbox" value="include" <?php checked( $this->uncheckedtags, true ); ?> /></label>
+					<label for="xili_uncheckedtags"><?php _e( 'Include unchecked', 'xili-tidy-tags' ) ?> <input id="xili_uncheckedtags" name="xili_uncheckedtags" type="checkbox" value="include" <?php checked( $this->uncheckedtags, true ); ?> /></label>
 				<?php }
 				}?>
-			<p class="submit"><input type="submit" id="tagssublist" name="tagssublist" value="<?php _e('Sub select…','xili_tidy_tags'); ?>" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" id="notagssublist" name="notagssublist" value="<?php _e('No select…','xili_tidy_tags'); ?>" /></p>
+			<p class="submit"><input type="submit" id="tagssublist" name="tagssublist" value="<?php _e( 'Sub select…', 'xili-tidy-tags' ); ?>" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" id="notagssublist" name="notagssublist" value="<?php _e( 'No select…', 'xili-tidy-tags' ); ?>" /></p>
 		</fieldset>
 		<?php /* only show one group to select */ ?>
-		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;"><legend><?php _e('Columns: Group selection','xili_tidy_tags'); ?></legend>
+		<fieldset style="margin:2px; padding:3px; border:1px solid #ccc;"><legend><?php _e( 'Columns: Group selection', 'xili-tidy-tags' ); ?></legend>
 			<?php if ( !is_wp_error( $listtagsgroups ) && $listtagsgroups != array() ) { ?>
 				<select name="tagsgroup_parent_select" id="tagsgroup_parent_select" style="width:100%;">
-		  				<option value="no_select" ><?php _e('No sub-selection','xili_tidy_tags'); ?></option>
+		  				<option value="no_select" ><?php _e( 'No sub-selection', 'xili-tidy-tags' ); ?></option>
 				<?php
 				foreach ($listtagsgroups as $curterm) {
 					if ($curterm->parent == 0) {
@@ -1860,7 +1860,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 				} ?>
 				</select>
 				<?php } ?>
-				<br /> <p class="submit"><input type="submit" id="subselection" name="subselection" value="<?php _e('Sub select…','xili_tidy_tags'); ?>" /></p></fieldset><?php
+				<br /> <p class="submit"><input type="submit" id="subselection" name="subselection" value="<?php _e( 'Sub select…', 'xili-tidy-tags' ); ?>" /></p></fieldset><?php
 	}
 	/**
 	 * The rows of the tags and checkboxes to assign group(s)
@@ -1998,11 +1998,11 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		$wplang = ( isset ($this->xili_settings['wplang']) ) ? $this->xili_settings['wplang'] : "";
 		$xiliplug = ( isset ($this->xili_settings['xiliplug']) ) ? $this->xili_settings['xiliplug'] : "";
 		if ( '' != $emessage ) { ?>
-	 		<h4><?php _e('Note:','xili_tidy_tags') ?></h4>
+	 		<h4><?php _e( 'Note:', 'xili-tidy-tags' ) ?></h4>
 			<p><strong><?php echo $emessage;?></strong></p>
 		<?php } ?>
-		<fieldset style="margin:2px; padding:12px 6px; border:1px solid #ccc;"><legend><?php echo _e('Mail to dev.xiligroup', 'xili_tidy_tags'); ?></legend>
-		<label for="ccmail"><?php _e('Cc: (Reply to:)','xili_tidy_tags'); ?>
+		<fieldset style="margin:2px; padding:12px 6px; border:1px solid #ccc;"><legend><?php echo _e( 'Mail to dev.xiligroup', 'xili-tidy-tags' ); ?></legend>
+		<label for="ccmail"><?php _e( 'Cc: (Reply to:)', 'xili-tidy-tags' ); ?>
 		<input class="widefat" id="ccmail" name="ccmail" type="text" value="<?php bloginfo ('admin_email') ; ?>" /></label><br /><br />
 		<?php if ( false === strpos( get_bloginfo ('url'), 'local' ) ){ ?>
 			<label for="urlenable">
@@ -2011,7 +2011,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		<?php } else { ?>
 			<input type="hidden" name="onlocalhost" id="onlocalhost" value="localhost" />
 		<?php } ?>
-		<br /><em><?php _e('When checking and giving detailled infos, support will be better !', 'xili_tidy_tags'); ?></em><br />
+		<br /><em><?php _e( 'When checking and giving detailled infos, support will be better !', 'xili-tidy-tags' ); ?></em><br />
 		<label for="themeenable">
 			<input type="checkbox" id="themeenable" name="themeenable" value="enable" <?php checked( $theme, 'enable', true ); ?> />&nbsp;<?php echo "Theme name= ".get_option ('stylesheet') ; ?>
 		</label><br />
@@ -2029,32 +2029,32 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			<input type="checkbox" id="xiliplugenable" name="xiliplugenable" value="enable" <?php checked ( $xiliplug, 'enable', true ); ?> />&nbsp;<?php echo "Other xili plugins = ".$list ; ?>
 		</label><br /><br />
 		<?php } ?>
-		<label for="webmestre"><?php _e('Type of webmaster:','xili_tidy_tags'); ?>
+		<label for="webmestre"><?php _e( 'Type of webmaster:', 'xili-tidy-tags' ); ?>
 		<select name="webmestre" id="webmestre" style="width:100%;">
 		<?php if ( !isset ( $this->xili_settings['webmestre-level'] ) ) $this->xili_settings['webmestre-level'] = '?' ; ?>
-			<option value="?" <?php selected( $this->xili_settings['webmestre-level'], '?' ); ?>><?php _e('Define your experience as webmaster…','xili_tidy_tags'); ?></option>
-			<option value="newbie" <?php selected( $this->xili_settings['webmestre-level'], "newbie" ); ?>><?php _e('Newbie in WP','xili_tidy_tags'); ?></option>
-			<option value="wp-php" <?php selected( $this->xili_settings['webmestre-level'], "wp-php" ); ?>><?php _e('Good knowledge in WP and few in php','xili_tidy_tags'); ?></option>
-			<option value="wp-php-dev" <?php selected( $this->xili_settings['webmestre-level'], "wp-php-dev" ); ?>><?php _e('Good knowledge in WP, CMS and good in php','xili_tidy_tags'); ?></option>
-			<option value="wp-plugin-theme" <?php selected( $this->xili_settings['webmestre-level'], "wp-plugin-theme" ); ?>><?php _e('WP theme and /or plugin developper','xili_tidy_tags'); ?></option>
+			<option value="?" <?php selected( $this->xili_settings['webmestre-level'], '?' ); ?>><?php _e( 'Define your experience as webmaster…', 'xili-tidy-tags' ); ?></option>
+			<option value="newbie" <?php selected( $this->xili_settings['webmestre-level'], "newbie" ); ?>><?php _e( 'Newbie in WP', 'xili-tidy-tags' ); ?></option>
+			<option value="wp-php" <?php selected( $this->xili_settings['webmestre-level'], "wp-php" ); ?>><?php _e( 'Good knowledge in WP and few in php', 'xili-tidy-tags' ); ?></option>
+			<option value="wp-php-dev" <?php selected( $this->xili_settings['webmestre-level'], "wp-php-dev" ); ?>><?php _e( 'Good knowledge in WP, CMS and good in php', 'xili-tidy-tags' ); ?></option>
+			<option value="wp-plugin-theme" <?php selected( $this->xili_settings['webmestre-level'], "wp-plugin-theme" ); ?>><?php _e( 'WP theme and /or plugin developper', 'xili-tidy-tags' ); ?></option>
 		</select></label>
 		<br /><br />
-		<label for="subject"><?php _e('Subject:','xili_tidy_tags'); ?>
+		<label for="subject"><?php _e( 'Subject:', 'xili-tidy-tags' ); ?>
 		<input class="widefat" id="subject" name="subject" type="text" value="" /></label>
 		<select name="thema" id="thema" style="width:100%;">
-			<option value="" ><?php _e('Choose topic...','xili_tidy_tags'); ?></option>
-			<option value="Message" ><?php _e('Message','xili_tidy_tags'); ?></option>
-			<option value="Question" ><?php _e('Question','xili_tidy_tags'); ?></option>
-			<option value="Encouragement" ><?php _e('Encouragement','xili_tidy_tags'); ?></option>
-			<option value="Support need" ><?php _e('Support need','xili_tidy_tags'); ?></option>
+			<option value="" ><?php _e( 'Choose topic...', 'xili-tidy-tags' ); ?></option>
+			<option value="Message" ><?php _e( 'Message', 'xili-tidy-tags' ); ?></option>
+			<option value="Question" ><?php _e( 'Question', 'xili-tidy-tags' ); ?></option>
+			<option value="Encouragement" ><?php _e( 'Encouragement', 'xili-tidy-tags' ); ?></option>
+			<option value="Support need" ><?php _e( 'Support need', 'xili-tidy-tags' ); ?></option>
 		</select>
-		<textarea class="widefat" rows="5" cols="20" id="mailcontent" name="mailcontent"><?php _e('Your message here…','xili_tidy_tags'); ?></textarea>
+		<textarea class="widefat" rows="5" cols="20" id="mailcontent" name="mailcontent"><?php _e( 'Your message here…', 'xili-tidy-tags' ); ?></textarea>
 		</fieldset>
 		<p>
-		<?php _e('Before send the mail, check the infos to be sent and complete textarea. A copy (Cc:) is sent to webmaster email (modify it if needed).','xili_tidy_tags'); ?>
+		<?php _e( 'Before send the mail, check the infos to be sent and complete textarea. A copy (Cc:) is sent to webmaster email (modify it if needed).', 'xili-tidy-tags' ); ?>
 		</p>
 		<div class='submit'>
-		<input id='sendmail' name='sendmail' type='submit' tabindex='6' value="<?php _e('Send email','xili_tidy_tags') ?>" /></div>
+		<input id='sendmail' name='sendmail' type='submit' tabindex='6' value="<?php _e( 'Send email', 'xili-tidy-tags' ) ?>" /></div>
 
 		<div style="clear:both; height:1px"></div>
 		<?php
