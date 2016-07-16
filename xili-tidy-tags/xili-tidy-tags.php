@@ -523,21 +523,18 @@ function xili_get_object_terms( $object_ids, $taxonomies, $args = array() ) {
 
 	extract( $args, EXTR_SKIP );
 
-	if ( 'count' == $orderby )
-		$orderby = 'tt.count';
-	else if ( 'name' == $orderby )
-		$orderby = 't.name';
-	else if ( 'slug' == $orderby )
-		$orderby = 't.slug';
-	else if ( 'term_group' == $orderby )
-		$orderby = 't.term_group';
-	else if ( 'term_order' == $orderby )
-		$orderby = 'tr.term_order';
-	else if ( 'none' == $orderby ) {
-		$orderby = '';
-		$order = '';
-	} else {
-		$orderby = 't.term_id';
+	switch( $orderby )
+	{
+		case 'count'     : $orderby = 'tt.count'     ; break;
+		case 'name'      : $orderby = 't.name'       ; break;
+		case 'slug'      : $orderby = 't.slug'       ; break;
+		case 'term_group': $orderby = 't.term_group' ; break;
+		case 'term_order': $orderby = 'tr.term_order'; break;
+
+		case 'none'      : $orderby = ''             ;
+		                   $order   = ''             ; break;
+
+		default          : $orderby = 't.term_id'    ; break;
 	}
 
 	// tt_ids queries can only be none or tr.term_taxonomy_id
@@ -553,15 +550,14 @@ function xili_get_object_terms( $object_ids, $taxonomies, $args = array() ) {
 	$taxonomies = "'" . implode("', '", $taxonomies) . "'";
 	$object_ids = implode(', ', $object_ids);
 
-	$select_this = '';
-	if ( 'all' == $fields )
-		$select_this = 't.*, tt.*';
-	else if ( 'ids' == $fields )
-		$select_this = 't.term_id';
-	else if ( 'names' == $fields )
-		$select_this = 't.name';
-	else if ( 'all_with_object_id' == $fields )
-		$select_this = 't.*, tt.*, tr.object_id';
+	switch( $fields )
+	{
+		case 'all'               : $select_this = 't.*, tt.*'               ; break;
+		case 'ids'               : $select_this = 't.term_id'               ; break;
+		case 'names'             : $select_this = 't.name'                  ; break;
+		case 'all_with_object_id': $select_this = 't.*, tt.*, tr.object_id' ; break;
+		default                  : $select_this = ''                        ; break;
+	}
 
 	$subselect = $wpdb->prepare( "SELECT st.term_id FROM $wpdb->term_relationships AS str INNER JOIN $wpdb->term_taxonomy AS stt ON str.term_taxonomy_id = stt.term_taxonomy_id INNER JOIN $wpdb->terms AS st ON st.term_id = str.object_id INNER JOIN $wpdb->term_taxonomy AS stt2 ON stt2.term_id = str.object_id WHERE stt.taxonomy IN (%s) AND stt2.taxonomy = $taxonomies AND stt.term_id IN ($group_ids)", $tidy_tags_taxo );
 
