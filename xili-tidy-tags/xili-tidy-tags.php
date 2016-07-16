@@ -475,19 +475,6 @@ function xili_get_object_terms( $object_ids, $taxonomies, $args = array() ) {
 
 	global $wpdb;
 
-	if ( !is_array($taxonomies) )
-		$taxonomies = array($taxonomies);
-
-	foreach ( (array) $taxonomies as $taxonomy ) {
-		if ( ! taxonomy_exists($taxonomy) )
-			return new WP_Error('invalid_taxonomy', __('Invalid Taxonomy'));
-	}
-
-	if ( !is_array( $object_ids ) )
-		$object_ids = array($object_ids);
-
-	$object_ids = array_map( 'intval', $object_ids );
-
 	$defaults = array(
 		'orderby' => 'name',
 		'order' => 'ASC',
@@ -498,14 +485,24 @@ function xili_get_object_terms( $object_ids, $taxonomies, $args = array() ) {
 	$args = array_merge ( $defaults, $args );
 	extract ($args);
 
+	settype( $taxonomies, 'array' );
+	foreach ( $taxonomies as $taxonomy ) {
+		if ( ! is_taxonomy($taxonomy) )
+			return new WP_Error('invalid_taxonomy', __('Invalid Taxonomy'));
+	}
 
-	if (!is_array($sub_groups)) $sub_groups = array($sub_groups);
+	settype( $object_ids, 'array' );
+	$object_ids = array_map('intval', $object_ids);
+
+	settype( $sub_groups, 'array' );
 	foreach ($sub_groups as $tagsgroup) {
 		if ($tagsgroup !='') {
 			$groupterm = term_exists($tagsgroup, $tidy_tags_taxo); //echo '----'.$tagsgroup;
 			$group_ids[] = $groupterm['term_id'];
 		}
 	}
+
+	settype( $group_ids, 'array' );
 	$group_ids = array_map('intval', $group_ids);
 		$group_ids = implode(', ', $group_ids); /* the terms ID of subgroups are now in list */
 
