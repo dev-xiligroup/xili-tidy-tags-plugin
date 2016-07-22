@@ -12,6 +12,7 @@
  * 1.10.2 - 150322 - new datatables JS+CSS (1.10.5)
  * 1.10.3 - 150408 - fixes notice with constante line 61
  * 1.11.0 - 150703 - datatables js 1.10.7 updated WP 43 + debug
+ * 1.11.4 - 160722 - insert commits of Najan
  */
 
 class xili_tidy_tags_admin extends xili_tidy_tags {
@@ -79,7 +80,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 		 	$pre = ( $this->post_tag == 'post_tag') ? ''  : '_'.$this->post_tag;
 
-			$this->thehook0 = add_object_page( sprintf(__( '%s groups', 'xili-tidy-tags' ), $this->tags_name), sprintf(__( 'Tidy %s', 'xili-tidy-tags' ), $this->tags_name ) , '', 'xili-tidy-tags'.$pre, array(&$this,'top_tidy_menu_title'), plugins_url( 'images/xilitidy-logo-16.png', $this->file_file ) ); //1.5.5
+			$this->thehook0 = add_menu_page( sprintf(__( '%s groups', 'xili-tidy-tags' ), $this->tags_name), sprintf(__( 'Tidy %s', 'xili-tidy-tags' ), $this->tags_name ) , '', 'xili-tidy-tags'.$pre, array(&$this,'top_tidy_menu_title'), plugins_url( 'images/xilitidy-logo-16.png', $this->file_file ) ); //1.5.5
 
 		  	$this->thehooka = add_submenu_page('xili-tidy-tags'.$pre, sprintf( __( '%s groups', 'xili-tidy-tags' ), $this->tags_name),__( 'Info for SuperAdmin', 'xili-tidy-tags' ), '', 'xili-tidy-tags'.$pre, array(&$this,'top_tidy_menu_title'));
 

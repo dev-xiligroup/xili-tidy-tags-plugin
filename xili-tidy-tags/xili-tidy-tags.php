@@ -4,13 +4,14 @@ Plugin Name: xili-tidy-tags
 Plugin URI: http://dev.xiligroup.com/xili-tidy-tags/
 Description: xili-tidy-tags is a tool for grouping tags by language or semantic group. Initially developed to enrich xili-language plugin and usable in all sites (CMS) and bbPress forum or others custom taxonomies.
 Author: dev.xiligroup.com - MS
-Version: 1.11.3
+Version: 1.11.4
 Author URI: http://dev.xiligroup.com
 License: GPLv2
 Text Domain: xili-tidy-tags
 Domain Path: /languages/
 */
 
+# 1.11.4 - 160722 - insertion of Naja commits
 # 1.11.3 - 160207 - compatibility with glotpress (language file name changed)
 
 # 1.11.2 - 150924 - compatibility with xl 2.20.3+
@@ -81,7 +82,7 @@ Domain Path: /languages/
 # License along with this plugin; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
-define('XILITIDYTAGS_VER','1.11.3'); /* used in admin UI */
+define('XILITIDYTAGS_VER','1.11.4'); /* used in admin UI */
 
 class xili_tidy_tags {
 
@@ -477,16 +478,19 @@ function xili_get_object_terms($object_ids, $taxonomies, $args = array()) {
 		$taxonomies = array($taxonomies);
 
 	foreach ( (array) $taxonomies as $taxonomy ) {
-		if ( ! is_taxonomy($taxonomy) )
+		if ( ! taxonomy_exists($taxonomy) )
 			return new WP_Error('invalid_taxonomy', __('Invalid Taxonomy'));
 	}
 
-	if ( !is_array($object_ids) )
+	if ( !is_array( $object_ids ) )
 		$object_ids = array($object_ids);
-	$object_ids = array_map('intval', $object_ids);
 
-	$defaults = array('orderby' => 'name',
-		'order' => 'ASC', 'fields' => 'all',
+	$object_ids = array_map( 'intval', $object_ids );
+
+	$defaults = array(
+		'orderby' => 'name',
+		'order' => 'ASC',
+		'fields' => 'all',
 		'tidy_tags_taxo' => TAXOTIDYTAGS ,
 
 		);
@@ -542,8 +546,11 @@ function xili_get_object_terms($object_ids, $taxonomies, $args = array()) {
 	if ( ('tt_ids' == $fields) && !empty($orderby) )
 		$orderby = 'tr.term_taxonomy_id';
 
-	if ( !empty($orderby) )
+	if ( !empty( $orderby ) )
 		$orderby = "ORDER BY $orderby";
+
+	if ( !in_array( $order, ['', 'ASC', 'DESC'], /*strict = */ true ) )
+		$order = 'ASC';
 
 	$taxonomies = "'" . implode("', '", $taxonomies) . "'";
 	$object_ids = implode(', ', $object_ids);
@@ -558,17 +565,17 @@ function xili_get_object_terms($object_ids, $taxonomies, $args = array()) {
 	else if ( 'all_with_object_id' == $fields )
 		$select_this = 't.*, tt.*, tr.object_id';
 
-	$subselect = $wpdb->prepare( "SELECT st.term_id FROM $wpdb->term_relationships AS str INNER JOIN $wpdb->term_taxonomy AS stt ON str.term_taxonomy_id = stt.term_taxonomy_id INNER JOIN $wpdb->terms AS st ON st.term_id = str.object_id INNER JOIN $wpdb->term_taxonomy AS stt2 ON stt2.term_id = str.object_id WHERE stt.taxonomy IN ('".$tidy_tags_taxo."') AND stt2.taxonomy = ".$taxonomies." AND stt.term_id IN (".$group_ids.") ", 'd' );
-	// dummy param added 3.5
-	$query = "SELECT $select_this FROM $wpdb->terms AS t INNER JOIN $wpdb->term_taxonomy AS tt ON tt.term_id = t.term_id INNER JOIN $wpdb->term_relationships AS tr ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tt.taxonomy IN ($taxonomies) AND tr.object_id IN ($object_ids) AND t.term_id IN ($subselect) $orderby $order"; //echo $query;
+	$subselect = $wpdb->prepare( "SELECT st.term_id FROM $wpdb->term_relationships AS str INNER JOIN $wpdb->term_taxonomy AS stt ON str.term_taxonomy_id = stt.term_taxonomy_id INNER JOIN $wpdb->terms AS st ON st.term_id = str.object_id INNER JOIN $wpdb->term_taxonomy AS stt2 ON stt2.term_id = str.object_id WHERE stt.taxonomy IN (%s) AND stt2.taxonomy = $taxonomies AND stt.term_id IN ($group_ids)", $tidy_tags_taxo );
+
+ 	$query = "SELECT $select_this FROM $wpdb->terms AS t INNER JOIN $wpdb->term_taxonomy AS tt ON tt.term_id = t.term_id INNER JOIN $wpdb->term_relationships AS tr ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tt.taxonomy IN ($taxonomies) AND tr.object_id IN ($object_ids) AND t.term_id IN ($subselect) $orderby $order";
 
 	if ( 'all' == $fields || 'all_with_object_id' == $fields ) {
-		$terms = array_merge( $terms, $wpdb->get_results( $wpdb->prepare( $query, 'd' ) ) );
+		$terms = array_merge( $terms, $wpdb->get_results( $query ) );
 		update_term_cache($terms);
 	} else if ( 'ids' == $fields || 'names' == $fields ) {
-		$terms = array_merge( $terms, $wpdb->get_col( $wpdb->prepare( $query, 'd' ) ) );
+		$terms = array_merge( $terms, $wpdb->get_col( $query ) );
 	} else if ( 'tt_ids' == $fields ) {
-		$terms = $wpdb->get_col( $wpdb->prepare( "SELECT tr.term_taxonomy_id FROM $wpdb->term_relationships AS tr INNER JOIN $wpdb->term_taxonomy AS tt ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tr.object_id IN ($object_ids) AND tt.taxonomy IN ($taxonomies) $orderby $order", 'd' ) );
+		$terms = $wpdb->get_col( "SELECT tr.term_taxonomy_id FROM $wpdb->term_relationships AS tr INNER JOIN $wpdb->term_taxonomy AS tt ON tr.term_taxonomy_id = tt.term_taxonomy_id WHERE tr.object_id IN ($object_ids) AND tt.taxonomy IN ($taxonomies) $orderby $order" );
 	}
 
 	if ( ! $terms )

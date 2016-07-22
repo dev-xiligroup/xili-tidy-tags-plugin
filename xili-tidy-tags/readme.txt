@@ -3,11 +3,11 @@ Contributors: michelwppi, MS dev.xiligroup
 Donate link: http://dev.xiligroup.com/
 Tags: tag,tags,theme,post,plugin,posts, page, category, admin,multilingual,taxonomy,dictionary,widget,CMS, multisite, wpmu, bbPress, shortcode
 Requires at least: 4.0
-Tested up to: 4.4.2
-Stable tag: 1.11.3
+Tested up to: 4.5.3
+Stable tag: 1.11.4
 License: GPLv2
 
-xili-tidy-tags is a tool for grouping tags by semantic groups or by language and for creating tidy tag clouds. 
+xili-tidy-tags is a tool for grouping tags by semantic groups or by language and for creating tidy tag clouds.
 
 == Description ==
 
@@ -16,7 +16,7 @@ xili-tidy-tags is a tool for grouping tags by semantic groups and sub-groups.
 This tags aggregator can also, by instance, be used to group tags according two or more main parts of the CMS website. It is also possible to create group of tags in parallel of category and display a ‘sub’ tag cloud only depending of the displayed category.
 
 = on multilingual website =
-xili-tidy-tags is a tool for grouping tags by language with xili-language plugin for multilingual site and for creating tidy tag clouds. By instance to present only tags in english when the theme is in english because the post or the current category present texts in english. Technically, as xili-language, this plugin don't create tables in wordpress db. He only use (rich) taxonomy features. So, with or without the plugin, the base structure is not modified. 
+xili-tidy-tags is a tool for grouping tags by language with xili-language plugin for multilingual site and for creating tidy tag clouds. By instance to present only tags in english when the theme is in english because the post or the current category present texts in english. Technically, as xili-language, this plugin don't create tables in wordpress db. He only use (rich) taxonomy features. So, with or without the plugin, the base structure is not modified.
 
 = Why xili-tidy-tags versus / against included parent property of terms ? =
 
@@ -29,7 +29,7 @@ Using nice feature "alias of" and "group" of WP core taxonomy.php, xili-tidy-tag
 = Widget to insert Tags cloud =
 The powerful widget is easy to setup and to choose what and when group of tags to display.
 
-= Template tags usable in theme design = 
+= Template tags usable in theme design =
 Template tags are provided to enrich the theme and display sub-selection of tags.
 Through the settings admin UI, it is possible to assign to a tag one or more groups (by instance a french tag to the french language group. A trademark term like WordPress to a group named "trademark". You can choose different storage policies.
 
@@ -64,7 +64,7 @@ Please verify that you have installed the latest versions of:
 
 1. Upload the folder containing `xili-tidy-tags.php` and others files to the `/wp-content/plugins/` directory,
 2. If xili-language plugin is activated, groups of languages are automatically created. If not, you can also use xili-tidy-tags to group your tags in semantic group like technical, trademark...
-3. in theme, a new template tag is available : `xili_tidy_tag_cloud` Same passed values as tag_cloud but two new : tagsgroup and tagsallgroup . tagsallgroup can be the parent group slug, tagsgroup is one of the child group slug. If one or both are included, the cloud is built with sub-selected tags in this (theses) group(s). 
+3. in theme, a new template tag is available : `xili_tidy_tag_cloud` Same passed values as tag_cloud but two new : tagsgroup and tagsallgroup . tagsallgroup can be the parent group slug, tagsgroup is one of the child group slug. If one or both are included, the cloud is built with sub-selected tags in this (theses) group(s).
 
 
 **Exemples of script in sidebar.php :**
@@ -78,7 +78,7 @@ Please verify that you have installed the latest versions of:
 
 = with semantic group named as category and a group containing trademarks named trademark =
 `
-<h2><?php _e('Tags cloud','xilidev');?></h2><?php 
+<h2><?php _e('Tags cloud','xilidev');?></h2><?php
 if (function_exists('xili_tidy_tag_cloud')) xili_tidy_tag_cloud('tagsgroup='.single_cat_title('',false).'&tagsallgroup=trademark&largest=18'); ?>
 </div>
 `
@@ -131,7 +131,7 @@ or
 
 = Compatibility with other plugins ? =
 
-In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](http://wordpress.org/extend/plugins/xili-language/), [xili-dictionary](http://wordpress.org/extend/plugins/xili-dictionary/), [xilitheme-select](http://wordpress.org/extend/plugins/xilitheme-select/) and [others](http://wordpress.org/extend/plugins/search.php?q=xili&sort=) , a set of plugins to create powerful multilingual (multisite) CMS website. 
+In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](http://wordpress.org/extend/plugins/xili-language/), [xili-dictionary](http://wordpress.org/extend/plugins/xili-dictionary/), [xilitheme-select](http://wordpress.org/extend/plugins/xilitheme-select/) and [others](http://wordpress.org/extend/plugins/search.php?q=xili&sort=) , a set of plugins to create powerful multilingual (multisite) CMS website.
 
 == Screenshots ==
 
@@ -147,6 +147,9 @@ In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](h
 10. Tags grouping - same sense but in different languages.
 
 == Changelog ==
+= 1.11.4 ( 2016-07-22 ) =
+* insertion of Najan Commits
+* tested with WP 4.5.3
 = 1.11.3 ( 2016-02-07 ) =
 * ready for glotpress - .po/.mo file names changed (equal plugin name)
 = 1.11.2 ( 2015-09-24 - 2016-01-24 ) =
@@ -169,18 +172,18 @@ In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](h
 = 1.9.2 ( 2014-04-13 ) =
 * tests WP 3.9-rc - fixes notices
 = 1.9.1 ( 2013-12-29 ) =
-* tests WP 3.8 final - 
+* tests WP 3.8 final -
 * more accurate messages on initialisation
 = 1.9.0 ( 2013-09-29 ) =
 * Grouping features : This version introduces the tags multilingual grouping *same sense but in different languages* (using alias feature existing in WP taxonomy) according languages.
 = 1.8.6 ( 2013-09-03 ) =
-* tests WP 3.6 final - 
+* tests WP 3.6 final -
 * fixes Strict Standards message (class Walker)
 * new icons
 * dropdown template tag for tags : xili_tidy_tags_dropdown (see commented example in sources line #1009)
 = 1.8.5 ( 2013-05-25 ) =
 * tests 3.6-beta3,
-* fixes Strict Standards message (class Walker), 
+* fixes Strict Standards message (class Walker),
 * fixes rare situation when one or more plugin desactivated.
 = 1.8.4 ( 2013-05-08 ) =
 * add capabilities removing when deactivating.
@@ -189,7 +192,7 @@ In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](h
 = 1.8.3 ( 2013-04-22 ) =
 * tests 3.6
 * better errors management for external instancing
-= 1.8.2 ( 2013-01-27 ) = 
+= 1.8.2 ( 2013-01-27 ) =
 * tests WP 3.5.1 - fixes warning
 = 1.8.0, 1.8.1 ( 2012-08-20, 2012-09-25 ) =
 * fixes (constants), cloud/list echoing in template tag
@@ -222,7 +225,7 @@ In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](h
 = 1.2 = fix `xili_tidy_tag_cloud` sort and order.
 = 1.1 (2009-10-12) = In loop, the template tag `the_tags` named `xili_the_tags` is now able to show only tags of sub-group(s).
 = 1.0.1 = some fixes in php code on some servers (Thanks to Giannis)
-= 1.0 (2009-06-11) = 
+= 1.0 (2009-06-11) =
 * add shortcode to include a cloud of a group of tags inside a post,
 * compatible with WP 2.8.
 = 0.9.5 = Capabilities and roles, better admin menu
@@ -235,7 +238,7 @@ In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](h
 = 0.8.1 (2009-03-31) = some fixes - improved query - better tag_cloud()
 = 0.8.0 = first public beta release.
 
-© 2016-02-07 dev.xiligroup.com
+© 2016-07-22 dev.xiligroup.com
 
 == Upgrade Notice ==
 
@@ -248,7 +251,7 @@ In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](h
 
 = Capabilities and roles : =
 
-0.9.5 : Administrator role can create grouping or setting capabilities for editor role. 'Grouping' permits to editor to group tags in group (lang and/or semantic). 'Setting' permits to editor to create, modify or delete semantic groups. Only administrator has access to languages groups. 
+0.9.5 : Administrator role can create grouping or setting capabilities for editor role. 'Grouping' permits to editor to group tags in group (lang and/or semantic). 'Setting' permits to editor to create, modify or delete semantic groups. Only administrator has access to languages groups.
 
 
 The plugin post is frequently documented [dev.xiligroup.com](http://dev.xiligroup.com/)
