@@ -465,12 +465,13 @@ function xtt_get_subgroup_terms_in_post ( $id, $taxonomy, $sub_groups, $tidy_tax
 /**
  * get the terms of subgroups of the series objects
  * (not in class for general use)
+ * this function is inspired from wp_get_object_terms from file wp-includes/taxonomy.php (before wp 3.0)
  *
  * @since 1.1 -
  *
  */
 
-function xili_get_object_terms($object_ids, $taxonomies, $args = array()) {
+function xili_get_object_terms( $object_ids, $taxonomies, $args = array() ) {
 
 	global $wpdb;
 
@@ -523,7 +524,7 @@ function xili_get_object_terms($object_ids, $taxonomies, $args = array()) {
 			$args = array_merge($args, $t->args);
 	}
 
-	extract($args, EXTR_SKIP);
+	extract( $args, EXTR_SKIP );
 
 	if ( 'count' == $orderby )
 		$orderby = 'tt.count';
