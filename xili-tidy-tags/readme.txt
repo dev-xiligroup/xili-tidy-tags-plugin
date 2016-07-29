@@ -147,9 +147,9 @@ In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](h
 10. Tags grouping - same sense but in different languages.
 
 == Changelog ==
-= 1.11.4 ( 2016-07-22 ) =
-* insertion of Najan Commits
-* tested with WP 4.5.3
+= 1.11.4 ( 2016-07-29 ) =
+* verified with 4.5.3 and tested with 4.6-rc1
+* insertion of Naja Melan Commits
 = 1.11.3 ( 2016-02-07 ) =
 * ready for glotpress - .po/.mo file names changed (equal plugin name)
 = 1.11.2 ( 2015-09-24 - 2016-01-24 ) =

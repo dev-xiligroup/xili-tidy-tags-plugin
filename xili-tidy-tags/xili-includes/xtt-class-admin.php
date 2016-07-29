@@ -12,7 +12,7 @@
  * 1.10.2 - 150322 - new datatables JS+CSS (1.10.5)
  * 1.10.3 - 150408 - fixes notice with constante line 61
  * 1.11.0 - 150703 - datatables js 1.10.7 updated WP 43 + debug
- * 1.11.4 - 160722 - insert commits of Najan
+ * 1.11.4 - 160722 - insert commits of Naja
  */
 
 class xili_tidy_tags_admin extends xili_tidy_tags {
