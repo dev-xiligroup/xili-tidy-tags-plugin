@@ -550,7 +550,7 @@ function xili_get_object_terms( $object_ids, $taxonomies, $args = array() ) {
 	if ( !empty( $orderby ) )
 		$orderby = "ORDER BY $orderby";
 
-	if ( !in_array( $order, ['', 'ASC', 'DESC'], /*strict = */ true ) )
+	if ( !in_array( $order, array('', 'ASC', 'DESC'), true ) ) // and not [] NAJA !!
 		$order = 'ASC';
 
 	$taxonomies = "'" . implode("', '", $taxonomies) . "'";
