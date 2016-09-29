@@ -817,7 +817,7 @@ function walk_TagGroupList_sorted() {
 
 class xili_tidy_tags_cloud_multiple_widgets extends WP_Widget {
 
-	function xili_tidy_tags_cloud_multiple_widgets() {
+	function __construct() {
 		load_plugin_textdomain('xili-tidy-tags', false, 'xili-tidy-tags/languages' );
 		$widget_ops = array('classname' => 'xili_tdtc_widget', 'description' => __( "Cloud of grouped tags by xili-tidy-tags plugin", 'xili-tidy-tags' ).' - v.'.XILITIDYTAGS_VER );
 		parent::__construct('xili_tidy_tags_cloud_widget', '[©xili] ' .__( "Tidy tags cloud", 'xili-tidy-tags'), $widget_ops);
