@@ -1,7 +1,7 @@
 === xili-tidy-tags ===
 Contributors: michelwppi, MS dev.xiligroup
 Donate link: http://dev.xiligroup.com/
-Tags: tag,tags,theme,post,plugin,posts, page, category, admin,multilingual,taxonomy,dictionary,widget,CMS, multisite, wpmu, bbPress, shortcode
+Tags: tags, posts, multilingual,taxonomy, shortcode
 Requires at least: 4.6
 Tested up to: 4.8
 Stable tag: 1.11.5
@@ -55,8 +55,9 @@ Please verify that you have installed the latest versions of:
 * readme.txt rewritting.
 * more function for grouping new features introducted in version 1.9
 
-= Version 1.11.3 =
-* Last Updated 2016-02-07
+= Version 1.11.5 =
+* Last Updated 2017-06-20
+* Previous Tags: tag,tags,theme,post,plugin,posts, page, category, admin,multilingual,taxonomy,dictionary,widget,CMS, multisite, wpmu, bbPress, shortcode
 * see [tab and chapters in changelog](http://wordpress.org/extend/plugins/xili-tidy-tags/changelog/)
 
 
