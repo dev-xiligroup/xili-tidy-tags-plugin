@@ -4,12 +4,14 @@ Plugin Name: xili-tidy-tags
 Plugin URI: http://dev.xiligroup.com/xili-tidy-tags/
 Description: xili-tidy-tags is a tool for grouping tags by language or semantic group. Initially developed to enrich xili-language plugin and usable in all sites (CMS) and bbPress forum or others custom taxonomies.
 Author: dev.xiligroup.com - MS
-Version: 1.11.4
+Version: 1.11.5
 Author URI: http://dev.xiligroup.com
 License: GPLv2
 Text Domain: xili-tidy-tags
 Domain Path: /languages/
 */
+
+# 1.11.5 - 170620 - fixes group sorting - compatible with 4.8 Evans
 
 # 1.11.4 - 160722 - insertion of Naja commits
 # 1.11.3 - 160207 - compatibility with glotpress (language file name changed)
@@ -82,7 +84,7 @@ Domain Path: /languages/
 # License along with this plugin; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
-define('XILITIDYTAGS_VER','1.11.4'); /* used in admin UI */
+define('XILITIDYTAGS_VER','1.11.5'); /* used in admin UI */
 
 class xili_tidy_tags {
 
@@ -284,6 +286,21 @@ class xili_tidy_tags {
 		} else {
 			return $langs;
 		}
+	}
+
+	/**
+	 *  update walking sorting
+	 *  @since  1.11.5
+	 */
+	function create_taggrouplist_sorted ( $walking_string ) {
+		$term_id_array = explode ( '/', $walking_string );
+		if ( is_array( $term_id_array ) ) {
+			$sorted_terms = array();
+			foreach ( $term_id_array as $term_id ) {
+				$sorted_terms[] = get_term( (int) $term_id, $this->tidy_taxonomy, OBJECT, 'edit');
+			}
+		}
+		return $sorted_terms;
 	}
 
 
@@ -786,9 +803,12 @@ class Walker_TagGroupList_sorted extends Walker {
 	 */
 	function start_el( &$output, $term, $depth = 0, $args = array(), $current_object_id = 0 ) {
 		/*$pad = str_repeat('&nbsp;', $depth * 3);*/
-		$output[] = $term;
+		$output .= ( $output == "" ) ? $term->term_id : '/' . $term->term_id ;
 	}
 }
+
+
+
 /**
  * Retrieve Sorted array of Tags from Group List.
  *
@@ -936,7 +956,9 @@ class xili_tidy_tags_cloud_multiple_widgets extends WP_Widget {
 		}
 
 		$listtagsgroup = get_terms( $tidy_taxonomy, array('hide_empty' => false));
-		$listtagsgroupssorted = walk_TagGroupList_sorted( $listtagsgroup, 3, null, null );
+		global $xili_tidy_tags; // 1.11.5
+		$listtagsgroupssorted = $xili_tidy_tags->create_taggrouplist_sorted( walk_TagGroupList_sorted( $listtagsgroup, 3, null, null ) );
+		//$listtagsgroupssorted = $listtagsgroups;
 
 		?>
 		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title:'); ?></label>

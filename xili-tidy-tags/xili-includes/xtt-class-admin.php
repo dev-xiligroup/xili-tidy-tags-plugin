@@ -13,6 +13,7 @@
  * 1.10.3 - 150408 - fixes notice with constante line 61
  * 1.11.0 - 150703 - datatables js 1.10.7 updated WP 43 + debug
  * 1.11.4 - 160722 - insert commits of Naja
+ * 1.11.5 - 170620 - fixes group sorting
  */
 
 class xili_tidy_tags_admin extends xili_tidy_tags {
@@ -110,7 +111,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		<p><?php printf(__( "Link to set tidy %s in current site", 'xili-tidy-tags' ), $this->tags_name); ?>: <a href="<?php echo "admin.php?page=xili_tidy_tags_settings".$pre; ?>" title="xili-tidy-tags settings" ><?php printf(__( "To create groups of %s", 'xili-tidy-tags' ), $this->tags_name); ?></a></p>
 		<p><?php printf(__( "Link to assign tidy %s in current site", 'xili-tidy-tags' ), $this->tags_name); ?>: <a href="<?php echo "admin.php?page=xili_tidy_tags_assign".$pre; ?>" title="xili-tidy-tags assign"><?php printf(__( "To assign a group to %s", 'xili-tidy-tags' ), $this->tags_name); ?></a></p>
 
-		<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ) ; ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e( 'Author'); ?>" >xiligroup.com</a>™ - msc 2009-16 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
+		<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ) ; ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e( 'Author'); ?>" >xiligroup.com</a>™ - msc 2009-17 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
 		</div>
 		<?php
  	}
@@ -354,7 +355,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 								<?php do_meta_boxes($this->thehook, 'normal', $data); ?>
 							</div>
 
-							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ); ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e( 'Author'); ?>" >xiligroup.com</a>™ - msc 2009-16 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
+							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ); ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e( 'Author'); ?>" >xiligroup.com</a>™ - msc 2009-17 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
 
 						</div>
 					</div>
@@ -554,7 +555,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	   							<?php do_meta_boxes($this->thehook2, 'normal', $data); ?>
 							</div>
 
-							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ) ; ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e( 'Author'); ?>" >xiligroup.com</a>™ - msc 2009-16 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
+							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ) ; ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php _e( 'Author'); ?>" >xiligroup.com</a>™ - msc 2009-17 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
 
 						</div>
 					</div>
@@ -897,7 +898,8 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 	function xili_add_tag_form() {
 		$listtagsgroups = get_terms( $this->tidy_taxonomy, array('hide_empty' => false,'get'=>'all') );
 		if ( !is_wp_error( $listtagsgroups ) && $listtagsgroups ) {
-			$listtagsgroupssorted = walk_TagGroupList_sorted( $listtagsgroups, 3 , null, null );
+			$listtagsgroupssorted = $this->create_taggrouplist_sorted ( walk_TagGroupList_sorted( $listtagsgroups, 3 , null, null ) );
+
 			$checkline ='';
 			$i = 0;
 			foreach ( $listtagsgroupssorted as $group ) {
@@ -1023,7 +1025,8 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		$listtagsgroups = get_terms( $this->tidy_taxonomy, array( 'hide_empty' => false,'get'=>'all' ) );
 
 		if ( !is_wp_error( $listtagsgroups ) && $listtagsgroups ) {
-			$listtagsgroupssorted = walk_TagGroupList_sorted( $listtagsgroups, 3 , null, null );
+			$listtagsgroupssorted = $this->create_taggrouplist_sorted ( walk_TagGroupList_sorted( $listtagsgroups, 3 , null, null ) );
+
 			$checkline ='';
 			$i = 0;
 			foreach ($listtagsgroupssorted as $group) {
@@ -1696,7 +1699,8 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 
 		} else {
 
-		$listtagsgroupssorted = walk_TagGroupList_sorted( $listtagsgroups, 3 , null, null );
+		$listtagsgroupssorted = $this->create_taggrouplist_sorted ( walk_TagGroupList_sorted( $listtagsgroups, 3 , null, null ) );
+
 		$class = '';
 		if ($listtagsgroupssorted) { // @since 1.4.2 - no warning if no groups at init
 			foreach ($listtagsgroupssorted as $tagsgroup) {
@@ -1788,6 +1792,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 		<?php
 
 	}
+
 	/**
 	 *
 	 * @updated 1.5.3
@@ -1808,7 +1813,8 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 			<?php $listtagsgroups = get_terms($this->tidy_taxonomy, array('hide_empty' => false));
 
 			if ( !is_wp_error( $listtagsgroups ) && $listtagsgroups != array() ) {
-				$listtagsgroupssorted = walk_TagGroupList_sorted( $listtagsgroups, 3, null, null );
+				$listtagsgroupssorted =  $this->create_taggrouplist_sorted ( walk_TagGroupList_sorted( $listtagsgroups, 3, null, null ) );
+				//$listtagsgroupssorted = $listtagsgroups;
 				?>
 					<select name="tagsgroup_from_select" id="tagsgroup_from_select" style="width:45%;">
 			  				<option value="no_select" ><?php _e( 'every', 'xili-tidy-tags' ); ?></option>
@@ -1816,7 +1822,7 @@ class xili_tidy_tags_admin extends xili_tidy_tags {
 					<?php
 					$show = false;
 
-					foreach ($listtagsgroupssorted as $curterm) {
+					foreach ( $listtagsgroupssorted as $curterm ) {
 						$ttab = ($curterm->parent == 0) ? '' : '– ' ;
 						if ($this->fromgroupselect == $curterm->term_id) {
 							$selected =  'selected="selected"';

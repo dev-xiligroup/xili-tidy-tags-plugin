@@ -2,9 +2,9 @@
 Contributors: michelwppi, MS dev.xiligroup
 Donate link: http://dev.xiligroup.com/
 Tags: tag,tags,theme,post,plugin,posts, page, category, admin,multilingual,taxonomy,dictionary,widget,CMS, multisite, wpmu, bbPress, shortcode
-Requires at least: 4.0
-Tested up to: 4.5.3
-Stable tag: 1.11.4
+Requires at least: 4.6
+Tested up to: 4.8
+Stable tag: 1.11.5
 License: GPLv2
 
 xili-tidy-tags is a tool for grouping tags by semantic groups or by language and for creating tidy tag clouds.
@@ -147,6 +147,8 @@ In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](h
 10. Tags grouping - same sense but in different languages.
 
 == Changelog ==
+= 1.11.5 - (2017-06-20) =
+* fixe admin UI groups sorting - compatible with 4.8 Evans
 = 1.11.4 ( 2016-07-29 ) =
 * verified with 4.5.3 and tested with 4.6-rc1
 * insertion of Naja Melan Commits
@@ -238,7 +240,7 @@ In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](h
 = 0.8.1 (2009-03-31) = some fixes - improved query - better tag_cloud()
 = 0.8.0 = first public beta release.
 
-© 2016-07-22 dev.xiligroup.com
+© 2017-06-20
 
 == Upgrade Notice ==
 
@@ -260,4 +262,4 @@ and updated [Wordpress repository](http://wordpress.org/extend/plugins/xili-tidy
 See also the [dev.xiligroup plugins forum](http://dev.xiligroup.com/?forum=xili-tidy-tags-plugin).
 
 
-© 2009-2016 MS - dev.xiligroup.com
+© 2009-2017 MS - dev.xiligroup.com
