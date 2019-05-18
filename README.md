@@ -6,6 +6,15 @@ When displayed, in [WordPress repository](https://wordpress.org/plugins/xili-tid
 
 The other files are available for comments or fixes. Only the version in [WordPress xili-tidy-tags repository](https://wordpress.org/plugins/xili-tidy-tags/) is for use.
 
+
+## master is rewritten with WPCS
+
+2019-05-18
+Contains latest dev with rewritten sources code with [WP Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards). 
+**REQUIRES PHP 7.1+ !** 
+**pre-tested with WP 5.2**
+The branch xtt-1-15 is previous version (WP < 5.x)
+
 ## Preliminary infos:
 
 1. This readme.txt follow the rules of developers described [here](https://wordpress.org/plugins/about/)
