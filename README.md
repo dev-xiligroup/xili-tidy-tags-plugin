@@ -10,9 +10,13 @@ The other files are available for comments or fixes. Only the version in [WordPr
 ## master is rewritten with WPCS
 
 2019-05-18
-Contains latest dev with rewritten sources code with [WP Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards). 
-**REQUIRES PHP 7.1+ !** 
+
+Contains latest dev with rewritten sources code with [WP Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
+ 
+**REQUIRES PHP 7.1+ !**
+
 **pre-tested with WP 5.2**
+
 The branch xtt-1-15 is previous version (WP < 5.x)
 
 ## Preliminary infos:
