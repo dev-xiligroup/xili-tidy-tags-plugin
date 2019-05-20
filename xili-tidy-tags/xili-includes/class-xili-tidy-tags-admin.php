@@ -1424,7 +1424,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 		// inspired from www.generalthreat.com
 		// Get the list of dismissed pointers for the user
 		$dismissed = explode( ',', (string) get_user_meta( get_current_user_id(), 'dismissed_wp_pointers', true ) );
-		error_log( serialize( $dismissed ) );
+
 		if ( in_array( $pointer_dismiss, $dismissed ) && sanitize_key( 'xtt-new-version-' . str_replace( '.', '-', XILITIDYTAGS_VER ) ) == $pointer_dismiss ) {
 			$pointer_text = '';
 		} elseif ( in_array( $pointer_dismiss, $dismissed ) ) {
@@ -2364,7 +2364,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 		<label for="themeenable">
 			<input type="checkbox" id="themeenable" name="themeenable" value="enable" <?php checked( $theme, 'enable', true ); ?> />&nbsp;<?php echo 'Theme name= ' . get_option( 'stylesheet' ); ?>
 		</label><br />
-		<?php if ( ''!= $this->get_wplang() ) { ?>
+		<?php if ( '' != $this->get_wplang() ) { ?>
 		<label for="wplangenable">
 			<input type="checkbox" id="wplangenable" name="wplangenable" value="enable" <?php checked( $wplang, 'enable', true ); ?> />&nbsp;<?php echo 'WPLANG= ' . $this->get_wplang(); ?>
 		</label><br />
