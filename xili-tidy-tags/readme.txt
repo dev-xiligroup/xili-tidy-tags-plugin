@@ -246,7 +246,7 @@ In xiligroup plugins series, xili-tidy-tags is compatible with [xili-language](h
 = 0.8.1 (2009-03-31) = some fixes - improved query - better tag_cloud()
 = 0.8.0 = first public beta release.
 
-© 2017-06-20
+© 2019-05-20
 
 == Upgrade Notice ==
 
@@ -268,4 +268,4 @@ and updated [Wordpress repository](http://wordpress.org/extend/plugins/xili-tidy
 See also the [dev.xiligroup plugins forum](http://dev.xiligroup.com/?forum=xili-tidy-tags-plugin).
 
 
-© 2009-2017 MS - dev.xiligroup.com
+© 2009-2019 MS - dev.xiligroup.com
