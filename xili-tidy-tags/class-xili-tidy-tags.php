@@ -173,7 +173,7 @@ class Xili_Tidy_Tags {
 		echo '<!-- for tag ' . $this->post_tag . ', website powered with xili-tidy-tags v.' . XILITIDYTAGS_VER . ", a WP plugin by dev.xiligroup.com -->\n";
 	}
 
-	public function get_WPLANG() {
+	public function get_wplang() {
 		global $wp_version;
 		if ( version_compare( $wp_version, '4.0', '<' ) ) {
 			if ( defined( 'WPLANG' ) ) {
