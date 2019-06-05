@@ -88,10 +88,10 @@ Domain Path: /languages/
 
 define( 'XILITIDYTAGS_VER', '1.12.01' ); /* used in admin UI */
 
-define( 'XILITIDYTAGS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
+define( 'XILITIDYTAGS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) ); /* with / at end */
 
-require_once XILITIDYTAGS_PLUGIN_DIR . '/class-xili-tidy-tags.php';
-require_once XILITIDYTAGS_PLUGIN_DIR . '/xili-includes/class-xili-tidy-tags-cloud-multiple-widgets.php';
+require_once XILITIDYTAGS_PLUGIN_DIR . 'class-xili-tidy-tags.php';
+require_once XILITIDYTAGS_PLUGIN_DIR . 'xili-includes/class-xili-tidy-tags-cloud-multiple-widgets.php';
 
 /**
  * instantiation of xili_tidy_tags class
@@ -377,8 +377,7 @@ function xili_get_object_terms( $object_ids, $taxonomies, $args = array() ) {
 		'tidy_tags_taxo' => TAXOTIDYTAGS ,
 	);
 	$args = array_merge( $defaults, $args );
-	extract ( $args);
-
+	extract( $args);
 
 	if ( ! is_array( $sub_groups ) ) {
 		$sub_groups = array( $sub_groups );
