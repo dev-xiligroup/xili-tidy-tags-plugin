@@ -24,6 +24,8 @@
  * 1.11.4 - 160722 - insert commits of Naja
  * 1.11.5 - 170620 - fixes group sorting
  * 1.12.0 - 190517 - Code sources rewritting with WPCS
+ * 1.12.02 - 200619 - fixes links in group admin...
+ * 1.12.03 - 200805 - fixes input of group tags
  */
 
 class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
@@ -122,7 +124,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 		<p><?php printf( esc_html__( 'Link to set tidy %s in current site', 'xili-tidy-tags' ), $this->tags_name ); ?>: <a href="<?php echo 'admin.php?page=xili_tidy_tags_settings' . $pre; ?>" title="xili-tidy-tags settings" ><?php /* translators: */ printf( esc_html__( 'To create groups of %s', 'xili-tidy-tags' ), $this->tags_name ); ?></a></p>
 		<p><?php printf( esc_html__( 'Link to assign tidy %s in current site', 'xili-tidy-tags' ), $this->tags_name ); ?>: <a href="<?php echo 'admin.php?page=xili_tidy_tags_assign' . $pre; ?>" title="xili-tidy-tags assign"><?php /* translators: */ printf( esc_html__( 'To assign a group to %s', 'xili-tidy-tags' ), $this->tags_name ); ?></a></p>
 
-		<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ); ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php esc_html_e( 'Author' ); ?>" >xiligroup.com</a>™ - msc 2009-19 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
+		<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ); ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php esc_html_e( 'Author' ); ?>" >xiligroup.com</a>™ - msc 2009-20 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
 		</div>
 		<?php
 	}
@@ -412,7 +414,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 								<?php do_meta_boxes( $this->thehook, 'normal', $data ); ?>
 							</div>
 
-							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ); ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php esc_html_e( 'Author' ); ?>" >xiligroup.com</a>™ - msc 2009-19 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
+							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ); ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php esc_html_e( 'Author' ); ?>" >xiligroup.com</a>™ - msc 2009-20 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
 
 						</div>
 					</div>
@@ -629,7 +631,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 								<?php do_meta_boxes( $this->thehook2, 'normal', $data ); ?>
 							</div>
 
-							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ); ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php esc_html_e( 'Author' ); ?>" >xiligroup.com</a>™ - msc 2009-19 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
+							<h4><a href="http://dev.xiligroup.com/xili-tidy-tags" title="Plugin page and docs" target="_blank" style="text-decoration:none" ><img style="vertical-align:middle" src="<?php echo plugins_url( 'images/xilitidy-logo-32.png', $this->file_file ); ?>" alt="xili-tidy-tags logo"/></a> - © <a href="http://dev.xiligroup.com" target="_blank" title="<?php esc_html_e( 'Author' ); ?>" >xiligroup.com</a>™ - msc 2009-20 - v. <?php echo XILITIDYTAGS_VER; ?></h4>
 
 						</div>
 					</div>
@@ -1400,7 +1402,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 				/* translators: */
 				$pointer_text .= '<p>' . esc_js( sprintf( __( 'xili-tidy-tags was updated to version %s', 'xili-tidy-tags' ), XILITIDYTAGS_VER ) ) . ' .</p>';
 				/* translators: */
-				$pointer_text .= '<p>' . esc_js( sprintf( __( 'This version %s is tested with WP 4.3', 'xili-tidy-tags' ), XILITIDYTAGS_VER ) ) . ' .</p>';
+				$pointer_text .= '<p>' . esc_js( sprintf( __( 'This version %s is tested with WP 5.5', 'xili-tidy-tags' ), XILITIDYTAGS_VER ) ) . ' .</p>';
 				$pointer_text .= '<p>' . esc_js( __( 'Now tags can be grouped using alias feature existing in WP taxonomy and two new template tags for theme are available for files tag.php and taxonomy.php. ', 'xili-tidy-tags' ) ) . ',</p>';
 
 				$pointer_text .= '<p>' . esc_js( __( 'See submenu', 'xili-tidy-tags' ) . ' “<a href="admin.php?page=xili_tidy_tags_settings' . $pre . '">' . __( 'to define groups of tags', 'xili-tidy-tags' ) . "</a>”" ) . ' .</p>';
@@ -1729,13 +1731,11 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 			</tr>
 			<tr>
 				<th scope="row" valign="top" align="right"><label for="tagsgroup_nicename"><?php esc_html_e( 'tags group slug', 'xili-tidy-tags' ); ?></label>:&nbsp;</th>
-				<td><input name="tagsgroup_nicename" id="tagsgroup_nicename" type="text" value="
-					<?php
+				<td><input name="tagsgroup_nicename" id="tagsgroup_nicename" type="text" value="<?php
 					if ( isset( $tagsgroup ) ) {
 						echo esc_attr( $tagsgroup->slug );
 					}
-					?>
-					" size="40"<?php echo $disabled; ?> /></td>
+					?>" size="40"<?php echo $disabled; ?> /></td>
 			</tr>
 			<tr>
 				<th scope="row" valign="top" align="right"><label for="tagsgroup_description"><?php esc_html_e( 'Description', 'xili-tidy-tags' ); ?></label>:&nbsp;</th>
@@ -1972,7 +1972,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 					}
 					$pre = ( 'post_tag' == $this->post_tag ) ? 'xili_tidy_tags_settings' : 'xili_tidy_tags_settings_' . $this->post_tag;
 					if ( true === $possible ) {
-						$edit = "<a href='?page=" . $pre . '&amp;action=edit&amp;term_id=' . $tagsgroup->term_id . ' >' . __( 'Edit' ) . '</a></td>';
+						$edit = "<a href='?page=" . $pre . '&amp;action=edit&amp;term_id=' . $tagsgroup->term_id . "' >" . __( 'Edit' ) . '</a></td>';
 						/* delete link &amp;action=edit&amp;term_id=' . $tagsgroup->term_id. "*/
 						$edit .= "<td><a href='?page=" . $pre . '&amp;action=delete&amp;term_id=' . $tagsgroup->term_id . "' class='delete'>" . __( 'Delete' ) . '</a>';
 					} else {

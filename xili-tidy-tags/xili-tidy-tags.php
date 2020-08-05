@@ -4,12 +4,15 @@ Plugin Name: xili-tidy-tags
 Plugin URI: http://dev.xiligroup.com/xili-tidy-tags/
 Description: xili-tidy-tags is a tool for grouping tags by language or semantic group. Initially developed to enrich xili-language plugin and usable in all sites (CMS) and bbPress forum or others custom taxonomies.
 Author: dev.xiligroup.com - MS
-Version: 1.12.01
+Version: 1.12.03
 Author URI: http://dev.xiligroup.com
 License: GPLv2
 Text Domain: xili-tidy-tags
 Domain Path: /languages/
 */
+
+# 1.12.03 - 200805 - fixes input of group tags
+# 1.12.02 - 200619 - fixes links in group admin...
 
 # 1.12.0 - 190517 - Code sources rewritting with WPCS
 
@@ -86,12 +89,12 @@ Domain Path: /languages/
 # License along with this plugin; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
-define( 'XILITIDYTAGS_VER', '1.12.01' ); /* used in admin UI */
+define( 'XILITIDYTAGS_VER', '1.12.03' ); /* used in admin UI */
 
-define( 'XILITIDYTAGS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) ); /* with / at end */
+define( 'XILITIDYTAGS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 
-require_once XILITIDYTAGS_PLUGIN_DIR . 'class-xili-tidy-tags.php';
-require_once XILITIDYTAGS_PLUGIN_DIR . 'xili-includes/class-xili-tidy-tags-cloud-multiple-widgets.php';
+require_once XILITIDYTAGS_PLUGIN_DIR . '/class-xili-tidy-tags.php';
+require_once XILITIDYTAGS_PLUGIN_DIR . '/xili-includes/class-xili-tidy-tags-cloud-multiple-widgets.php';
 
 /**
  * instantiation of xili_tidy_tags class
@@ -377,7 +380,8 @@ function xili_get_object_terms( $object_ids, $taxonomies, $args = array() ) {
 		'tidy_tags_taxo' => TAXOTIDYTAGS ,
 	);
 	$args = array_merge( $defaults, $args );
-	extract( $args);
+	extract ( $args);
+
 
 	if ( ! is_array( $sub_groups ) ) {
 		$sub_groups = array( $sub_groups );
