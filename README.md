@@ -9,6 +9,11 @@ The other files are available for comments or fixes. Only the version in [WordPr
 
 ## master is rewritten with WPCS
 
+2023-07-31
+
+fix forgot nonce reported by WP and Patchstack in admin group settings.
+Tested with WP 5.7
+
 2019-05-18
 
 Contains latest dev with rewritten sources code with [WP Coding Standards](https://github.com/WordPress-Coding-Standards/WordPress-Coding-Standards).
