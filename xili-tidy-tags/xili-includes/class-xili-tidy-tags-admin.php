@@ -1407,7 +1407,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 				/* translators: */
 				$pointer_text .= '<p>' . esc_js( sprintf( __( 'xili-tidy-tags was updated to version %s', 'xili-tidy-tags' ), XILITIDYTAGS_VER ) ) . ' .</p>';
 				/* translators: */
-				$pointer_text .= '<p>' . esc_js( sprintf( __( 'This version %s is tested with WP 5.5', 'xili-tidy-tags' ), XILITIDYTAGS_VER ) ) . ' .</p>';
+				$pointer_text .= '<p>' . esc_js( sprintf( __( 'This version %s is pre-tested with WP 6.2', 'xili-tidy-tags' ), XILITIDYTAGS_VER ) ) . ' .</p>';
 				$pointer_text .= '<p>' . esc_js( __( 'Now tags can be grouped using alias feature existing in WP taxonomy and two new template tags for theme are available for files tag.php and taxonomy.php. ', 'xili-tidy-tags' ) ) . ',</p>';
 
 				$pointer_text .= '<p>' . esc_js( __( 'See submenu', 'xili-tidy-tags' ) . ' “<a href="admin.php?page=xili_tidy_tags_settings' . $pre . '">' . __( 'to define groups of tags', 'xili-tidy-tags' ) . "</a>”" ) . ' .</p>';
