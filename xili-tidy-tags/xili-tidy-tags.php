@@ -377,11 +377,10 @@ function xili_get_object_terms( $object_ids, $taxonomies, $args = array() ) {
 		'orderby' => 'name',
 		'order' => 'ASC',
 		'fields' => 'all',
-		'tidy_tags_taxo' => TAXOTIDYTAGS ,
+		'tidy_tags_taxo' => TAXOTIDYTAGS,
 	);
 	$args = array_merge( $defaults, $args );
-	extract ( $args);
-
+	extract( $args);
 
 	if ( ! is_array( $sub_groups ) ) {
 		$sub_groups = array( $sub_groups );
@@ -431,7 +430,7 @@ function xili_get_object_terms( $object_ids, $taxonomies, $args = array() ) {
 	}
 
 	// tt_ids queries can only be none or tr.term_taxonomy_id
-	if ( ( 'tt_ids' == $fields) && ! empty( $orderby) ) {
+	if ( ( 'tt_ids' == $fields ) && ! empty( $orderby ) ) {
 		$orderby = 'tr.term_taxonomy_id';
 	}
 
@@ -731,7 +730,7 @@ function walk_taggrouplist_sorted() {
  *
  * @updated 1.5.5
  *
- *	[xili-tidy-tags params="tagsgroup=french-actors&tidy_taxonomy=xili_tidy_tags_actors&tidy_post_tag=actors&largest=10&smallest=10" glue=" | " emptyresult="vide"]
+ * [xili-tidy-tags params="tagsgroup=french-actors&tidy_taxonomy=xili_tidy_tags_actors&tidy_post_tag=actors&largest=10&smallest=10" glue=" | " emptyresult="vide"]
  *
  */
 function xili_tidy_tags_shortcode( $atts ) {
@@ -1019,7 +1018,7 @@ function xili_tidy_tag_in_other_lang( $args = array() ) {
 								if ( OBJECT == $r['format'] ) {
 									return $one_alias;
 								} elseif ( ARRAY_A == $r['format'] ) {
-									$__term = get_object_vars( $one_alias);
+									$__term = get_object_vars( $one_alias );
 									return $__term;
 								} elseif ( ARRAY_N == $r['format'] ) {
 									$__term = array_values( get_object_vars( $one_alias ) );
@@ -1102,7 +1101,7 @@ function xili_tags_from_group( $group_name, $mode = 'slug', $taxonomy = 'xili_ti
 
 /**
  *  return the link to show posts of a xili_tags_group
- *	can be used in template - used in tags group cloud
+ *  can be used in template - used in tags group cloud
  *  example : echo '<a href="'.link_for_posts_of_xili_tags_group ( 'trademark' ).'" >Trademark</a>'
  *
  * @param: slug of target tags-group

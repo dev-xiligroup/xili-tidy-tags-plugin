@@ -7,9 +7,8 @@
  * @since 1.12
  */
 
-
 /**
- * xili-tidy-tags class admin (now separated file since 1.8.0) - 1.8.1 fixes - 1.8.2 (s)-
+ * Xili-tidy-tags class admin (now separated file since 1.8.0) - 1.8.1 fixes - 1.8.2 (s)-
  *
  * 1.8.3 - Add errors management to detect bad instancing with other tag (custom taxonomy) ...
  * 1.8.7 - Tags grouping via alias - fixes errors when no declared taxonomy and more...
@@ -26,8 +25,8 @@
  * 1.12.0 - 190517 - Code sources rewritting with WPCS
  * 1.12.02 - 200619 - fixes links in group admin...
  * 1.12.03 - 200805 - fixes input of group tags
+ * 1.12.04 - 230731 - fix forgotten nonce in $_GET in group part !
  */
-
 class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 
 	public $subselect = 0; /* selected parent group */
@@ -159,10 +158,16 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 		}
 
 		if ( isset( $_GET['action'] ) ) :
-			$action = $_GET['action'];
-			$term_id = $_GET['term_id'];
+			if ( isset($_GET['my_nonce']) && wp_verify_nonce( $_GET['my_nonce'], 'doing_settings')) {
+
+				$action = $_GET['action'];
+				$term_id = $_GET['term_id'];
+			} else {
+				$message = " NO NONCE !!!! ";
+			}
 		endif;
-		$message = $action;
+
+		$message .= $action;
 		$msg = 0;
 		switch ( $action ) {
 			case 'editor_caps_submit':
@@ -506,10 +511,10 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 		if ( isset( $_POST['tagssublist'] ) ) {
 			$action = 'tagssublist';
 		}
-		if ( isset( $_GET['action'] ) ) :
-			$action = $_GET['action'];
-			$term_id = $_GET['term_id'];
-		endif;
+		//if ( isset( $_GET['action'] ) ) :
+			////$action = $_GET['action'];
+			//$term_id = $_GET['term_id'];
+		//endif;
 		$message = $action;
 		switch ( $action ) {
 
@@ -1972,9 +1977,15 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 					}
 					$pre = ( 'post_tag' == $this->post_tag ) ? 'xili_tidy_tags_settings' : 'xili_tidy_tags_settings_' . $this->post_tag;
 					if ( true === $possible ) {
-						$edit = "<a href='?page=" . $pre . '&amp;action=edit&amp;term_id=' . $tagsgroup->term_id . "' >" . __( 'Edit' ) . '</a></td>';
+						//$edit = "<a href='?page=" . $pre . '&amp;action=edit&amp;term_id=' . $tagsgroup->term_id . "' >" . __( 'Edit' ) . '</a></td>';
+						$link = wp_nonce_url(admin_url('admin.php?page=xili_tidy_tags_settings&amp;action=edit&amp;term_id=' . $tagsgroup->term_id ), 'doing_settings', 'my_nonce');
+
+						$edit = "<a href='" . $link . "' >" . __( 'Edit' ) . '</a></td>';
 						/* delete link &amp;action=edit&amp;term_id=' . $tagsgroup->term_id. "*/
-						$edit .= "<td><a href='?page=" . $pre . '&amp;action=delete&amp;term_id=' . $tagsgroup->term_id . "' class='delete'>" . __( 'Delete' ) . '</a>';
+						//$edit .= "<td><a href='?page=" . $pre . '&amp;action=delete&amp;term_id=' . $tagsgroup->term_id . "' class='delete'>" . __( 'Delete' ) . '</a>';
+						$link = wp_nonce_url(admin_url('admin.php?page=xili_tidy_tags_settings&amp;action=delete&amp;term_id=' . $tagsgroup->term_id ), 'doing_settings', 'my_nonce');
+						$edit .= "<td><a href='" . $link . "' class='delete' >" . __( 'Delete' ) . '</a>';
+
 					} else {
 						$edit = __( 'no capability', 'xili-tidy-tags' ) . '</td><td>';
 					}

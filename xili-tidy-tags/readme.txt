@@ -3,8 +3,8 @@ Contributors: michelwppi, MS dev.xiligroup
 Donate link: http://dev.xiligroup.com/
 Tags: tags, posts, multilingual,taxonomy, shortcode
 Requires at least: 4.6
-Tested up to: 5.5 RC2
-Stable tag: 1.12.03
+Tested up to: 5.7
+Stable tag: 1.12.04
 License: GPLv2
 
 xili-tidy-tags is a tool for grouping tags by semantic groups or by language and for creating tidy tag clouds.
