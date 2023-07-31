@@ -12,7 +12,7 @@ The other files are available for comments or fixes. Only the version in [WordPr
 2023-07-31
 
 fix forgot nonce reported by WP and Patchstack in admin group settings.
-Tested with WP 5.7
+Tested with **WP 5.7- to 6.2** (requires other plugins Classic Editor and Classic Widgets)
 
 2019-05-18
 
