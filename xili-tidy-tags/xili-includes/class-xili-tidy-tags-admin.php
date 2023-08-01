@@ -25,7 +25,7 @@
  * 1.12.0 - 190517 - Code sources rewritting with WPCS
  * 1.12.02 - 200619 - fixes links in group admin...
  * 1.12.03 - 200805 - fixes input of group tags
- * 1.12.04 - 230731 - fix forgotten nonce in $_GET in group part !
+ * 1.12.04 - 230731 - fix forgotten nonce in $_GET in group part - add hidden field !
  */
 class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 
@@ -511,10 +511,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 		if ( isset( $_POST['tagssublist'] ) ) {
 			$action = 'tagssublist';
 		}
-		//if ( isset( $_GET['action'] ) ) :
-			////$action = $_GET['action'];
-			//$term_id = $_GET['term_id'];
-		//endif;
+
 		$message = $action;
 		switch ( $action ) {
 
@@ -551,11 +548,17 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 				break;
 
 			case 'update':
-				check_admin_referer( 'xilitagassign' );
-				$message .= ' ok: datas are saved... ';
-				$message .= $this->checkboxes_update_them( $tagsnamelike, $tagsnamesearch );
-				$msg = 1;
-				$actiontype = 'add';
+				// redundant nonce !! 230801
+				if ( wp_verify_nonce( $_POST['assign_nonce'], 'update_checks' ) ) {
+					check_admin_referer( 'xilitagassign' );
+					$message .= ' ok:: datas are saved... ';
+					$message .= $this->checkboxes_update_them( $tagsnamelike, $tagsnamesearch );
+					$msg = 1;
+					$actiontype = 'add';
+				} else {
+					$message = "NONCE error";
+					$msg = 2;
+				}
 				break;
 
 			case 'reset':
@@ -2061,6 +2064,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 	 */
 	public function on_sub_sidebox_action_content( $data = array() ) {
 		extract( $data );
+		wp_nonce_field( 'update_checks', 'assign_nonce', false );
 		?>
 		<p><?php esc_html_e( 'After checking or unchecking do not forget to click update button !', 'xili-tidy-tags' ); ?></p>
 		<p class="submit"><input type="submit" class="button-primary" id="update" name="update" value="<?php echo $submit_text; ?>" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="submit" name="reset" value="<?php echo $cancel_text; ?>" /></p>

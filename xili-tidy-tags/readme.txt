@@ -3,7 +3,7 @@ Contributors: michelwppi, MS dev.xiligroup
 Donate link: http://dev.xiligroup.com/
 Tags: tags, posts, multilingual,taxonomy, shortcode
 Requires at least: 4.6
-Tested up to: 5.7
+Tested up to: 6.2
 Stable tag: 1.12.04
 License: GPLv2
 
@@ -55,6 +55,9 @@ Please verify that you have installed the latest versions of:
 * readme.txt rewritting.
 * more function for grouping new features introducted in version 1.9
 
+= Version 1.12.04 =
+* fixes forget nounce
+* Last Updated 2023-08-01
 = Version 1.12.01 =
 * Last Updated 2019-05-18
 * rewritten with WPCS rules
