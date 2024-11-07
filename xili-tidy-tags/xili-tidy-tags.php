@@ -4,13 +4,14 @@ Plugin Name: xili-tidy-tags
 Plugin URI: http://dev.xiligroup.com/xili-tidy-tags/
 Description: xili-tidy-tags is a tool for grouping tags by language or semantic group. Initially developed to enrich xili-language plugin and usable in all sites (CMS) and bbPress forum or others custom taxonomies.
 Author: dev.xiligroup.com - MS
-Version: 1.12.04
+Version: 1.12.05
 Author URI: http://dev.xiligroup.com
 License: GPLv2
 Text Domain: xili-tidy-tags
 Domain Path: /languages/
 */
 
+# 1.12.05 - 202411 - fixes forget sanitize (vgo0 wordfence)
 # 1.12.04 - 202307 - fixes forget nonce (WP - patchstack)
 # 1.12.03 - 200805 - fixes input of group tags
 # 1.12.02 - 200619 - fixes links in group admin...
@@ -90,7 +91,7 @@ Domain Path: /languages/
 # License along with this plugin; if not, write to the Free Software
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
-define( 'XILITIDYTAGS_VER', '1.12.04' ); /* used in admin UI */
+define( 'XILITIDYTAGS_VER', '1.12.05' ); /* used in admin UI */
 
 define( 'XILITIDYTAGS_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 

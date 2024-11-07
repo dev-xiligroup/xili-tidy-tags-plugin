@@ -26,6 +26,7 @@
  * 1.12.02 - 200619 - fixes links in group admin...
  * 1.12.03 - 200805 - fixes input of group tags
  * 1.12.04 - 230731 - fix forgotten nonce in $_GET in group part - add hidden field !
+ * 1.12.05 - 241104 - fix forgotten sanitize - thanks to vgo0
  */
 class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 
@@ -141,6 +142,8 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 		$emessage = '';
 		$tagsgroup = null;
 		$term_id = 0;
+
+		// 241003 - IE fixes with $title = sanitize_text_field( $_POST['title'] );
 		if ( isset( $_POST['reset'] ) ) {
 			$action = $_POST['reset'];
 		} elseif ( isset( $_POST['updateoptions'] ) ) {
@@ -151,14 +154,14 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 			$action = 'importacat';
 		} elseif ( isset( $_POST['editor_caps_submit'] ) ) { /* 0.9.5 capabilities */
 			$action = 'editor_caps_submit';
-		} elseif ( isset( $_POST['sendmail'] ) ) { //1.5.4
+		} elseif ( isset( $_POST['sendmail'] ) ) { // 1.5.4
 			$action = 'sendmail';
 		} elseif ( isset( $_POST['action'] ) ) {
-			$action = $_POST['action'];
+			$action = sanitize_text_field( wp_unslash( $_POST['action'] ) );
 		}
 
 		if ( isset( $_GET['action'] ) ) :
-			if ( isset($_GET['my_nonce']) && wp_verify_nonce( $_GET['my_nonce'], 'doing_settings')) {
+			if ( isset( $_GET['my_nonce'] ) && wp_verify_nonce( $_GET['my_nonce'], 'doing_settings' ) ) {
 
 				$action = $_GET['action'];
 				$term_id = $_GET['term_id'];
