@@ -10,7 +10,7 @@ The other files are available for comments or fixes. Only the version in [WordPr
 ## master is rewritten with WPCS
 2024-11-07
 fixes forgotten sanitize
-
+version 1.12.05 as in WP repository
 2023-07-31
 
 fix forgot nonce reported by WP and Patchstack in admin group settings.
