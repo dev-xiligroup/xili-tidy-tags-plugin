@@ -8,6 +8,8 @@ The other files are available for comments or fixes. Only the version in [WordPr
 
 
 ## master is rewritten with WPCS
+2024-11-07
+fixes forgotten sanitize
 
 2023-07-31
 
