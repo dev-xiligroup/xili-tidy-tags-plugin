@@ -166,7 +166,7 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 				$action = $_GET['action'];
 				$term_id = $_GET['term_id'];
 			} else {
-				$message = " NO NONCE !!!! ";
+				$message = ' NO NONCE !!!! ';
 			}
 		endif;
 
@@ -175,10 +175,10 @@ class Xili_Tidy_Tags_Admin extends Xili_Tidy_Tags {
 		switch ( $action ) {
 			case 'editor_caps_submit':
 				check_admin_referer( 'xilitagsettings' );
-				$new_cap = $_POST['editor_caps'];
+				$new_cap = sanitize_text_field( wp_unslash( $_POST['editor_caps'] ) ); //20250324!
 
 				$this->xili_settings['editor_caps'] = $new_cap;
-				$this->xili_settings['datatable_js'] = ( isset( $_POST['datatable_js'] ) ) ? $_POST['datatable_js'] : ''; // 1.5.3.1
+				$this->xili_settings['datatable_js'] = ( isset( $_POST['datatable_js'] ) ) ? sanitize_text_field( wp_unslash( $_POST['datatable_js'] ) ) : ''; // 1.5.3.1 //20250324
 
 				update_option( 'xili_tidy_tags_settings', $this->xili_settings );
 
